@@ -3,8 +3,88 @@
 @tailwind utilities;
 
 @layer base {
-    body { 
-      @apply bg-black text-white 
-      relative font-sans h-screen
-      overflow-x-hidden}
+  body {
+    @apply bg-stone-50 text-stone-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-stone-900 text-white hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply px-8 py-3 border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 text-sm uppercase tracking-widest font-medium;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-12;
+  }
+
+  /* Text link with animated underline */
+  .link-animated {
+    @apply relative inline-block;
+  }
+  
+  .link-animated::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-px bg-stone-900 transition-all duration-300;
+  }
+  
+  .link-animated:hover::after {
+    @apply w-full;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  .card-hover:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+}
+
+/* Texture overlay for atmosphere */
+.texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-stone-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-400;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-stone-900 text-white;
 }
