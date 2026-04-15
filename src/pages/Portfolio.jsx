@@ -67,8 +67,8 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [selectedArtwork, setSelectedArtwork] = useState(null);
 
-  const filteredArtworks = selectedCategory === "Todos" 
-    ? artworks 
+  const filteredArtworks = selectedCategory === "Todos"
+    ? artworks
     : artworks.filter(art => art.category === selectedCategory);
 
   return (
@@ -77,18 +77,17 @@ const Portfolio = () => {
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Galería</span>
           <h1 className="text-4xl font-serif mb-8 text-stone-900">Colección</h1>
-          
+
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`text-sm uppercase tracking-widest pb-2 transition-all ${
-                  selectedCategory === category 
-                    ? 'text-stone-900 border-b-2 border-stone-900' 
+                className={`text-sm uppercase tracking-widest pb-2 transition-all ${selectedCategory === category
+                    ? 'text-stone-900 border-b-2 border-stone-900'
                     : 'text-stone-400 hover:text-stone-600'
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -97,7 +96,7 @@ const Portfolio = () => {
         </div>
 
         {/* Gallery Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
@@ -114,8 +113,8 @@ const Portfolio = () => {
                 onClick={() => setSelectedArtwork(art)}
               >
                 <div className="relative overflow-hidden aspect-[3/4] bg-stone-100 mb-4">
-                  <img 
-                    src={art.image} 
+                  <img
+                    src={art.image}
                     alt={art.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -138,26 +137,26 @@ const Portfolio = () => {
               className="fixed inset-0 z-50 flex items-center justify-center bg-stone-50/98 p-4 md:p-8"
               onClick={() => setSelectedArtwork(null)}
             >
-              <button 
+              <button
                 className="absolute top-8 right-8 text-stone-500 hover:text-stone-900 p-2"
                 onClick={() => setSelectedArtwork(null)}
               >
                 <X size={32} />
               </button>
-              
-              <div 
-                className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+
+              <div
+                className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white rounded-[2rem] overflow-hidden shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="max-h-[80vh] overflow-hidden flex items-center justify-center bg-white">
-                  <img 
-                    src={selectedArtwork.image} 
+                <div className="max-h-[80vh] overflow-hidden flex items-center justify-center bg-stone-100">
+                  <img
+                    src={selectedArtwork.image}
                     alt={selectedArtwork.title}
-                    className="max-w-full max-h-full object-contain shadow-2xl"
+                    className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                
-                <div>
+
+                <div className="p-8 md:p-12">
                   <span className="text-stone-900 text-xs uppercase tracking-widest mb-2 block">{selectedArtwork.category}</span>
                   <h2 className="text-4xl font-serif mb-4 text-stone-900">{selectedArtwork.title}</h2>
                   <p className="text-stone-600 leading-relaxed mb-6">{selectedArtwork.description}</p>

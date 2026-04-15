@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Facebook } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +22,7 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-stone-50">
       {/* Texture overlay */}
       <div className="texture-overlay" />
-      
+
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500">
         <div className="container-custom py-5 flex justify-between items-center">
@@ -38,9 +37,8 @@ const Layout = ({ children }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated ${
-                  location.pathname === link.path ? 'text-stone-900 font-medium' : 'text-stone-500'
-                }`}
+                className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated ${location.pathname === link.path ? 'text-stone-900 font-medium' : 'text-stone-500'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -56,48 +54,29 @@ const Layout = ({ children }) => {
           </button>
 
           {/* Mobile Menu Overlay */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-8 md:hidden pt-12 border-t border-stone-200"
-              >
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.path}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+          {isMenuOpen && (
+            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-8 md:hidden pt-12 border-t border-stone-200">
+              {navLinks.map((link) => (
+                <div key={link.path}>
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors"
                   >
-                    <Link
-                      to={link.path}
-                      className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
+                    {link.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Main Content */}
       <main className="flex-grow pt-20">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            {children}
-          </motion.div>
-        </AnimatePresence>
+        <div key={location.pathname}>
+          {children}
+        </div>
       </main>
 
       {/* Footer */}
@@ -109,7 +88,7 @@ const Layout = ({ children }) => {
               El inconsciente traza mapas que la razón desconoce. Un legado de surrealismo, color y humanidad.
             </p>
           </div>
-          
+
           <div>
             <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Enlaces</h4>
             <ul className="space-y-3 text-sm">
@@ -123,8 +102,7 @@ const Layout = ({ children }) => {
           <div>
             <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Síguenos</h4>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
+
             </div>
             <p className="mt-6 text-xs text-stone-600">
               © {new Date().getFullYear()} Legado Faiwel Wolfsdorf. Todos los derechos reservados.
