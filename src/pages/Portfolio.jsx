@@ -63,6 +63,20 @@ const artworks = [
 
 const categories = ["Todos", "Ecos del Inconsciente", "Figuras y Arquetipos", "Serie Humanística"];
 
+const pageTransition = {
+  initial: { opacity: 0, y: 20 },
+  animate: { 
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  },
+  exit: { 
+    opacity: 0,
+    y: -20,
+    transition: { duration: 0.4, ease: "easeIn" }
+  }
+};
+
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [selectedArtwork, setSelectedArtwork] = useState(null);
@@ -72,7 +86,13 @@ const Portfolio = () => {
     : artworks.filter(art => art.category === selectedCategory);
 
   return (
-    <div className="pt-12 pb-24 min-h-screen">
+    <motion.div
+      className="pt-12 pb-24 min-h-screen"
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="container-custom">
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Galería</span>
@@ -167,7 +187,7 @@ const Portfolio = () => {
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
