@@ -7,6 +7,37 @@ import imgFaiwelPatty from '../assets/images/Faiwel y Patty 15Oct2008.JPG';
 import imgFoto003 from '../assets/images/foto003.jpg';
 import imgTallerPatty from '../assets/images/Taller-Patty.jpg';
 import imgTallerAlbum from '../assets/images/Taller-Pattyalbum-06.jpg';
+// Taller images
+import tallerImg1 from '../assets/images/Taller/12.jpg';
+import tallerImg2 from '../assets/images/Taller/16.jpg';
+import tallerImg3 from '../assets/images/Taller/foto003.jpg';
+import tallerImg4 from '../assets/images/Taller/Taller-Patty.jpg';
+import tallerImg5 from '../assets/images/Taller/Taller-Pattyalbum-06.jpg';
+// ElArconDeLosRecuerdos images
+import arconImg1 from '../assets/images/ElArconDeLosRecuerdos/escanear0001.jpg';
+import arconImg2 from '../assets/images/ElArconDeLosRecuerdos/escanear0002.jpg';
+import arconImg3 from '../assets/images/ElArconDeLosRecuerdos/escanear0003.jpg';
+import arconImg4 from '../assets/images/ElArconDeLosRecuerdos/escanear0004.jpg';
+import arconImg5 from '../assets/images/ElArconDeLosRecuerdos/escanear0005.jpg';
+import arconImg6 from '../assets/images/ElArconDeLosRecuerdos/escanear0006.jpg';
+import arconImg7 from '../assets/images/ElArconDeLosRecuerdos/escanear0007.jpg';
+import arconImg8 from '../assets/images/ElArconDeLosRecuerdos/escanear0008.jpg';
+import arconImg9 from '../assets/images/ElArconDeLosRecuerdos/escanear0009.jpg';
+import arconImg11 from '../assets/images/ElArconDeLosRecuerdos/escanear0011.jpg';
+import arconImg12 from '../assets/images/ElArconDeLosRecuerdos/escanear0012.jpg';
+import arconImg14 from '../assets/images/ElArconDeLosRecuerdos/escanear0014.jpg';
+import arconImg15 from '../assets/images/ElArconDeLosRecuerdos/escanear0015.jpg';
+import arconImg16 from '../assets/images/ElArconDeLosRecuerdos/escanear0016.jpg';
+import arconImg17 from '../assets/images/ElArconDeLosRecuerdos/escanear0017.jpg';
+import arconImg18 from '../assets/images/ElArconDeLosRecuerdos/escanear0018.jpg';
+import arconImg73 from '../assets/images/ElArconDeLosRecuerdos/escanear0073.jpg';
+import arconImg74 from '../assets/images/ElArconDeLosRecuerdos/escanear0074.jpg';
+import arconImg75 from '../assets/images/ElArconDeLosRecuerdos/escanear0075.jpg';
+import arconImg77 from '../assets/images/ElArconDeLosRecuerdos/escanear0077.jpg';
+import arconImg78 from '../assets/images/ElArconDeLosRecuerdos/escanear0078.jpg';
+import arconImg79 from '../assets/images/ElArconDeLosRecuerdos/escanear0079.jpg';
+import arconImg80 from '../assets/images/ElArconDeLosRecuerdos/escanear0080.jpg';
+import arconImg81 from '../assets/images/ElArconDeLosRecuerdos/escanear0081.jpg';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -31,17 +62,46 @@ const pageTransition = {
 const About = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-  const [showCarousel, setShowCarousel] = useState(false);
+  const [currentImageTaller, setCurrentImageTaller] = useState(0);
+  const [showCarouselTaller, setShowCarouselTaller] = useState(false);
+  const [currentImageArcon, setCurrentImageArcon] = useState(0);
+  const [showCarouselArcon, setShowCarouselArcon] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
 
   const arconImages = [
-    img12,
-    imgFaiwelPatty,
-    imgFoto003,
-    imgTallerPatty,
-    imgTallerAlbum
+    arconImg1,
+    arconImg2,
+    arconImg3,
+    arconImg4,
+    arconImg5,
+    arconImg6,
+    arconImg7,
+    arconImg8,
+    arconImg9,
+    arconImg11,
+    arconImg12,
+    arconImg14,
+    arconImg15,
+    arconImg16,
+    arconImg17,
+    arconImg18,
+    arconImg73,
+    arconImg74,
+    arconImg75,
+    arconImg77,
+    arconImg78,
+    arconImg79,
+    arconImg80,
+    arconImg81
+  ];
+
+  const tallerImages = [
+    tallerImg1,
+    tallerImg2,
+    tallerImg3,
+    tallerImg4,
+    tallerImg5
   ];
 
   const toggleMusic = () => {
@@ -321,19 +381,92 @@ const About = () => {
 
             {/* Other Cards Column */}
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 content-start">
-              {/* Taller Card */}
+              {/* Taller Card - with Arcón content */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group bg-stone-50 hover:bg-stone-100 transition-all duration-300 cursor-pointer"
+                className="group bg-stone-50 transition-all duration-300 cursor-pointer"
+                onClick={() => {
+                  setModalImageIndex(0);
+                  setShowModal(true);
+                }}
+                onMouseEnter={() => setShowCarouselTaller(true)}
+                onMouseLeave={() => setShowCarouselTaller(false)}
               >
+                {/* Collage / Carrusel */}
                 <div className="aspect-[4/5] overflow-hidden">
-                  <div className="w-full h-full bg-stone-200 flex items-center justify-center">
-                    <span className="text-6xl text-stone-400">🎨</span>
-                  </div>
+                  {showCarouselTaller ? (
+                    // Carrusel
+                    <motion.img
+                      key={currentImageTaller}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5 }}
+                      src={arconImages[currentImageTaller]}
+                      alt={`Taller ${currentImageTaller + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    // Collage de-portada
+                    <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-0.5">
+                      <img src={imgTallerPatty} alt="1" className="w-full h-full object-cover row-span-1" />
+                      <img src={imgTallerAlbum} alt="2" className="w-full h-full object-cover row-span-1" />
+                      <img src={img12} alt="3" className="w-full h-full object-cover row-span-1" />
+                      <div className="relative row-span-1">
+                        <img src={imgFaiwelPatty} alt="4" className="w-full h-full object-cover" />
+                        <img src={imgFoto003} alt="5" className="w-1/2 h-1/2 object-cover absolute bottom-0 right-0" />
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Botones de navegación (solo cuando está el carrusel) */}
+                  {showCarouselTaller && (
+                    <>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setCurrentImageTaller((prev) => (prev === 0 ? arconImages.length - 1 : prev - 1));
+                        }}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setCurrentImageTaller((prev) => (prev === arconImages.length - 1 ? 0 : prev + 1));
+                        }}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+
+                      {/* Indicadores */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                        {arconImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setCurrentImageTaller(index);
+                            }}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              currentImageTaller === index ? 'bg-stone-900' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-serif text-stone-900 mb-2">Taller</h3>
@@ -361,7 +494,7 @@ const About = () => {
                 </div>
               </motion.div>
 
-{/* Arcón de los Recuerdos Card */}
+              {/* Arcón de los Recuerdos Card - with images */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -372,43 +505,43 @@ const About = () => {
                   setModalImageIndex(0);
                   setShowModal(true);
                 }}
-                onMouseEnter={() => setShowCarousel(true)}
-                onMouseLeave={() => setShowCarousel(false)}
+                onMouseEnter={() => setShowCarouselArcon(true)}
+                onMouseLeave={() => setShowCarouselArcon(false)}
               >
                 {/* Collage / Carrusel */}
                 <div className="aspect-[4/5] overflow-hidden">
-                  {showCarousel ? (
+                  {showCarouselArcon ? (
                     // Carrusel
                     <motion.img
-                      key={currentImage}
+                      key={currentImageArcon}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5 }}
-                      src={arconImages[currentImage]}
-                      alt={`Arcón de los Recuerdos ${currentImage + 1}`}
+                      src={arconImages[currentImageArcon]}
+                      alt={`Arcón de los Recuerdos ${currentImageArcon + 1}`}
                       className="w-full h-full object-cover"
                     />
                   ) : (
                     // Collage de-portada
                     <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-0.5">
-                      <img src={img12} alt="1" className="w-full h-full object-cover row-span-1" />
-                      <img src={imgFaiwelPatty} alt="2" className="w-full h-full object-cover row-span-1" />
-                      <img src={imgFoto003} alt="3" className="w-full h-full object-cover row-span-1" />
+                      <img src={arconImg1} alt="1" className="w-full h-full object-cover row-span-1" />
+                      <img src={arconImg2} alt="2" className="w-full h-full object-cover row-span-1" />
+                      <img src={arconImg3} alt="3" className="w-full h-full object-cover row-span-1" />
                       <div className="relative row-span-1">
-                        <img src={imgTallerPatty} alt="4" className="w-full h-full object-cover" />
-                        <img src={imgTallerAlbum} alt="5" className="w-1/2 h-1/2 object-cover absolute bottom-0 right-0" />
+                        <img src={arconImg4} alt="4" className="w-full h-full object-cover" />
+                        <img src={arconImg5} alt="5" className="w-1/2 h-1/2 object-cover absolute bottom-0 right-0" />
                       </div>
                     </div>
                   )}
                   
                   {/* Botones de navegación (solo cuando está el carrusel) */}
-                  {showCarousel && (
+                  {showCarouselArcon && (
                     <>
                       <button
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          setCurrentImage((prev) => (prev === 0 ? arconImages.length - 1 : prev - 1));
+                          setCurrentImageArcon((prev) => (prev === 0 ? arconImages.length - 1 : prev - 1));
                         }}
                         className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
                       >
@@ -420,7 +553,7 @@ const About = () => {
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          setCurrentImage((prev) => (prev === arconImages.length - 1 ? 0 : prev + 1));
+                          setCurrentImageArcon((prev) => (prev === arconImages.length - 1 ? 0 : prev + 1));
                         }}
                         className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
                       >
@@ -437,10 +570,10 @@ const About = () => {
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
-                              setCurrentImage(index);
+                              setCurrentImageArcon(index);
                             }}
                             className={`w-2 h-2 rounded-full transition-colors ${
-                              currentImage === index ? 'bg-stone-900' : 'bg-white/50'
+                              currentImageArcon === index ? 'bg-stone-900' : 'bg-white/50'
                             }`}
                           />
                         ))}
