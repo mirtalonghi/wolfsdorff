@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import CarouselCard from '../components/CarouselCard';
 import portrait from '../assets/images/16.jpg';
-import backgroundMusic from '../assets/17 Johann Sebastian Bach - Air On The G String,1723.mp3';
+import backgroundMusic from '../assets/17-Johann-Sebastian-Bach-Air-On-The-G-String-1723.mp3';
 // Taller images
 import tallerImg1 from '../assets/images/Taller/12.jpg';
 import tallerImg2 from '../assets/images/Taller/Faiwel-y-Patty-15Oct2008.JPG';
