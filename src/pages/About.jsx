@@ -1,15 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import CarouselCard from '../components/CarouselCard';
 import portrait from '../assets/images/16.jpg';
 import backgroundMusic from '../assets/17 Johann Sebastian Bach - Air On The G String,1723.mp3';
-import img12 from '../assets/images/12.jpg';
-import imgFaiwelPatty from '../assets/images/Faiwel y Patty 15Oct2008.JPG';
-import imgFoto003 from '../assets/images/foto003.jpg';
-import imgTallerPatty from '../assets/images/Taller-Patty.jpg';
-import imgTallerAlbum from '../assets/images/Taller-Pattyalbum-06.jpg';
 // Taller images
 import tallerImg1 from '../assets/images/Taller/12.jpg';
-import tallerImg2 from '../assets/images/Taller/16.jpg';
+import tallerImg2 from '../assets/images/Taller/Faiwel-y-Patty-15Oct2008.JPG';
 import tallerImg3 from '../assets/images/Taller/foto003.jpg';
 import tallerImg4 from '../assets/images/Taller/Taller-Patty.jpg';
 import tallerImg5 from '../assets/images/Taller/Taller-Pattyalbum-06.jpg';
@@ -39,70 +35,36 @@ import arconImg79 from '../assets/images/ElArconDeLosRecuerdos/escanear0079.jpg'
 import arconImg80 from '../assets/images/ElArconDeLosRecuerdos/escanear0080.jpg';
 import arconImg81 from '../assets/images/ElArconDeLosRecuerdos/escanear0081.jpg';
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
-};
-
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
-  animate: { 
+  animate: {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" }
   },
-  exit: { 
+  exit: {
     opacity: 0,
     y: -20,
     transition: { duration: 0.4, ease: "easeIn" }
   }
 };
 
+const arconImages = [
+  arconImg1, arconImg2, arconImg3, arconImg4, arconImg5,
+  arconImg6, arconImg7, arconImg8, arconImg9, arconImg11,
+  arconImg12, arconImg14, arconImg15, arconImg16, arconImg17,
+  arconImg18, arconImg73, arconImg74, arconImg75, arconImg77,
+  arconImg78, arconImg79, arconImg80, arconImg81
+];
+
+const tallerImages = [tallerImg1, tallerImg2, tallerImg3, tallerImg4, tallerImg5];
+
 const About = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentImageTaller, setCurrentImageTaller] = useState(0);
-  const [showCarouselTaller, setShowCarouselTaller] = useState(false);
-  const [currentImageArcon, setCurrentImageArcon] = useState(0);
-  const [showCarouselArcon, setShowCarouselArcon] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
-
-  const arconImages = [
-    arconImg1,
-    arconImg2,
-    arconImg3,
-    arconImg4,
-    arconImg5,
-    arconImg6,
-    arconImg7,
-    arconImg8,
-    arconImg9,
-    arconImg11,
-    arconImg12,
-    arconImg14,
-    arconImg15,
-    arconImg16,
-    arconImg17,
-    arconImg18,
-    arconImg73,
-    arconImg74,
-    arconImg75,
-    arconImg77,
-    arconImg78,
-    arconImg79,
-    arconImg80,
-    arconImg81
-  ];
-
-  const tallerImages = [
-    tallerImg1,
-    tallerImg2,
-    tallerImg3,
-    tallerImg4,
-    tallerImg5
-  ];
+  const [modalImages, setModalImages] = useState(arconImages);
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -158,7 +120,7 @@ const About = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={arconImages[modalImageIndex]}
+              src={modalImages[modalImageIndex]}
               alt={`Imagen ${modalImageIndex + 1}`}
               className="max-w-full max-h-[80vh] object-contain"
             />
@@ -168,7 +130,7 @@ const About = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setModalImageIndex((prev) => (prev === 0 ? arconImages.length - 1 : prev - 1));
+              setModalImageIndex((prev) => (prev === 0 ? modalImages.length - 1 : prev - 1));
             }}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white"
           >
@@ -179,7 +141,7 @@ const About = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setModalImageIndex((prev) => (prev === arconImages.length - 1 ? 0 : prev + 1));
+              setModalImageIndex((prev) => (prev === modalImages.length - 1 ? 0 : prev + 1));
             }}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white"
           >
@@ -190,16 +152,15 @@ const About = () => {
 
           {/* Indicadores */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
-            {arconImages.map((_, index) => (
+            {modalImages.map((_, index) => (
               <button
                 key={index}
                 onClick={(e) => {
                   e.stopPropagation();
                   setModalImageIndex(index);
                 }}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  modalImageIndex === index ? 'bg-white' : 'bg-white/40'
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors ${modalImageIndex === index ? 'bg-white' : 'bg-white/40'
+                  }`}
               />
             ))}
           </div>
@@ -227,14 +188,14 @@ const About = () => {
 
       <div className="container-custom">
         {/* Info Cards Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
           <h2 className="text-3xl font-serif text-center mb-12 text-stone-900">Explorar</h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Biografía Card - Large with full content */}
             <motion.div
@@ -246,14 +207,14 @@ const About = () => {
             >
               {/* Card Header */}
               <div className="text-center pt-12 pb-6 px-8">
-                <motion.span 
+                <motion.span
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-4"
                 >
                   Biografía
                 </motion.span>
-                <motion.h1 
+                <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
@@ -261,7 +222,7 @@ const About = () => {
                 >
                   El Arquitecto de los Sueños
                 </motion.h1>
-                <motion.div 
+                <motion.div
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -271,15 +232,15 @@ const About = () => {
 
               {/* Portrait */}
               <div className="px-8 pb-4">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <div className="relative overflow-hidden">
-                    <img 
+                    <img
                       src={portrait}
-                      alt="Faiwel Wolfsdorf" 
+                      alt="Faiwel Wolfsdorf"
                       className="w-full h-auto shadow-xl"
                     />
                   </div>
@@ -296,7 +257,7 @@ const About = () => {
                   <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-stone-900">N</span>
                   acido en Varsovia en 1921 y renacido bajo el cielo del sur, <strong className="text-stone-900">Faiwel Wolfsdorf (1921–2011)</strong> trazó un puente invisible entre la vieja Europa y la vibrante energía de América Latina. Su travesía vital, que lo llevó desde Polonia a Buenos Aires y finalmente a echar raíces en el Perú, forjó una sensibilidad única ante el desarraigo y la pertenencia.
                 </motion.p>
-                
+
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -304,7 +265,7 @@ const About = () => {
                 >
                   Discípulo del automatismo inconsciente y la psicología de la forma —influenciado profundamente por el maestro <strong className="text-stone-900">Juan Batlle Planas</strong>—, Wolfsdorf no pintaba lo que veía, sino lo que sentía latir bajo la superficie de la realidad.
                 </motion.p>
-                
+
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -313,7 +274,7 @@ const About = () => {
                   Su legado trasciende el lienzo: dedicó décadas a transformar vidas a través del arte, guiando a niños y jóvenes ("De pirañas a delfines") a encontrar su propia voz a través del color.
                 </motion.p>
 
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
@@ -325,7 +286,7 @@ const About = () => {
                   </p>
                 </motion.div>
 
-                <motion.h3 
+                <motion.h3
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
@@ -344,7 +305,7 @@ const About = () => {
               </div>
 
               {/* Exhibitions */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -359,7 +320,7 @@ const About = () => {
                     </div>
                     <span className="text-stone-900 font-serif text-sm">Colección Permanente</span>
                   </div>
-                  
+
                   <div className="flex flex-col md:flex-row md:items-center justify-between group hover:bg-stone-100 p-3 transition-colors">
                     <div>
                       <h4 className="text-base font-serif text-stone-900">Salón de Arte Moderno</h4>
@@ -381,98 +342,13 @@ const About = () => {
 
             {/* Other Cards Column */}
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 content-start">
-              {/* Taller Card - with Arcón content */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="group bg-stone-50 transition-all duration-300 cursor-pointer"
-                onClick={() => {
-                  setModalImageIndex(0);
-                  setShowModal(true);
-                }}
-                onMouseEnter={() => setShowCarouselTaller(true)}
-                onMouseLeave={() => setShowCarouselTaller(false)}
-              >
-                {/* Collage / Carrusel */}
-                <div className="aspect-[4/5] overflow-hidden">
-                  {showCarouselTaller ? (
-                    // Carrusel
-                    <motion.img
-                      key={currentImageTaller}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                      src={arconImages[currentImageTaller]}
-                      alt={`Taller ${currentImageTaller + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    // Collage de-portada
-                    <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-0.5">
-                      <img src={imgTallerPatty} alt="1" className="w-full h-full object-cover row-span-1" />
-                      <img src={imgTallerAlbum} alt="2" className="w-full h-full object-cover row-span-1" />
-                      <img src={img12} alt="3" className="w-full h-full object-cover row-span-1" />
-                      <div className="relative row-span-1">
-                        <img src={imgFaiwelPatty} alt="4" className="w-full h-full object-cover" />
-                        <img src={imgFoto003} alt="5" className="w-1/2 h-1/2 object-cover absolute bottom-0 right-0" />
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Botones de navegación (solo cuando está el carrusel) */}
-                  {showCarouselTaller && (
-                    <>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setCurrentImageTaller((prev) => (prev === 0 ? arconImages.length - 1 : prev - 1));
-                        }}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setCurrentImageTaller((prev) => (prev === arconImages.length - 1 ? 0 : prev + 1));
-                        }}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-
-                      {/* Indicadores */}
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                        {arconImages.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              setCurrentImageTaller(index);
-                            }}
-                            className={`w-2 h-2 rounded-full transition-colors ${
-                              currentImageTaller === index ? 'bg-stone-900' : 'bg-white/50'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-serif text-stone-900 mb-2">Taller</h3>
-                  <p className="text-sm text-stone-500">El espacio de creación</p>
-                </div>
-              </motion.div>
+              <CarouselCard
+                images={tallerImages}
+                title="Taller"
+                description="El espacio de creación"
+                delay={0.1}
+                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setShowModal(true); }}
+              />
 
               {/* Fotos Cotidianas Card */}
               <motion.div
@@ -494,98 +370,13 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Arcón de los Recuerdos Card - with images */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="group bg-stone-50 transition-all duration-300 cursor-pointer"
-                onClick={() => {
-                  setModalImageIndex(0);
-                  setShowModal(true);
-                }}
-                onMouseEnter={() => setShowCarouselArcon(true)}
-                onMouseLeave={() => setShowCarouselArcon(false)}
-              >
-                {/* Collage / Carrusel */}
-                <div className="aspect-[4/5] overflow-hidden">
-                  {showCarouselArcon ? (
-                    // Carrusel
-                    <motion.img
-                      key={currentImageArcon}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                      src={arconImages[currentImageArcon]}
-                      alt={`Arcón de los Recuerdos ${currentImageArcon + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    // Collage de-portada
-                    <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-0.5">
-                      <img src={arconImg1} alt="1" className="w-full h-full object-cover row-span-1" />
-                      <img src={arconImg2} alt="2" className="w-full h-full object-cover row-span-1" />
-                      <img src={arconImg3} alt="3" className="w-full h-full object-cover row-span-1" />
-                      <div className="relative row-span-1">
-                        <img src={arconImg4} alt="4" className="w-full h-full object-cover" />
-                        <img src={arconImg5} alt="5" className="w-1/2 h-1/2 object-cover absolute bottom-0 right-0" />
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Botones de navegación (solo cuando está el carrusel) */}
-                  {showCarouselArcon && (
-                    <>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setCurrentImageArcon((prev) => (prev === 0 ? arconImages.length - 1 : prev - 1));
-                        }}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setCurrentImageArcon((prev) => (prev === arconImages.length - 1 ? 0 : prev + 1));
-                        }}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-
-                      {/* Indicadores */}
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                        {arconImages.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              setCurrentImageArcon(index);
-                            }}
-                            className={`w-2 h-2 rounded-full transition-colors ${
-                              currentImageArcon === index ? 'bg-stone-900' : 'bg-white/50'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-serif text-stone-900 mb-2">Arcón de los Recuerdos</h3>
-                  <p className="text-sm text-stone-500">Cápsula del tiempo</p>
-                </div>
-              </motion.div>
+              <CarouselCard
+                images={arconImages}
+                title="Arcón de los Recuerdos"
+                description="Cápsula del tiempo"
+                delay={0.4}
+                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setShowModal(true); }}
+              />
             </div>
           </div>
         </motion.div>
