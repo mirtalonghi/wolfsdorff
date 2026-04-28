@@ -32,7 +32,7 @@ const Criticas = () => {
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">
             Prensa & Crítica
           </span>
-          <h1 className="text-4xl font-serif mb-8 text-stone-900">Críticas de Prensa</h1>
+          <h1 className="text-4xl font-serif mb-8 text-stone-900">Críticas</h1>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             Voces de la prensa internacional que documentaron la trayectoria de Faiwel Wolfsdorf a lo largo de las décadas.
           </p>
