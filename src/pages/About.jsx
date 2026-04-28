@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import CarouselCard from '../components/CarouselCard';
+import ImageLightbox from '../components/ImageLightbox';
 import portrait from '../assets/images/16.jpg';
 import backgroundMusic from '../assets/17-Johann-Sebastian-Bach-Air-On-The-G-String-1723.mp3';
 // Taller images
@@ -141,9 +142,7 @@ const About = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [modalImageIndex, setModalImageIndex] = useState(0);
   const [modalImages, setModalImages] = useState(arconImages);
-  const [zoom, setZoom] = useState(false);
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -169,107 +168,16 @@ const About = () => {
         <source src={backgroundMusic} type="audio/mpeg" />
       </audio>
 
-      {/* Modal para Arcón de los Recuerdos */}
-      {showModal && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
-          onClick={() => setShowModal(false)}
-        >
-          {/* Botón cerrar */}
-          <button
-            onClick={() => setShowModal(false)}
-            className="absolute top-6 right-6 text-white hover:text-stone-300 z-10"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-
-          {/* Imagen principal */}
-          <motion.div
-            key={modalImageIndex}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="relative mx-4 overflow-hidden flex items-center justify-center"
-            style={{ maxWidth: zoom ? '90vw' : '56rem', maxHeight: '80vh' }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <motion.img
-              src={modalImages[modalImageIndex]}
-              alt={`Imagen ${modalImageIndex + 1}`}
-              className={`max-w-full max-h-[80vh] object-contain select-none ${zoom ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
-              animate={{ scale: zoom ? 2.5 : 1 }}
-              transition={{ duration: 0.3 }}
-              drag={zoom}
-              dragElastic={0.05}
-              dragConstraints={{ left: -600, right: 600, top: -400, bottom: 400 }}
-              onTap={() => setZoom(z => !z)}
-            />
-            <button
-              className="absolute bottom-3 right-3 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
-              onClick={(e) => { e.stopPropagation(); setZoom(z => !z); }}
-              title={zoom ? 'Alejar' : 'Acercar'}
-            >
-              {zoom ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/>
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-                </svg>
-              )}
-            </button>
-          </motion.div>
-
-          {/* Botones navegación */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setZoom(false);
-              setModalImageIndex((prev) => (prev === 0 ? modalImages.length - 1 : prev - 1));
-            }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setZoom(false);
-              setModalImageIndex((prev) => (prev === modalImages.length - 1 ? 0 : prev + 1));
-            }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-
-          {/* Indicadores */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
-            {modalImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setZoom(false);
-                  setModalImageIndex(index);
-                }}
-                className={`w-3 h-3 rounded-full transition-colors ${modalImageIndex === index ? 'bg-white' : 'bg-white/40'
-                  }`}
-              />
-            ))}
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {showModal && (
+          <ImageLightbox
+            images={modalImages}
+            initialIndex={0}
+            onClose={() => setShowModal(false)}
+            dots
+          />
+        )}
+      </AnimatePresence>
 
       {/* Music Control Button */}
       <button
@@ -451,7 +359,7 @@ const About = () => {
                 title="Taller"
                 description="El espacio de creación"
                 delay={0.1}
-                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setZoom(false); setShowModal(true); }}
+                onOpen={(imgs) => { setModalImages(imgs); setShowModal(true); }}
               />
 
               <CarouselCard
@@ -459,7 +367,7 @@ const About = () => {
                 title="Fotos Cotidianas"
                 description="Momentos de la vida"
                 delay={0.2}
-                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setZoom(false); setShowModal(true); }}
+                onOpen={(imgs) => { setModalImages(imgs); setShowModal(true); }}
               />
 
               <CarouselCard
@@ -467,7 +375,7 @@ const About = () => {
                 title="Arcón de los Recuerdos"
                 description="Cápsula del tiempo"
                 delay={0.4}
-                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setZoom(false); setShowModal(true); }}
+                onOpen={(imgs) => { setModalImages(imgs); setShowModal(true); }}
               />
             </div>
           </div>

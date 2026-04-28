@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import galleries from '../data/galleries.json';
 import GalleryGrid from '../components/GalleryGrid';
+import ImageLightbox from '../components/ImageLightbox';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
@@ -27,8 +28,6 @@ const Portfolio = () => {
     : galleries.find(g => g.id === selectedId);
 
   const closeLightbox = () => setLightbox(null);
-  const prev = (e) => { e.stopPropagation(); setLightbox(lb => ({ ...lb, index: lb.index === 0 ? lb.images.length - 1 : lb.index - 1 })); };
-  const next = (e) => { e.stopPropagation(); setLightbox(lb => ({ ...lb, index: lb.index === lb.images.length - 1 ? 0 : lb.index + 1 })); };
 
   return (
     <motion.div
@@ -38,57 +37,13 @@ const Portfolio = () => {
       animate="animate"
       exit="exit"
     >
-      {/* Lightbox */}
       <AnimatePresence>
         {lightbox && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
-            onClick={closeLightbox}
-          >
-            <button
-              onClick={closeLightbox}
-              className="absolute top-6 right-6 text-white/70 hover:text-white z-10 p-2"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            </button>
-
-            <motion.img
-              key={lightbox.index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.25 }}
-              src={lightbox.images[lightbox.index]}
-              alt=""
-              className="max-w-[88vw] max-h-[88vh] object-contain"
-              onClick={e => e.stopPropagation()}
-            />
-
-            <button
-              onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 p-3 rounded-full text-white"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="15 18 9 12 15 6"/>
-              </svg>
-            </button>
-            <button
-              onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 p-3 rounded-full text-white"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="9 18 15 12 9 6"/>
-              </svg>
-            </button>
-
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/50 text-sm">
-              {lightbox.index + 1} / {lightbox.images.length}
-            </div>
-          </motion.div>
+          <ImageLightbox
+            images={lightbox.images}
+            initialIndex={lightbox.index}
+            onClose={closeLightbox}
+          />
         )}
       </AnimatePresence>
 

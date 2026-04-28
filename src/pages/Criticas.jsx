@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CriticaCard from '../components/CriticaCard';
-import CriticaLightbox from '../components/CriticaLightbox';
+import ImageLightbox from '../components/ImageLightbox';
 import { publicaciones, archivoPrensa } from '../data/criticasData';
 
 const pageTransition = {
@@ -16,10 +16,6 @@ const Criticas = () => {
   const openPublication = (pub) => setLightbox({ images: pub.imagenes, index: 0 });
   const openArchive = (i) => setLightbox({ images: archivoPrensa, index: i });
   const close = () => setLightbox(null);
-  const prev = () =>
-    setLightbox((lb) => ({ ...lb, index: (lb.index - 1 + lb.images.length) % lb.images.length }));
-  const next = () =>
-    setLightbox((lb) => ({ ...lb, index: (lb.index + 1) % lb.images.length }));
 
   return (
     <motion.div
@@ -94,12 +90,10 @@ const Criticas = () => {
 
       <AnimatePresence>
         {lightbox && (
-          <CriticaLightbox
+          <ImageLightbox
             images={lightbox.images}
-            index={lightbox.index}
+            initialIndex={lightbox.index}
             onClose={close}
-            onPrev={prev}
-            onNext={next}
           />
         )}
       </AnimatePresence>
