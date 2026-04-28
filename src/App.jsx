@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Gallery from './pages/Gallery';
+import Criticas from './pages/Criticas';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/criticas" element={<Criticas />} />
           <Route path="/legacy" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

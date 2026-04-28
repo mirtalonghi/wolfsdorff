@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setIsMenuOpen(false);
-    setIsGalleryOpen(false);
   }, [location]);
 
   const navLinks = [
     { name: 'Inicio', path: '/' },
     { name: 'Sobre el Artista', path: '/about' },
     { name: 'Obras', path: '/portfolio' },
-    { name: 'Galería', hasSubmenu: true, submenu: [
-      { name: 'Colección', path: '/portfolio' },
-      { name: 'Exposiciones', path: '/gallery' },
-    ]},
+    { name: 'Exposiciones', path: '/gallery' },
+    { name: 'Críticas', path: '/criticas' },
     { name: 'Legado', path: '/legacy' },
     { name: 'Contacto', path: '/contact' },
   ];
