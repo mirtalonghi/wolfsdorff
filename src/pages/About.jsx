@@ -34,6 +34,74 @@ import arconImg78 from '../assets/images/ElArconDeLosRecuerdos/escanear0078.jpg'
 import arconImg79 from '../assets/images/ElArconDeLosRecuerdos/escanear0079.jpg';
 import arconImg80 from '../assets/images/ElArconDeLosRecuerdos/escanear0080.jpg';
 import arconImg81 from '../assets/images/ElArconDeLosRecuerdos/escanear0081.jpg';
+// Con-alumnos-y-amigos images
+import ca1 from '../assets/images/Con-alumnos-y-amigos/13.jpg';
+import ca2 from '../assets/images/Con-alumnos-y-amigos/14.jpg';
+import ca3 from '../assets/images/Con-alumnos-y-amigos/17.jpg';
+import ca4 from '../assets/images/Con-alumnos-y-amigos/18.jpg';
+import ca5 from '../assets/images/Con-alumnos-y-amigos/19.jpg';
+import ca6 from '../assets/images/Con-alumnos-y-amigos/1b.jpg';
+import ca7 from '../assets/images/Con-alumnos-y-amigos/21.jpg';
+import ca8 from '../assets/images/Con-alumnos-y-amigos/26.jpg';
+import ca9 from '../assets/images/Con-alumnos-y-amigos/27.jpg';
+import ca10 from '../assets/images/Con-alumnos-y-amigos/2b.jpg';
+import ca11 from '../assets/images/Con-alumnos-y-amigos/3.jpg';
+import ca12 from '../assets/images/Con-alumnos-y-amigos/35.jpg';
+import ca13 from '../assets/images/Con-alumnos-y-amigos/4.jpg';
+import ca14 from '../assets/images/Con-alumnos-y-amigos/40.jpg';
+import ca15 from '../assets/images/Con-alumnos-y-amigos/42.jpg';
+import ca16 from '../assets/images/Con-alumnos-y-amigos/43.jpg';
+import ca17 from '../assets/images/Con-alumnos-y-amigos/44.jpg';
+import ca18 from '../assets/images/Con-alumnos-y-amigos/46.jpg';
+import ca19 from '../assets/images/Con-alumnos-y-amigos/5.jpg';
+import ca20 from '../assets/images/Con-alumnos-y-amigos/8b.jpg';
+import ca21 from '../assets/images/Con-alumnos-y-amigos/9b.jpg';
+import ca22 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-21AGO2008.jpg';
+import ca23 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-23JUL2009-1.jpg';
+import ca24 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-23JUL2009-2.jpg';
+import ca25 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-23JUL2009-3.jpg';
+import ca26 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-23JUL2009-5.jpg';
+import ca27 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-23JUL2009-6.jpg';
+import ca28 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-con-Eleana-Sara-Patty-Rinske-Delia-2.JPG';
+import ca29 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-con-Eleana-Sara-Patty-Rinske-Delia-3.JPG';
+import ca30 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-con-Eleana-Sara-Patty-Rinske-Delia.JPG';
+import ca31 from '../assets/images/Con-alumnos-y-amigos/Faiwel-con-Patricia-Rodriguez-Mejia-y-Sara-Sterental.JPG';
+import ca32 from '../assets/images/Con-alumnos-y-amigos/Faiwel-con-su-hija-Noemi-Patty-Cubas-y-Patty-Rodriguez-Mejia.JPG';
+import ca33 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-Vico-Doig-Bert-Engelhard.JPG';
+import ca34 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-Vico-Doig-Sara-Sterental.jpg';
+import ca35 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-Doris-Sumar.JPG';
+import ca36 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-Patricia-Rodriguez-Mejia.JPG';
+import ca37 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-Patty-1992-2.JPG';
+import ca38 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-Patty-1992.jpg';
+import ca39 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-Patty-2003-3.JPG';
+import ca40 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-Patty-2003.JPG';
+import ca41 from '../assets/images/Con-alumnos-y-amigos/Faiwel-y-Patty-27Abr2010-2.JPG';
+import ca42 from '../assets/images/Con-alumnos-y-amigos/Faiwel-y-Patty-27Abr2010.JPG';
+import ca43 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-su-nena-Patty-Cubas-2.JPG';
+import ca44 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-su-nena-Patty-Cubas-3.JPG';
+import ca45 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-su-nena-Patty-Cubas-4.JPG';
+import ca46 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-su-nena-Patty-Cubas-5.JPG';
+import ca47 from '../assets/images/Con-alumnos-y-amigos/FAIWEL-y-su-nena-Patty-Cubas.JPG';
+import ca48 from '../assets/images/Con-alumnos-y-amigos/foto001.jpg';
+import ca49 from '../assets/images/Con-alumnos-y-amigos/foto005.jpg';
+import ca50 from '../assets/images/Con-alumnos-y-amigos/foto006.jpg';
+import ca51 from '../assets/images/Con-alumnos-y-amigos/P1000867.jpeg';
+import ca52 from '../assets/images/Con-alumnos-y-amigos/P1000958.jpeg';
+import ca53 from '../assets/images/Con-alumnos-y-amigos/SCAN_1.jpg';
+import ca54 from '../assets/images/Con-alumnos-y-amigos/SCAN_11.jpg';
+import ca55 from '../assets/images/Con-alumnos-y-amigos/SCAN_12.jpg';
+import ca56 from '../assets/images/Con-alumnos-y-amigos/SCAN_5.jpg';
+import ca57 from '../assets/images/Con-alumnos-y-amigos/SCAN_6.jpg';
+import ca58 from '../assets/images/Con-alumnos-y-amigos/SCAN_7.jpg';
+// Familiares images
+import fam1 from '../assets/images/Familiares/Faiwel-Wolfsdorf-con-su-hija-Noemi-W..JPG';
+import fam2 from '../assets/images/Familiares/Faiwel-Wolfsdorf-con-su-hija-Noemi.JPG';
+import fam3 from '../assets/images/Familiares/P1000861.jpeg';
+import fam4 from '../assets/images/Familiares/P1000862.jpeg';
+import fam5 from '../assets/images/Familiares/P1000863.jpeg';
+import fam6 from '../assets/images/Familiares/P1000864.jpeg';
+import fam7 from '../assets/images/Familiares/P1000865.jpeg';
+import fam8 from '../assets/images/Familiares/SCAN_8.jpg';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
@@ -59,12 +127,23 @@ const arconImages = [
 
 const tallerImages = [tallerImg1, tallerImg2, tallerImg3, tallerImg4, tallerImg5];
 
+const fotosImages = [
+  ca1, ca2, ca3, ca4, ca5, ca6, ca7, ca8, ca9, ca10,
+  ca11, ca12, ca13, ca14, ca15, ca16, ca17, ca18, ca19, ca20,
+  ca21, ca22, ca23, ca24, ca25, ca26, ca27, ca28, ca29, ca30,
+  ca31, ca32, ca33, ca34, ca35, ca36, ca37, ca38, ca39, ca40,
+  ca41, ca42, ca43, ca44, ca45, ca46, ca47, ca48, ca49, ca50,
+  ca51, ca52, ca53, ca54, ca55, ca56, ca57, ca58,
+  fam1, fam2, fam3, fam4, fam5, fam6, fam7, fam8
+];
+
 const About = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
   const [modalImages, setModalImages] = useState(arconImages);
+  const [zoom, setZoom] = useState(false);
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -116,20 +195,43 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative max-w-4xl max-h-[80vh] mx-4"
+            className="relative mx-4 overflow-hidden flex items-center justify-center"
+            style={{ maxWidth: zoom ? '90vw' : '56rem', maxHeight: '80vh' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <img
+            <motion.img
               src={modalImages[modalImageIndex]}
               alt={`Imagen ${modalImageIndex + 1}`}
-              className="max-w-full max-h-[80vh] object-contain"
+              className={`max-w-full max-h-[80vh] object-contain select-none ${zoom ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
+              animate={{ scale: zoom ? 2.5 : 1 }}
+              transition={{ duration: 0.3 }}
+              drag={zoom}
+              dragElastic={0.05}
+              dragConstraints={{ left: -600, right: 600, top: -400, bottom: 400 }}
+              onTap={() => setZoom(z => !z)}
             />
+            <button
+              className="absolute bottom-3 right-3 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
+              onClick={(e) => { e.stopPropagation(); setZoom(z => !z); }}
+              title={zoom ? 'Alejar' : 'Acercar'}
+            >
+              {zoom ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              )}
+            </button>
           </motion.div>
 
           {/* Botones navegación */}
           <button
             onClick={(e) => {
               e.stopPropagation();
+              setZoom(false);
               setModalImageIndex((prev) => (prev === 0 ? modalImages.length - 1 : prev - 1));
             }}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white"
@@ -141,6 +243,7 @@ const About = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
+              setZoom(false);
               setModalImageIndex((prev) => (prev === modalImages.length - 1 ? 0 : prev + 1));
             }}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white"
@@ -157,6 +260,7 @@ const About = () => {
                 key={index}
                 onClick={(e) => {
                   e.stopPropagation();
+                  setZoom(false);
                   setModalImageIndex(index);
                 }}
                 className={`w-3 h-3 rounded-full transition-colors ${modalImageIndex === index ? 'bg-white' : 'bg-white/40'
@@ -347,35 +451,23 @@ const About = () => {
                 title="Taller"
                 description="El espacio de creación"
                 delay={0.1}
-                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setShowModal(true); }}
+                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setZoom(false); setShowModal(true); }}
               />
 
-              {/* Fotos Cotidianas Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                whileHover={{ y: -8 }}
-                className="group bg-stone-50 hover:bg-stone-100 transition-all duration-300 cursor-pointer"
-              >
-                <div className="aspect-[4/5] overflow-hidden">
-                  <div className="w-full h-full bg-stone-200 flex items-center justify-center">
-                    <span className="text-6xl text-stone-400">📷</span>
-                  </div>
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-serif text-stone-900 mb-2">Fotos Cotidianas</h3>
-                  <p className="text-sm text-stone-500">Momentos de la vida</p>
-                </div>
-              </motion.div>
+              <CarouselCard
+                images={fotosImages}
+                title="Fotos Cotidianas"
+                description="Momentos de la vida"
+                delay={0.2}
+                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setZoom(false); setShowModal(true); }}
+              />
 
               <CarouselCard
                 images={arconImages}
                 title="Arcón de los Recuerdos"
                 description="Cápsula del tiempo"
                 delay={0.4}
-                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setShowModal(true); }}
+                onOpen={(imgs) => { setModalImages(imgs); setModalImageIndex(0); setZoom(false); setShowModal(true); }}
               />
             </div>
           </div>
