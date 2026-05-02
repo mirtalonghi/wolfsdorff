@@ -31,16 +31,16 @@ const Criticas = () => {
 
         {/* Encabezado */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 dark:text-stone-400 block mb-6">
             {t('criticasPage.subtitle')}
           </span>
-          <h1 className="text-4xl font-serif mb-8 text-stone-900">{t('criticasPage.title')}</h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">{t('criticasPage.intro')}</p>
+          <h1 className="text-4xl font-serif mb-8 text-stone-900 dark:text-stone-100">{t('criticasPage.title')}</h1>
+          <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">{t('criticasPage.intro')}</p>
         </div>
 
         {/* Publicaciones nombradas */}
         <section className="mb-20">
-          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 text-center mb-10">
+          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 dark:text-stone-500 text-center mb-10">
             {t('criticasPage.publicaciones')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -54,14 +54,14 @@ const Criticas = () => {
           </div>
         </section>
 
-        <div className="border-t border-stone-200 my-4" />
+        <div className="border-t border-stone-200 dark:border-stone-700 my-4" />
 
         {/* Archivo de prensa */}
         <section className="mt-16">
-          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 text-center mb-3">
+          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 dark:text-stone-500 text-center mb-3">
             {t('criticasPage.archivoTitle')}
           </h2>
-          <p className="text-sm text-stone-500 text-center mb-10 max-w-lg mx-auto">
+          <p className="text-sm text-stone-500 dark:text-stone-400 text-center mb-10 max-w-lg mx-auto">
             {t('criticasPage.archivoIntro')}
           </p>
           <div className="columns-2 md:columns-3 lg:columns-4 gap-3">

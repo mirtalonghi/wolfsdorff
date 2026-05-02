@@ -11,31 +11,31 @@ import tallerImg2 from '../assets/images/Taller/Faiwel-y-Patty-15Oct2008.JPG';
 import tallerImg3 from '../assets/images/Taller/foto003.jpg';
 import tallerImg4 from '../assets/images/Taller/Taller-Patty.jpg';
 import tallerImg5 from '../assets/images/Taller/Taller-Pattyalbum-06.jpg';
-// ElArconDeLosRecuerdos images
-import arconImg1 from '../assets/images/ElArconDeLosRecuerdos/escanear0001.jpg';
-import arconImg2 from '../assets/images/ElArconDeLosRecuerdos/escanear0002.jpg';
-import arconImg3 from '../assets/images/ElArconDeLosRecuerdos/escanear0003.jpg';
-import arconImg4 from '../assets/images/ElArconDeLosRecuerdos/escanear0004.jpg';
-import arconImg5 from '../assets/images/ElArconDeLosRecuerdos/escanear0005.jpg';
-import arconImg6 from '../assets/images/ElArconDeLosRecuerdos/escanear0006.jpg';
-import arconImg7 from '../assets/images/ElArconDeLosRecuerdos/escanear0007.jpg';
-import arconImg8 from '../assets/images/ElArconDeLosRecuerdos/escanear0008.jpg';
-import arconImg9 from '../assets/images/ElArconDeLosRecuerdos/escanear0009.jpg';
-import arconImg11 from '../assets/images/ElArconDeLosRecuerdos/escanear0011.jpg';
-import arconImg12 from '../assets/images/ElArconDeLosRecuerdos/escanear0012.jpg';
-import arconImg14 from '../assets/images/ElArconDeLosRecuerdos/escanear0014.jpg';
-import arconImg15 from '../assets/images/ElArconDeLosRecuerdos/escanear0015.jpg';
-import arconImg16 from '../assets/images/ElArconDeLosRecuerdos/escanear0016.jpg';
-import arconImg17 from '../assets/images/ElArconDeLosRecuerdos/escanear0017.jpg';
-import arconImg18 from '../assets/images/ElArconDeLosRecuerdos/escanear0018.jpg';
-import arconImg73 from '../assets/images/ElArconDeLosRecuerdos/escanear0073.jpg';
-import arconImg74 from '../assets/images/ElArconDeLosRecuerdos/escanear0074.jpg';
-import arconImg75 from '../assets/images/ElArconDeLosRecuerdos/escanear0075.jpg';
-import arconImg77 from '../assets/images/ElArconDeLosRecuerdos/escanear0077.jpg';
-import arconImg78 from '../assets/images/ElArconDeLosRecuerdos/escanear0078.jpg';
-import arconImg79 from '../assets/images/ElArconDeLosRecuerdos/escanear0079.jpg';
-import arconImg80 from '../assets/images/ElArconDeLosRecuerdos/escanear0080.jpg';
-import arconImg81 from '../assets/images/ElArconDeLosRecuerdos/escanear0081.jpg';
+// ElArconDeLosRecuerdos images (001.jpg–024.jpg, orden alfabético)
+import arconImg01 from '../assets/images/ElArconDeLosRecuerdos/001.jpg';
+import arconImg02 from '../assets/images/ElArconDeLosRecuerdos/002.jpg';
+import arconImg03 from '../assets/images/ElArconDeLosRecuerdos/003.jpg';
+import arconImg04 from '../assets/images/ElArconDeLosRecuerdos/004.jpg';
+import arconImg05 from '../assets/images/ElArconDeLosRecuerdos/005.jpg';
+import arconImg06 from '../assets/images/ElArconDeLosRecuerdos/006.jpg';
+import arconImg07 from '../assets/images/ElArconDeLosRecuerdos/007.jpg';
+import arconImg08 from '../assets/images/ElArconDeLosRecuerdos/008.jpg';
+import arconImg09 from '../assets/images/ElArconDeLosRecuerdos/009.jpg';
+import arconImg10 from '../assets/images/ElArconDeLosRecuerdos/010.jpg';
+import arconImg11 from '../assets/images/ElArconDeLosRecuerdos/011.jpg';
+import arconImg12 from '../assets/images/ElArconDeLosRecuerdos/012.jpg';
+import arconImg13 from '../assets/images/ElArconDeLosRecuerdos/013.jpg';
+import arconImg14 from '../assets/images/ElArconDeLosRecuerdos/014.jpg';
+import arconImg15 from '../assets/images/ElArconDeLosRecuerdos/015.jpg';
+import arconImg16 from '../assets/images/ElArconDeLosRecuerdos/016.jpg';
+import arconImg17 from '../assets/images/ElArconDeLosRecuerdos/017.jpg';
+import arconImg18 from '../assets/images/ElArconDeLosRecuerdos/018.jpg';
+import arconImg19 from '../assets/images/ElArconDeLosRecuerdos/019.jpg';
+import arconImg20 from '../assets/images/ElArconDeLosRecuerdos/020.jpg';
+import arconImg21 from '../assets/images/ElArconDeLosRecuerdos/021.jpg';
+import arconImg22 from '../assets/images/ElArconDeLosRecuerdos/022.jpg';
+import arconImg23 from '../assets/images/ElArconDeLosRecuerdos/023.jpg';
+import arconImg24 from '../assets/images/ElArconDeLosRecuerdos/024.jpg';
 // Con-alumnos-y-amigos images
 import ca1 from '../assets/images/Con-alumnos-y-amigos/13.jpg';
 import ca2 from '../assets/images/Con-alumnos-y-amigos/14.jpg';
@@ -120,11 +120,11 @@ const pageTransition = {
 };
 
 const arconImages = [
-  arconImg1, arconImg2, arconImg3, arconImg4, arconImg5,
-  arconImg6, arconImg7, arconImg8, arconImg9, arconImg11,
-  arconImg12, arconImg14, arconImg15, arconImg16, arconImg17,
-  arconImg18, arconImg73, arconImg74, arconImg75, arconImg77,
-  arconImg78, arconImg79, arconImg80, arconImg81
+  arconImg01, arconImg02, arconImg03, arconImg04, arconImg05,
+  arconImg06, arconImg07, arconImg08, arconImg09, arconImg10,
+  arconImg11, arconImg12, arconImg13, arconImg14, arconImg15,
+  arconImg16, arconImg17, arconImg18, arconImg19, arconImg20,
+  arconImg21, arconImg22, arconImg23, arconImg24,
 ];
 
 const tallerImages = [tallerImg1, tallerImg2, tallerImg3, tallerImg4, tallerImg5];
@@ -186,7 +186,7 @@ const About = () => {
       {/* Music Control Button */}
       <button
         onClick={toggleMusic}
-        className="fixed bottom-6 right-6 z-50 bg-stone-900 text-white p-4 rounded-full shadow-lg hover:bg-stone-700 transition-colors"
+        className="fixed bottom-6 right-6 z-50 bg-stone-900 text-white p-4 rounded-full shadow-lg hover:bg-stone-700 transition-colors dark:bg-stone-100 dark:text-stone-950 dark:hover:bg-stone-300"
         title={isPlaying ? t('about.musicPause') : t('about.musicPlay')}
       >
         {isPlaying ? (
@@ -215,7 +215,7 @@ const About = () => {
             aria-labelledby="about-bio-heading"
           >
             <div
-              className="pointer-events-none absolute right-0 top-0 h-40 w-40 translate-x-1/4 -translate-y-1/4 rounded-full bg-stone-200/40 blur-3xl"
+              className="pointer-events-none absolute right-0 top-0 h-40 w-40 translate-x-1/4 -translate-y-1/4 rounded-full bg-stone-200/40 blur-3xl dark:bg-stone-600/20"
               aria-hidden
             />
             <div
@@ -227,7 +227,7 @@ const About = () => {
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-xs uppercase tracking-[0.35em] text-stone-500"
+                className="text-xs uppercase tracking-[0.35em] text-stone-500 dark:text-stone-400"
               >
                 {t('about.bioLabel')}
               </motion.span>
@@ -236,7 +236,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-4 font-serif text-3xl leading-tight tracking-tight text-stone-900 md:text-4xl lg:text-[2.35rem]"
+                className="mt-4 font-serif text-3xl leading-tight tracking-tight text-stone-900 dark:text-stone-100 md:text-4xl lg:text-[2.35rem]"
               >
                 {t('about.bioTitle')}
               </motion.h1>
@@ -244,7 +244,7 @@ const About = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="mx-auto mt-8 h-px w-20 origin-center bg-gradient-to-r from-transparent via-stone-800 to-transparent"
+                className="mx-auto mt-8 h-px w-20 origin-center bg-gradient-to-r from-transparent via-stone-800 to-transparent dark:via-stone-500"
               />
             </header>
 
@@ -271,7 +271,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.05 }}
-                className="space-y-6 text-lg leading-[1.75] text-stone-700"
+                className="space-y-6 text-lg leading-[1.75] text-stone-700 dark:text-stone-300"
               >
                 <p>{t('about.bioP1')}</p>
                 <p>{t('about.bioP2')}</p>
@@ -285,13 +285,13 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="clear-both mt-10 space-y-4 border-t border-stone-200/90 pt-8"
+                className="clear-both mt-10 space-y-4 border-t border-stone-200/90 dark:border-stone-700/90 pt-8"
               >
-                <h3 className="font-serif text-xl text-stone-900">{t('about.techniquesTitle')}</h3>
-                <p className="text-sm leading-relaxed text-stone-700 md:text-[0.95rem]">
+                <h3 className="font-serif text-xl text-stone-900 dark:text-stone-100">{t('about.techniquesTitle')}</h3>
+                <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300 md:text-[0.95rem]">
                   <Trans
                     i18nKey="about.techniquesBody"
-                    components={{ auto: <strong className="font-semibold text-stone-900" /> }}
+                    components={{ auto: <strong className="font-semibold text-stone-900 dark:text-stone-100" /> }}
                   />
                 </p>
               </motion.div>
@@ -300,17 +300,17 @@ const About = () => {
 
           {/* Colecciones — después de la biografía */}
           <section className="relative pb-4" aria-labelledby="about-collections-heading">
-            <div className="mb-10 flex flex-col gap-6 border-b border-stone-200 pb-10 lg:mb-12 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12">
+            <div className="mb-10 flex flex-col gap-6 border-b border-stone-200 dark:border-stone-700 pb-10 lg:mb-12 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12">
               <div className="max-w-xl">
-                <p className="text-xs uppercase tracking-[0.35em] text-stone-500">{t('about.collectionsLabel')}</p>
+                <p className="text-xs uppercase tracking-[0.35em] text-stone-500 dark:text-stone-400">{t('about.collectionsLabel')}</p>
                 <h2
                   id="about-collections-heading"
-                  className="mt-3 font-serif text-2xl tracking-tight text-stone-900 md:text-3xl"
+                  className="mt-3 font-serif text-2xl tracking-tight text-stone-900 dark:text-stone-100 md:text-3xl"
                 >
                   {t('about.collectionsTitle')}
                 </h2>
               </div>
-              <p className="max-w-md text-sm leading-relaxed text-stone-600 lg:text-right lg:text-[0.9375rem]">
+              <p className="max-w-md text-sm leading-relaxed text-stone-600 dark:text-stone-400 lg:text-right lg:text-[0.9375rem]">
                 {t('about.collectionsSubtitle')}
               </p>
             </div>

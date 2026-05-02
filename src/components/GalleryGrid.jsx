@@ -29,7 +29,7 @@ const GalleryGrid = ({ images, galleryKey, onImageClick }) => {
 
   return (
     <>
-      <p className="text-center text-xs text-stone-400 uppercase tracking-widest mb-8">
+      <p className="text-center text-xs text-stone-400 dark:text-stone-500 uppercase tracking-widest mb-8">
         {visibleImages.length} / {images.length} obras
       </p>
 
@@ -50,7 +50,7 @@ const GalleryGrid = ({ images, galleryKey, onImageClick }) => {
 
       {hasMore && (
         <div ref={sentinelRef} className="flex justify-center py-12">
-          <div className="w-6 h-6 border-2 border-stone-300 border-t-stone-600 rounded-full animate-spin" />
+          <div className="w-6 h-6 border-2 border-stone-300 border-t-stone-600 dark:border-stone-600 dark:border-t-stone-300 rounded-full animate-spin" />
         </div>
       )}
     </>

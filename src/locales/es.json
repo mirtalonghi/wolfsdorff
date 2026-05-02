@@ -20,6 +20,10 @@
     "en": "EN",
     "pt": "PT"
   },
+  "theme": {
+    "useLight": "Activar tema claro",
+    "useDark": "Activar tema oscuro"
+  },
   "home": {
     "heroAlt": "Fondo abstracto surrealista",
     "label": "Artista Surrealista",
@@ -77,6 +81,25 @@
     "subtitle": "Exposiciones",
     "title": "Galería",
     "intro": "Un recorrido fotográfico por las exposiciones de Faiwel Wolfsdorf a lo largo de su trayectoria artística.",
+    "exhibitionsHeading": "Catálogos y muestras",
+    "exhibitionsRange": "1967–2003",
+    "photosHeading": "Fotos en exposiciones",
+    "exhibitions": [
+      "1967 – Galería Mimo Arte",
+      "1968 – Galería Witcomb",
+      "1971 – AMIA Asociación Mutual Israelita Argentina",
+      "1979 – Galería En Flores » De las moradas, sus habitantes y algunas otras cosas »",
+      "1981 – Galería Ivonne Briceño",
+      "1982 – Galería La Araña «Casualismo?»",
+      "1984 – Galería Praxis",
+      "1988 – Galería Praxis",
+      "1994 – Galería Vargas «Rostros»",
+      "1998 – Cultural Británico «Frutos del Sueño»",
+      "2000 – Galería John Harriman «Instantes de WOLFSDORF»",
+      "2001 – Galería 2599 «Retrospectiva 1976-2001»",
+      "2002 – Cultural Británico",
+      "2003 – Galería PetroPerú «Percepciones»"
+    ],
     "imageAlt": "Exposición {{n}}"
   },
   "criticasPage": {
@@ -92,24 +115,11 @@
     "pages_other": "{{count}} páginas"
   },
   "services": {
-    "subtitle": "Servicios",
-    "title": "Adquisición y Preservación",
-    "intro": "Gestionamos el legado artístico de Faiwel Wolfsdorf con el compromiso de preservar su visión y difundir su obra.",
-    "saleTitle": "Venta de Obra y Coleccionismo",
-    "saleBody": "Gestionamos la venta exclusiva de obras originales del maestro Wolfsdorf. Cada pieza se entrega con un <cert>Certificado de Autenticidad</cert> emitido por el archivo familiar/fundación, garantizando su procedencia y valor histórico.",
-    "saleLi1": "Obras de gran formato para instituciones.",
-    "saleLi2": "Piezas de colección privada.",
-    "saleLi3": "Asesoría para nuevos coleccionistas.",
-    "saleCta": "Solicitar Catálogo Privado",
-    "methodTitle": "El Método Wolfsdorf",
-    "methodBody": "Honrando sus 30 años de docencia, el Taller Wolfsdorf continúa su legado ofreciendo experiencias educativas basadas en su metodología única de automatismo y liberación creativa.",
-    "workshop1Title": "Talleres de Creatividad",
-    "workshop1Desc": "Para artistas que buscan desbloquear su potencial creativo mediante el automatismo.",
-    "workshop2Title": "Arte como Transformación",
-    "workshop2Desc": "Workshops enfocados en el arte como herramienta de desarrollo personal y social.",
-    "methodCta": "Más Información",
-    "quote": "\"De pirañas a delfines\" — la transformación de los jóvenes a través del arte era su mayor obra maestra.",
-    "bgAlt": "Fondo texturado"
+    "subtitle": "Legado",
+    "title": "Taller de Felipe",
+    "tagline": "La continuidad en sus alumnos",
+    "intro": "Fue más que un maestro. No enseñaba técnicas como recetas cerradas, sino como puertas abiertas. Decía que la pintura no se aprende, se descubre, y que cada trazo es una forma de decir «aquí estoy» frente al mundo. Sus alumnos —hoy artistas— no heredaron un estilo, sino algo más difícil de transmitir: una forma de mirar, una sensibilidad alerta.",
+    "imageAlt": "Legado {{n}}"
   },
   "contact": {
     "subtitle": "Contacto",

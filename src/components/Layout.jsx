@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../hooks/useTheme';
 
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
@@ -33,14 +35,16 @@ const Layout = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50">
+    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-stone-950">
       <div className="texture-overlay" />
 
-      <nav className="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500">
+      <nav className="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500 dark:bg-stone-950/95 dark:border-stone-800/60">
         <div className="container-custom py-5 flex justify-between items-center gap-4">
           <Link to="/" className="text-xl font-serif tracking-[0.2em] z-50 relative group shrink-0">
-            <span className="text-stone-900">FAIWEL</span>
-            <span className="text-stone-500 ml-2 group-hover:text-stone-900 transition-colors">WOLFSDORF</span>
+            <span className="text-stone-900 dark:text-stone-100">FAIWEL</span>
+            <span className="text-stone-500 ml-2 group-hover:text-stone-900 transition-colors dark:text-stone-400 dark:group-hover:text-stone-100">
+              WOLFSDORF
+            </span>
           </Link>
 
           <div className="hidden md:flex flex-wrap justify-end items-center gap-x-6 gap-y-2">
@@ -48,36 +52,54 @@ const Layout = ({ children }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated ${
-                  location.pathname === link.path ? 'text-stone-900 font-medium' : 'text-stone-500'
+                className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated dark:hover:text-stone-100 ${
+                  location.pathname === link.path
+                    ? 'text-stone-900 font-medium dark:text-stone-100'
+                    : 'text-stone-500 dark:text-stone-400'
                 }`}
               >
                 {t(link.nameKey)}
               </Link>
             ))}
-            <div
-              className="flex items-center gap-1 border-l border-stone-200 pl-6 ml-2"
-              role="group"
-              aria-label={t('lang.label')}
-            >
-              {langs.map(({ code, label }) => (
-                <button
-                  key={code}
-                  type="button"
-                  onClick={() => i18n.changeLanguage(code)}
-                  className={`text-xs uppercase tracking-widest px-2 py-1 rounded transition-colors ${
-                    i18n.language === code
-                      ? 'bg-stone-900 text-white'
-                      : 'text-stone-500 hover:text-stone-900'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
+            <div className="flex items-center gap-3 border-l border-stone-200 pl-6 ml-2 dark:border-stone-700">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="p-2 rounded-md text-stone-600 hover:bg-stone-200/80 hover:text-stone-900 transition-colors dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+                aria-label={theme === 'dark' ? t('theme.useLight') : t('theme.useDark')}
+                aria-pressed={theme === 'dark'}
+              >
+                {theme === 'dark' ? <Sun size={20} strokeWidth={1.75} /> : <Moon size={20} strokeWidth={1.75} />}
+              </button>
+              <div className="flex items-center gap-1" role="group" aria-label={t('lang.label')}>
+                {langs.map(({ code, label }) => (
+                  <button
+                    key={code}
+                    type="button"
+                    onClick={() => i18n.changeLanguage(code)}
+                    className={`text-xs uppercase tracking-widest px-2 py-1 rounded transition-colors ${
+                      i18n.language === code
+                        ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-950'
+                        : 'text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-1 md:hidden">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-2 rounded-md text-stone-600 hover:bg-stone-200/80 dark:text-stone-400 dark:hover:bg-stone-800"
+              aria-label={theme === 'dark' ? t('theme.useLight') : t('theme.useDark')}
+              aria-pressed={theme === 'dark'}
+            >
+              {theme === 'dark' ? <Sun size={22} strokeWidth={1.75} /> : <Moon size={22} strokeWidth={1.75} />}
+            </button>
             <div className="flex items-center gap-0.5" role="group" aria-label={t('lang.label')}>
               {langs.map(({ code, label }) => (
                 <button
@@ -85,7 +107,9 @@ const Layout = ({ children }) => {
                   type="button"
                   onClick={() => i18n.changeLanguage(code)}
                   className={`text-[10px] uppercase tracking-wider px-1.5 py-1 rounded ${
-                    i18n.language === code ? 'bg-stone-900 text-white' : 'text-stone-500'
+                    i18n.language === code
+                      ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-950'
+                      : 'text-stone-500 dark:text-stone-400'
                   }`}
                 >
                   {label}
@@ -93,7 +117,7 @@ const Layout = ({ children }) => {
               ))}
             </div>
             <button
-              className="z-50 relative p-2"
+              className="z-50 relative p-2 text-stone-800 dark:text-stone-200"
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
@@ -104,13 +128,13 @@ const Layout = ({ children }) => {
           </div>
 
           {isMenuOpen && (
-            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-6 md:hidden pt-8 border-t border-stone-200">
+            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-6 md:hidden pt-8 border-t border-stone-200 dark:bg-stone-950 dark:border-stone-800">
               {navLinks.map((link) => (
                 <div key={link.path}>
                   <Link
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors"
+                    className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors dark:text-stone-200 dark:hover:text-white"
                   >
                     {t(link.nameKey)}
                   </Link>
@@ -125,7 +149,7 @@ const Layout = ({ children }) => {
         <div key={location.pathname}>{children}</div>
       </main>
 
-      <footer className="bg-stone-900 text-stone-400 py-16">
+      <footer className="bg-stone-900 text-stone-400 py-16 dark:bg-black dark:border-t dark:border-stone-800">
         <div className="container-custom grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-white font-serif text-xl mb-6">Faiwel Wolfsdorf</h3>
@@ -158,7 +182,7 @@ const Layout = ({ children }) => {
             >
               faiwelwolfsdorf@gmail.com
             </a>
-            <p className="mt-6 text-xs text-stone-600">
+            <p className="mt-6 text-xs text-stone-600 dark:text-stone-500">
               {t('footer.rights', { year: new Date().getFullYear() })}
             </p>
           </div>
