@@ -153,10 +153,13 @@ const Layout = ({ children }) => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Síguenos</h4>
-            <div className="flex space-x-4">
-
-            </div>
+            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Contacto</h4>
+            <a
+              href="mailto:Faiwelwolfsdorf@gmail.com"
+              className="text-sm hover:text-white transition-colors"
+            >
+              Faiwelwolfsdorf@gmail.com
+            </a>
             <p className="mt-6 text-xs text-stone-600">
               © {new Date().getFullYear()} Legado Faiwel Wolfsdorf. Todos los derechos reservados.
             </p>
