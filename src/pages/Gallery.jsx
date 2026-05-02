@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import ImageLightbox from '../components/ImageLightbox';
 
@@ -93,6 +94,7 @@ const pageTransition = {
 };
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
@@ -105,11 +107,11 @@ const Gallery = () => {
     >
       <div className="container-custom">
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Exposiciones</span>
-          <h1 className="text-4xl font-serif mb-8 text-stone-900">Galería</h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            Un recorrido fotográfico por las exposiciones de Faiwel Wolfsdorf a lo largo de su trayectoria artística.
-          </p>
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">
+            {t('galleryPage.subtitle')}
+          </span>
+          <h1 className="text-4xl font-serif mb-8 text-stone-900">{t('galleryPage.title')}</h1>
+          <p className="text-lg text-stone-600 max-w-2xl mx-auto">{t('galleryPage.intro')}</p>
         </div>
 
         <div className="columns-2 md:columns-3 lg:columns-4 gap-3">
@@ -124,7 +126,7 @@ const Gallery = () => {
             >
               <img
                 src={src}
-                alt={`Exposición ${index + 1}`}
+                alt={t('galleryPage.imageAlt', { n: index + 1 })}
                 className="w-full block transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/20 transition-colors duration-300" />

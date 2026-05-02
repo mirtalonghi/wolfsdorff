@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import CarouselCard from '../components/CarouselCard';
 import ImageLightbox from '../components/ImageLightbox';
@@ -139,6 +140,7 @@ const fotosImages = [
 ];
 
 const About = () => {
+  const { t } = useTranslation();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -183,7 +185,7 @@ const About = () => {
       <button
         onClick={toggleMusic}
         className="fixed bottom-6 right-6 z-50 bg-stone-900 text-white p-4 rounded-full shadow-lg hover:bg-stone-700 transition-colors"
-        title={isPlaying ? "Pausar música" : "Reproducir música"}
+        title={isPlaying ? t('about.musicPause') : t('about.musicPlay')}
       >
         {isPlaying ? (
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -206,7 +208,7 @@ const About = () => {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl font-serif text-center mb-12 text-stone-900">Explorar</h2>
+          <h2 className="text-3xl font-serif text-center mb-12 text-stone-900">{t('about.explore')}</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Biografía Card - Large with full content */}
@@ -224,7 +226,7 @@ const About = () => {
                   animate={{ opacity: 1 }}
                   className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-4"
                 >
-                  Biografía
+                  {t('about.bioLabel')}
                 </motion.span>
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
@@ -232,7 +234,7 @@ const About = () => {
                   transition={{ duration: 0.8 }}
                   className="text-3xl md:text-4xl font-serif mb-6 text-stone-900"
                 >
-                  El Arquitecto de los Sueños
+                  {t('about.bioTitle')}
                 </motion.h1>
                 <motion.div
                   initial={{ scaleX: 0 }}
@@ -252,7 +254,7 @@ const About = () => {
                   <div className="relative overflow-hidden">
                     <img
                       src={portrait}
-                      alt="Faiwel Wolfsdorf"
+                      alt={t('about.portraitAlt')}
                       className="w-full h-auto shadow-xl"
                     />
                   </div>
@@ -265,25 +267,33 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
+                  className="text-lg text-stone-700 leading-relaxed"
                 >
-                  <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-stone-900">N</span>
-                  acido en Varsovia en 1921 y renacido bajo el cielo del sur, <strong className="text-stone-900">Faiwel Wolfsdorf (1921–2011)</strong> trazó un puente invisible entre la vieja Europa y la vibrante energía de América Latina. Su travesía vital, que lo llevó desde Polonia a Buenos Aires y finalmente a echar raíces en el Perú, forjó una sensibilidad única ante el desarraigo y la pertenencia.
+                  <Trans
+                    i18nKey="about.bioP1"
+                    components={{ artist: <strong className="text-stone-900" /> }}
+                  />
                 </motion.p>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
+                  className="text-lg text-stone-700 leading-relaxed"
                 >
-                  Discípulo del automatismo inconsciente y la psicología de la forma —influenciado profundamente por el maestro <strong className="text-stone-900">Juan Batlle Planas</strong>—, Wolfsdorf no pintaba lo que veía, sino lo que sentía latir bajo la superficie de la realidad.
+                  <Trans
+                    i18nKey="about.bioP2"
+                    components={{ master: <strong className="text-stone-900" /> }}
+                  />
                 </motion.p>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
+                  className="text-lg text-stone-700 leading-relaxed"
                 >
-                  Su legado trasciende el lienzo: dedicó décadas a transformar vidas a través del arte, guiando a niños y jóvenes ("De pirañas a delfines") a encontrar su propia voz a través del color.
+                  {t('about.bioP3')}
                 </motion.p>
 
                 <motion.div
@@ -292,10 +302,8 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="bg-stone-100 p-6 border-l-4 border-stone-900"
                 >
-                  <h3 className="font-serif text-lg mb-2 text-stone-900">Filosofía Artística</h3>
-                  <p className="italic text-stone-600 text-sm">
-                    "Crear es liberar. Mi obra busca capturar ese instante preciso donde el pensamiento lógico cede paso a la intuición pura. Utilizo el color —azules profundos, rojos que vibran, violetas que susurran— como vehículo para explorar los laberintos de la psique humana."
-                  </p>
+                  <h3 className="font-serif text-lg mb-2 text-stone-900">{t('about.philosophyTitle')}</h3>
+                  <p className="italic text-stone-600 text-sm">{t('about.philosophyQuote')}</p>
                 </motion.div>
 
                 <motion.h3
@@ -304,15 +312,18 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.7 }}
                   className="text-xl font-serif text-stone-900"
                 >
-                  Técnicas y Materiales
+                  {t('about.techniquesTitle')}
                 </motion.h3>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="text-sm"
+                  className="text-sm text-stone-700"
                 >
-                  Maestro del óleo y la técnica mixta, su trabajo se caracteriza por el uso del <strong className="text-stone-900">automatismo</strong>, permitiendo que la mano fluya libremente antes de que la mente imponga estructura. Sus texturas son ricas y orgánicas, construidas capa sobre capa para revelar la historia oculta en cada cuadro.
+                  <Trans
+                    i18nKey="about.techniquesBody"
+                    components={{ auto: <strong className="text-stone-900" /> }}
+                  />
                 </motion.p>
               </div>
 
@@ -323,30 +334,30 @@ const About = () => {
                 viewport={{ once: true }}
                 className="border-t border-stone-200 px-8 py-6"
               >
-                <h3 className="text-xl font-serif text-center mb-6 text-stone-900">Exposiciones Destacadas</h3>
+                <h3 className="text-xl font-serif text-center mb-6 text-stone-900">{t('about.exhibitionsTitle')}</h3>
                 <div className="space-y-4">
                   <div className="flex flex-col md:flex-row md:items-center justify-between group hover:bg-stone-100 p-3 transition-colors">
                     <div>
-                      <h4 className="text-base font-serif text-stone-900">Retrospectiva "El Lenguaje del Inconsciente"</h4>
-                      <p className="text-stone-500 text-sm">Museo de la Nación, Lima</p>
+                      <h4 className="text-base font-serif text-stone-900">{t('about.ex1Title')}</h4>
+                      <p className="text-stone-500 text-sm">{t('about.ex1Place')}</p>
                     </div>
-                    <span className="text-stone-900 font-serif text-sm">Colección Permanente</span>
+                    <span className="text-stone-900 font-serif text-sm">{t('about.ex1Badge')}</span>
                   </div>
 
                   <div className="flex flex-col md:flex-row md:items-center justify-between group hover:bg-stone-100 p-3 transition-colors">
                     <div>
-                      <h4 className="text-base font-serif text-stone-900">Salón de Arte Moderno</h4>
-                      <p className="text-stone-500 text-sm">Buenos Aires, Argentina</p>
+                      <h4 className="text-base font-serif text-stone-900">{t('about.ex2Title')}</h4>
+                      <p className="text-stone-500 text-sm">{t('about.ex2Place')}</p>
                     </div>
-                    <span className="text-stone-400 font-serif text-sm">Archivo Histórico</span>
+                    <span className="text-stone-400 font-serif text-sm">{t('about.ex2Badge')}</span>
                   </div>
 
                   <div className="flex flex-col md:flex-row md:items-center justify-between group hover:bg-stone-100 p-3 transition-colors">
                     <div>
-                      <h4 className="text-base font-serif text-stone-900">Colección Instituto Peruano de Seguridad Social</h4>
-                      <p className="text-stone-500 text-sm">Patronato Cultural</p>
+                      <h4 className="text-base font-serif text-stone-900">{t('about.ex3Title')}</h4>
+                      <p className="text-stone-500 text-sm">{t('about.ex3Place')}</p>
                     </div>
-                    <span className="text-stone-400 font-serif text-sm">Adquisición Institucional</span>
+                    <span className="text-stone-400 font-serif text-sm">{t('about.ex3Badge')}</span>
                   </div>
                 </div>
               </motion.div>
@@ -356,24 +367,24 @@ const About = () => {
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 content-start">
               <CarouselCard
                 images={tallerImages}
-                title="Taller"
-                description="El espacio de creación"
+                title={t('about.cardTallerTitle')}
+                description={t('about.cardTallerDesc')}
                 delay={0.1}
                 onOpen={(imgs) => { setModalImages(imgs); setShowModal(true); }}
               />
 
               <CarouselCard
                 images={fotosImages}
-                title="Fotos Cotidianas"
-                description="Momentos de la vida"
+                title={t('about.cardFotosTitle')}
+                description={t('about.cardFotosDesc')}
                 delay={0.2}
                 onOpen={(imgs) => { setModalImages(imgs); setShowModal(true); }}
               />
 
               <CarouselCard
                 images={arconImages}
-                title="Arcón de los Recuerdos"
-                description="Cápsula del tiempo"
+                title={t('about.cardArconTitle')}
+                description={t('about.cardArconDesc')}
                 delay={0.4}
                 onOpen={(imgs) => { setModalImages(imgs); setShowModal(true); }}
               />

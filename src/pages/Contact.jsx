@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
@@ -17,6 +18,7 @@ const pageTransition = {
 };
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <motion.div
       className="pt-12 pb-24"
@@ -29,11 +31,9 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Contacto</span>
-            <h1 className="text-4xl font-serif mb-8 text-stone-900">Conversemos</h1>
-            <p className="text-lg text-stone-600 mb-12 leading-relaxed">
-              Estamos a disposición de galeristas, curadores, coleccionistas y amantes del arte que deseen conocer más sobre la vida y obra de Faiwel Wolfsdorf.
-            </p>
+            <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">{t('contact.subtitle')}</span>
+            <h1 className="text-4xl font-serif mb-8 text-stone-900">{t('contact.title')}</h1>
+            <p className="text-lg text-stone-600 mb-12 leading-relaxed">{t('contact.intro')}</p>
 
             <div className="space-y-8 mb-12">
               <div className="flex items-start gap-4">
@@ -41,9 +41,13 @@ const Contact = () => {
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-stone-900 mb-1">Correo Electrónico</h4>
-                  <p className="text-stone-500">contacto@legadowolfsdorf.com</p>
-                  <p className="text-stone-500">adquisiciones@legadowolfsdorf.com</p>
+                  <h4 className="font-medium text-stone-900 mb-1">{t('contact.emailLabel')}</h4>
+                  <a
+                    href="mailto:faiwelwolfsdorf@gmail.com"
+                    className="text-stone-600 hover:text-stone-900 transition-colors"
+                  >
+                    faiwelwolfsdorf@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -52,9 +56,8 @@ const Contact = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-stone-900 mb-1">Ubicación</h4>
-                  <p className="text-stone-500">Lima, Perú (Sede Principal)</p>
-                  <p className="text-stone-500">Buenos Aires, Argentina (Archivo)</p>
+                  <h4 className="font-medium text-stone-900 mb-1">{t('contact.locationLabel')}</h4>
+                  <p className="text-stone-500">{t('contact.location')}</p>
                 </div>
               </div>
 
@@ -63,8 +66,13 @@ const Contact = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-stone-900 mb-1">Teléfono</h4>
-                  <p className="text-stone-500">+51 1 234 5678</p>
+                  <h4 className="font-medium text-stone-900 mb-1">{t('contact.phoneLabel')}</h4>
+                  <a
+                    href="tel:+5491141760605"
+                    className="text-stone-600 hover:text-stone-900 transition-colors"
+                  >
+                    +54 9 11 4176 0605
+                  </a>
                 </div>
               </div>
             </div>
@@ -72,54 +80,62 @@ const Contact = () => {
 
           {/* Form */}
           <div className="bg-white p-8 md:p-10 shadow-xl border-t-4 border-stone-900">
-            <h3 className="text-2xl font-serif mb-6 text-stone-900">Formulario de Contacto</h3>
+            <h3 className="text-2xl font-serif mb-6 text-stone-900">{t('contact.formTitle')}</h3>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">Nombre Completo</label>
+                <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">
+                  {t('contact.nameLabel')}
+                </label>
                 <input 
                   type="text" 
                   id="name" 
                   className="w-full px-4 py-3 bg-stone-50 border border-stone-200 focus:border-stone-900 focus:ring-0 outline-none transition-colors"
-                  placeholder="Su nombre"
+                  placeholder={t('contact.namePlaceholder')}
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">Correo Electrónico</label>
+                <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">
+                  {t('contact.emailFieldLabel')}
+                </label>
                 <input 
                   type="email" 
                   id="email" 
                   className="w-full px-4 py-3 bg-stone-50 border border-stone-200 focus:border-stone-900 focus:ring-0 outline-none transition-colors"
-                  placeholder="correo@ejemplo.com"
+                  placeholder={t('contact.emailPlaceholder')}
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-stone-700 mb-2">Asunto</label>
+                <label htmlFor="subject" className="block text-sm font-medium text-stone-700 mb-2">
+                  {t('contact.subjectLabel')}
+                </label>
                 <select 
                   id="subject" 
                   className="w-full px-4 py-3 bg-stone-50 border border-stone-200 focus:border-stone-900 focus:ring-0 outline-none transition-colors"
                 >
-                  <option value="">Seleccione un motivo</option>
-                  <option value="adquisicion">Adquisición de Obra</option>
-                  <option value="prensa">Prensa / Exposiciones</option>
-                  <option value="archivo">Consulta de Archivo</option>
-                  <option value="otro">Otro</option>
+                  <option value="">{t('contact.subjectPlaceholder')}</option>
+                  <option value="adquisicion">{t('contact.subjectAdquisicion')}</option>
+                  <option value="prensa">{t('contact.subjectPrensa')}</option>
+                  <option value="archivo">{t('contact.subjectArchivo')}</option>
+                  <option value="otro">{t('contact.subjectOtro')}</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-2">Mensaje</label>
+                <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-2">
+                  {t('contact.messageLabel')}
+                </label>
                 <textarea 
                   id="message" 
                   rows={5}
                   className="w-full px-4 py-3 bg-stone-50 border border-stone-200 focus:border-stone-900 focus:ring-0 outline-none transition-colors resize-none"
-                  placeholder="Escriba su mensaje aquí..."
+                  placeholder={t('contact.messagePlaceholder')}
                 ></textarea>
               </div>
 
               <button type="submit" className="btn-primary w-full">
-                Enviar Mensaje
+                {t('contact.submit')}
               </button>
             </form>
           </div>
