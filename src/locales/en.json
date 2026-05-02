@@ -92,24 +92,11 @@
     "pages_other": "{{count}} pages"
   },
   "services": {
-    "subtitle": "Services",
-    "title": "Acquisition and Preservation",
-    "intro": "We manage Faiwel Wolfsdorf’s artistic legacy with a commitment to preserving his vision and sharing his work.",
-    "saleTitle": "Sales and Collecting",
-    "saleBody": "We manage the exclusive sale of original works by Maestro Wolfsdorf. Each piece is delivered with a <cert>Certificate of Authenticity</cert> issued by the family archive/foundation, guaranteeing provenance and historical value.",
-    "saleLi1": "Large-format works for institutions.",
-    "saleLi2": "Private collection pieces.",
-    "saleLi3": "Guidance for new collectors.",
-    "saleCta": "Request Private Catalog",
-    "methodTitle": "The Wolfsdorf Method",
-    "methodBody": "Honoring his 30 years of teaching, Taller Wolfsdorf continues his legacy with educational experiences rooted in his unique methodology of automatism and creative liberation.",
-    "workshop1Title": "Creativity Workshops",
-    "workshop1Desc": "For artists seeking to unlock creative potential through automatism.",
-    "workshop2Title": "Art as Transformation",
-    "workshop2Desc": "Workshops focused on art as a tool for personal and social growth.",
-    "methodCta": "More Information",
-    "quote": "\"From piranhas to dolphins\" — transforming young people through art was his greatest masterpiece.",
-    "bgAlt": "Textured background"
+    "subtitle": "Legacy",
+    "title": "Felipe’s Workshop",
+    "tagline": "Continuity in his students",
+    "intro": "He was more than a teacher. He didn’t teach technique as closed recipes, but as open doors. He said painting isn’t learned—it’s discovered—and that every brushstroke is a way of saying “here I am” to the world. His students—artists today—didn’t inherit a style, but something harder to pass on: a way of seeing, an alert sensibility.",
+    "imageAlt": "Legacy {{n}}"
   },
   "contact": {
     "subtitle": "Contact",

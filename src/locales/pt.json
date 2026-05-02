@@ -92,24 +92,11 @@
     "pages_other": "{{count}} páginas"
   },
   "services": {
-    "subtitle": "Serviços",
-    "title": "Aquisição e Preservação",
-    "intro": "Gerimos o legado artístico de Faiwel Wolfsdorf com o compromisso de preservar sua visão e difundir sua obra.",
-    "saleTitle": "Venda de Obras e Coleção",
-    "saleBody": "Gerimos a venda exclusiva de obras originais do maestro Wolfsdorf. Cada peça é entregue com um <cert>Certificado de Autenticidade</cert> emitido pelo arquivo familiar/fundação, garantindo procedência e valor histórico.",
-    "saleLi1": "Obras de grande formato para instituições.",
-    "saleLi2": "Peças de coleção privada.",
-    "saleLi3": "Assessoria para novos colecionadores.",
-    "saleCta": "Solicitar Catálogo Privado",
-    "methodTitle": "O Método Wolfsdorf",
-    "methodBody": "Honrando seus 30 anos de docência, o Taller Wolfsdorf continua seu legado com experiências educativas baseadas em sua metodologia única de automatismo e libertação criativa.",
-    "workshop1Title": "Oficinas de Criatividade",
-    "workshop1Desc": "Para artistas que buscam desbloquear o potencial criativo pelo automatismo.",
-    "workshop2Title": "Arte como Transformação",
-    "workshop2Desc": "Workshops focados na arte como ferramenta de desenvolvimento pessoal e social.",
-    "methodCta": "Mais Informações",
-    "quote": "\"De piranhas a golfinhos\" — a transformação dos jovens pela arte era sua maior obra-prima.",
-    "bgAlt": "Fundo texturizado"
+    "subtitle": "Legado",
+    "title": "Oficina do Felipe",
+    "tagline": "A continuidade nos seus alunos",
+    "intro": "Foi mais que um mestre. Não ensinava técnicas como receitas fechadas, mas como portas abertas. Dizia que a pintura não se aprende, se descobre, e que cada traço é uma forma de dizer «aqui estou» ao mundo. Seus alunos —hoje artistas— não herdaram um estilo, e sim algo mais difícil de transmitir: uma forma de olhar, uma sensibilidade alerta.",
+    "imageAlt": "Legado {{n}}"
   },
   "contact": {
     "subtitle": "Contato",

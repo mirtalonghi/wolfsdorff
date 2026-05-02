@@ -92,24 +92,11 @@
     "pages_other": "{{count}} páginas"
   },
   "services": {
-    "subtitle": "Servicios",
-    "title": "Adquisición y Preservación",
-    "intro": "Gestionamos el legado artístico de Faiwel Wolfsdorf con el compromiso de preservar su visión y difundir su obra.",
-    "saleTitle": "Venta de Obra y Coleccionismo",
-    "saleBody": "Gestionamos la venta exclusiva de obras originales del maestro Wolfsdorf. Cada pieza se entrega con un <cert>Certificado de Autenticidad</cert> emitido por el archivo familiar/fundación, garantizando su procedencia y valor histórico.",
-    "saleLi1": "Obras de gran formato para instituciones.",
-    "saleLi2": "Piezas de colección privada.",
-    "saleLi3": "Asesoría para nuevos coleccionistas.",
-    "saleCta": "Solicitar Catálogo Privado",
-    "methodTitle": "El Método Wolfsdorf",
-    "methodBody": "Honrando sus 30 años de docencia, el Taller Wolfsdorf continúa su legado ofreciendo experiencias educativas basadas en su metodología única de automatismo y liberación creativa.",
-    "workshop1Title": "Talleres de Creatividad",
-    "workshop1Desc": "Para artistas que buscan desbloquear su potencial creativo mediante el automatismo.",
-    "workshop2Title": "Arte como Transformación",
-    "workshop2Desc": "Workshops enfocados en el arte como herramienta de desarrollo personal y social.",
-    "methodCta": "Más Información",
-    "quote": "\"De pirañas a delfines\" — la transformación de los jóvenes a través del arte era su mayor obra maestra.",
-    "bgAlt": "Fondo texturado"
+    "subtitle": "Legado",
+    "title": "Taller de Felipe",
+    "tagline": "La continuidad en sus alumnos",
+    "intro": "Fue más que un maestro. No enseñaba técnicas como recetas cerradas, sino como puertas abiertas. Decía que la pintura no se aprende, se descubre, y que cada trazo es una forma de decir «aquí estoy» frente al mundo. Sus alumnos —hoy artistas— no heredaron un estilo, sino algo más difícil de transmitir: una forma de mirar, una sensibilidad alerta.",
+    "imageAlt": "Legado {{n}}"
   },
   "contact": {
     "subtitle": "Contacto",
