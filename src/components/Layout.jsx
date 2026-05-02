@@ -18,6 +18,15 @@ const Layout = ({ children }) => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
+  useEffect(() => {
+    if (!isMenuOpen) return undefined;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isMenuOpen]);
+
   const navLinks = [
     { nameKey: 'nav.home', path: '/' },
     { nameKey: 'nav.about', path: '/about' },
@@ -38,16 +47,24 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-stone-950">
       <div className="texture-overlay" />
 
-      <nav className="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500 dark:bg-stone-950/95 dark:border-stone-800/60">
-        <div className="container-custom py-5 flex justify-between items-center gap-4">
-          <Link to="/" className="text-xl font-serif tracking-[0.2em] z-50 relative group shrink-0">
-            <span className="text-stone-900 dark:text-stone-100">FAIWEL</span>
-            <span className="text-stone-500 ml-2 group-hover:text-stone-900 transition-colors dark:text-stone-400 dark:group-hover:text-stone-100">
-              WOLFSDORF
+      <header className="fixed top-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500 dark:bg-stone-950/95 dark:border-stone-800/60">
+        <div className="container-custom py-5 flex min-w-0 justify-between items-center gap-3">
+          <Link
+            to="/"
+            className="group relative z-50 min-w-0 flex-1 pr-2 font-serif text-lg tracking-[0.15em] sm:text-xl sm:tracking-[0.2em] lg:flex-none lg:shrink-0 lg:pr-0"
+          >
+            <span className="block min-w-0 truncate">
+              <span className="text-stone-900 dark:text-stone-100">FAIWEL</span>
+              <span className="ml-1.5 text-stone-500 transition-colors group-hover:text-stone-900 sm:ml-2 dark:text-stone-400 dark:group-hover:text-stone-100">
+                WOLFSDORF
+              </span>
             </span>
           </Link>
 
-          <div className="hidden md:flex flex-wrap justify-end items-center gap-x-6 gap-y-2">
+          <nav
+            className="hidden lg:flex flex-wrap justify-end items-center gap-x-6 gap-y-2"
+            aria-label={t('layout.mainNavAria')}
+          >
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -88,9 +105,9 @@ const Layout = ({ children }) => {
                 ))}
               </div>
             </div>
-          </div>
+          </nav>
 
-          <div className="flex items-center gap-1 md:hidden">
+          <div className="flex shrink-0 items-center gap-1 lg:hidden">
             <button
               type="button"
               onClick={toggleTheme}
@@ -100,50 +117,70 @@ const Layout = ({ children }) => {
             >
               {theme === 'dark' ? <Sun size={22} strokeWidth={1.75} /> : <Moon size={22} strokeWidth={1.75} />}
             </button>
-            <div className="flex items-center gap-0.5" role="group" aria-label={t('lang.label')}>
-              {langs.map(({ code, label }) => (
-                <button
-                  key={code}
-                  type="button"
-                  onClick={() => i18n.changeLanguage(code)}
-                  className={`text-[10px] uppercase tracking-wider px-1.5 py-1 rounded ${
-                    i18n.language === code
-                      ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-950'
-                      : 'text-stone-500 dark:text-stone-400'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
             <button
-              className="z-50 relative p-2 text-stone-800 dark:text-stone-200"
+              className="relative z-50 -mr-1 p-2 text-stone-800 dark:text-stone-200"
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-controls="mobile-nav-panel"
+              aria-label={isMenuOpen ? t('layout.closeMenu') : t('layout.openMenu')}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={24} strokeWidth={1.75} /> : <Menu size={24} strokeWidth={1.75} />}
             </button>
           </div>
-
-          {isMenuOpen && (
-            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-6 md:hidden pt-8 border-t border-stone-200 dark:bg-stone-950 dark:border-stone-800">
-              {navLinks.map((link) => (
-                <div key={link.path}>
-                  <Link
-                    to={link.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors dark:text-stone-200 dark:hover:text-white"
-                  >
-                    {t(link.nameKey)}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
-      </nav>
+
+        {isMenuOpen && (
+          <div
+            id="mobile-nav-panel"
+            className="fixed inset-x-0 top-0 z-40 flex max-h-[100dvh] flex-col bg-stone-50 pb-[max(2.5rem,env(safe-area-inset-bottom,0px))] pt-[5.25rem] lg:hidden dark:bg-stone-950"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('layout.menuDialog')}
+          >
+            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain border-t border-stone-200 px-6 pb-10 pt-8 dark:border-stone-800">
+              <nav className="flex flex-col items-center space-y-6" aria-label={t('layout.mainNavAria')}>
+                {navLinks.map((link) => (
+                  <div key={link.path}>
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-2xl font-serif text-stone-800 transition-colors hover:text-stone-900 dark:text-stone-200 dark:hover:text-white"
+                    >
+                      {t(link.nameKey)}
+                    </Link>
+                  </div>
+                ))}
+              </nav>
+              <div
+                className="mx-auto mt-12 w-full max-w-xs border-t border-stone-200 pt-10 dark:border-stone-800"
+                role="group"
+                aria-label={t('lang.label')}
+              >
+                <p className="mb-4 text-center text-xs uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400">
+                  {t('lang.label')}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  {langs.map(({ code, label }) => (
+                    <button
+                      key={code}
+                      type="button"
+                      onClick={() => i18n.changeLanguage(code)}
+                      className={`min-h-[44px] min-w-[44px] rounded-md px-4 text-xs uppercase tracking-widest transition-colors ${
+                        i18n.language === code
+                          ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-950'
+                          : 'text-stone-600 ring-1 ring-stone-300 hover:bg-stone-100 dark:text-stone-400 dark:ring-stone-600 dark:hover:bg-stone-900'
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
 
       <main className="flex-grow pt-20">
         <div key={location.pathname}>{children}</div>
