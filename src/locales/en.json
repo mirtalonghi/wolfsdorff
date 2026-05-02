@@ -14,6 +14,12 @@
     "contact": "Contact",
     "rights": "© {{year}} Faiwel Wolfsdorf Legacy. All rights reserved."
   },
+  "layout": {
+    "menuDialog": "Site menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavAria": "Main navigation"
+  },
   "lang": {
     "label": "Language",
     "es": "ES",

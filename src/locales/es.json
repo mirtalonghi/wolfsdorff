@@ -14,6 +14,12 @@
     "contact": "Contacto",
     "rights": "© {{year}} Legado Faiwel Wolfsdorf. Todos los derechos reservados."
   },
+  "layout": {
+    "menuDialog": "Menú del sitio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mainNavAria": "Navegación principal"
+  },
   "lang": {
     "label": "Idioma",
     "es": "ES",
