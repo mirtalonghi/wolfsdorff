@@ -1,0 +1,176 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useMotionValue, animate } from 'framer-motion';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const ZoomInIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+  </svg>
+);
+
+const ZoomOutIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <line x1="8" y1="11" x2="14" y2="11"/>
+  </svg>
+);
+
+/**
+ * ImageLightbox — visor unificado con zoom, arrastrar, navegación y teclado.
+ *
+ * Props:
+ *   images        string[]   array de src
+ *   initialIndex  number     índice inicial (default 0)
+ *   onClose       () => void
+ *   dots          boolean    mostrar indicadores en vez de "x / total" (default false)
+ *
+ * El padre debe envolver la renderización condicional en <AnimatePresence>.
+ */
+const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
+  const [index, setIndex] = useState(initialIndex);
+  const [zoom, setZoom] = useState(false);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  useEffect(() => {
+    setIndex(initialIndex);
+  }, [images]);
+
+  useEffect(() => {
+    setZoom(false);
+    x.set(0);
+    y.set(0);
+  }, [index]);
+
+  const goPrev = useCallback(() => {
+    setIndex(i => (i - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  const goNext = useCallback(() => {
+    setIndex(i => (i + 1) % images.length);
+  }, [images.length]);
+
+  const toggleZoom = () => {
+    if (zoom) {
+      animate(x, 0, { duration: 0.3, ease: 'easeOut' });
+      animate(y, 0, { duration: 0.3, ease: 'easeOut' });
+      setZoom(false);
+    } else {
+      setZoom(true);
+    }
+  };
+
+  const navigate = (fn) => {
+    setZoom(false);
+    x.set(0);
+    y.set(0);
+    fn();
+  };
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === 'Escape') onClose();
+      if (!zoom && e.key === 'ArrowLeft') goPrev();
+      if (!zoom && e.key === 'ArrowRight') goNext();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [onClose, zoom, goPrev, goNext]);
+
+  const multiple = images.length > 1;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 bg-stone-950/95 flex items-center justify-center"
+      onClick={onClose}
+    >
+      <button
+        onClick={(e) => { e.stopPropagation(); onClose(); }}
+        className="absolute top-5 right-5 text-white/60 hover:text-white transition-colors z-10"
+        aria-label="Cerrar"
+      >
+        <X size={22} />
+      </button>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="relative flex items-center justify-center"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <motion.img
+            src={images[index]}
+            alt=""
+            draggable={false}
+            className={`max-h-[88vh] max-w-[88vw] object-contain select-none ${
+              zoom ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'
+            }`}
+            style={{ x, y }}
+            animate={{ scale: zoom ? 3 : 1 }}
+            transition={{ duration: 0.35 }}
+            drag={zoom}
+            dragElastic={0.05}
+            dragConstraints={{ left: -1200, right: 1200, top: -800, bottom: 800 }}
+            onTap={toggleZoom}
+          />
+          <button
+            className="absolute bottom-3 right-3 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors z-10"
+            onClick={(e) => { e.stopPropagation(); toggleZoom(); }}
+            title={zoom ? 'Alejar' : 'Acercar'}
+          >
+            {zoom ? <ZoomOutIcon /> : <ZoomInIcon />}
+          </button>
+        </motion.div>
+      </AnimatePresence>
+
+      {multiple && (
+        <>
+          <button
+            onClick={(e) => { e.stopPropagation(); navigate(goPrev); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white transition-colors z-10"
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={28} />
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); navigate(goNext); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white transition-colors z-10"
+            aria-label="Siguiente"
+          >
+            <ChevronRight size={28} />
+          </button>
+        </>
+      )}
+
+      {multiple && (
+        dots ? (
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={(e) => { e.stopPropagation(); navigate(() => setIndex(i)); }}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  i === index ? 'bg-white' : 'bg-white/40'
+                }`}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/40 text-xs uppercase tracking-[0.2em] z-10">
+            {index + 1} / {images.length}
+          </p>
+        )
+      )}
+    </motion.div>
+  );
+};
+
+export default ImageLightbox;

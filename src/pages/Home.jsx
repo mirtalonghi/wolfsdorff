@@ -11,6 +11,26 @@ const fadeInUp = {
   transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
 };
 
+const pageTransition = {
+  initial: { opacity: 0, y: 20 },
+  animate: { 
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  },
+  exit: { 
+    opacity: 0,
+    y: -20,
+    transition: { 
+      duration: 0.4,
+      ease: "easeIn"
+    }
+  }
+};
+
 const staggerContainer = {
   animate: {
     transition: {
@@ -21,7 +41,12 @@ const staggerContainer = {
 
 const Home = () => {
   return (
-    <div className="w-full">
+    <motion.div
+      className="w-full"
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+    >
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
@@ -104,7 +129,7 @@ const Home = () => {
                 <img
                   src={featuredWork}
                   alt="Featured Work"
-                  className="w-full h-auto shadow-2xl"
+                  className="w-full h-auto shadow-2xl rounded-lg"
                 />
               </motion.div>
             </div>
@@ -154,7 +179,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

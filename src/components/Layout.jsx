@@ -14,6 +14,8 @@ const Layout = ({ children }) => {
     { name: 'Inicio', path: '/' },
     { name: 'Sobre el Artista', path: '/about' },
     { name: 'Obras', path: '/portfolio' },
+    { name: 'Exposiciones', path: '/gallery' },
+    { name: 'Críticas', path: '/criticas' },
     { name: 'Legado', path: '/legacy' },
     { name: 'Contacto', path: '/contact' },
   ];
@@ -34,14 +36,40 @@ const Layout = ({ children }) => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 items-center">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated ${location.pathname === link.path ? 'text-stone-900 font-medium' : 'text-stone-500'
-                  }`}
-              >
-                {link.name}
-              </Link>
+              link.hasSubmenu ? (
+                <div key={link.name} className="relative group">
+                  <button
+                    className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated flex items-center gap-1 ${location.pathname === '/gallery' || location.pathname === '/portfolio' ? 'text-stone-900 font-medium' : 'text-stone-500'
+                      }`}
+                    onClick={() => setIsGalleryOpen(!isGalleryOpen)}
+                  >
+                    {link.name}
+                    <ChevronDown size={12} className={`transition-transform ${isGalleryOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {/* Dropdown Submenu */}
+                  <div className={`absolute top-full left-0 mt-2 bg-white border border-stone-200 shadow-lg py-2 min-w-[160px] transition-all duration-300 ${isGalleryOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                    {link.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.path}
+                        to={subItem.path}
+                        className={`block px-4 py-2 text-xs uppercase tracking-widest hover:text-stone-900 hover:bg-stone-50 transition-all ${location.pathname === subItem.path ? 'text-stone-900 font-medium' : 'text-stone-500'
+                          }`}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated ${location.pathname === link.path ? 'text-stone-900 font-medium' : 'text-stone-500'
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -55,17 +83,42 @@ const Layout = ({ children }) => {
 
           {/* Mobile Menu Overlay */}
           {isMenuOpen && (
-            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-8 md:hidden pt-12 border-t border-stone-200">
+            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-6 md:hidden pt-8 border-t border-stone-200">
               {navLinks.map((link) => (
-                <div key={link.path}>
-                  <Link
-                    to={link.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </div>
+                link.hasSubmenu ? (
+                  <div key={link.name} className="text-center">
+                    <button
+                      onClick={() => setIsGalleryOpen(!isGalleryOpen)}
+                      className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors flex items-center gap-2"
+                    >
+                      {link.name}
+                      <ChevronDown size={16} className={`transition-transform ${isGalleryOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {/* Mobile Submenu */}
+                    <div className={`mt-4 space-y-3 overflow-hidden transition-all duration-300 ${isGalleryOpen ? 'max-h-40' : 'max-h-0'}`}>
+                      {link.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          to={subItem.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block text-lg font-serif text-stone-600 hover:text-stone-900 transition-colors"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div key={link.path}>
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </div>
+                )
               ))}
             </div>
           )}
@@ -100,10 +153,13 @@ const Layout = ({ children }) => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Síguenos</h4>
-            <div className="flex space-x-4">
-
-            </div>
+            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Contacto</h4>
+            <a
+              href="mailto:Faiwelwolfsdorf@gmail.com"
+              className="text-sm hover:text-white transition-colors"
+            >
+              Faiwelwolfsdorf@gmail.com
+            </a>
             <p className="mt-6 text-xs text-stone-600">
               © {new Date().getFullYear()} Legado Faiwel Wolfsdorf. Todos los derechos reservados.
             </p>

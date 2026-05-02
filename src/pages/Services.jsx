@@ -1,11 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { ShieldCheck, Palette, BookOpen } from 'lucide-react';
 import bgTexture from '../assets/images/fe5dcb2f23c2452587c29f1e63c5fa81.jpeg';
 
+const pageTransition = {
+  initial: { opacity: 0, y: 20 },
+  animate: { 
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  },
+  exit: { 
+    opacity: 0,
+    y: -20,
+    transition: { duration: 0.4, ease: "easeIn" }
+  }
+};
+
 const Services = () => {
   return (
-    <div className="pt-12 pb-24">
+    <motion.div
+      className="pt-12 pb-24"
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Servicios</span>
@@ -89,7 +110,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

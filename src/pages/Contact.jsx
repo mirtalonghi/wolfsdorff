@@ -1,9 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
+
+const pageTransition = {
+  initial: { opacity: 0, y: 20 },
+  animate: { 
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  },
+  exit: { 
+    opacity: 0,
+    y: -20,
+    transition: { duration: 0.4, ease: "easeIn" }
+  }
+};
 
 const Contact = () => {
   return (
-    <div className="pt-12 pb-24">
+    <motion.div
+      className="pt-12 pb-24"
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
@@ -104,7 +125,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
