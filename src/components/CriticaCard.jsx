@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 
-const CriticaCard = ({ publicacion, onClick }) => (
+const CriticaCard = ({ publicacion, onClick }) => {
+  const { t } = useTranslation();
+  const n = publicacion.imagenes.length;
+  return (
   <motion.div
     initial={{ opacity: 0, y: 24 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -19,9 +23,9 @@ const CriticaCard = ({ publicacion, onClick }) => (
         loading="lazy"
       />
       <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors duration-300" />
-      {publicacion.imagenes.length > 1 && (
+      {n > 1 && (
         <span className="absolute bottom-2 right-2 bg-stone-900/70 text-white text-[10px] px-2 py-0.5 uppercase tracking-widest">
-          {publicacion.imagenes.length} páginas
+          {t('criticaCard.pages', { count: n })}
         </span>
       )}
     </div>
@@ -36,5 +40,6 @@ const CriticaCard = ({ publicacion, onClick }) => (
     </div>
   </motion.div>
 );
+};
 
 export default CriticaCard;

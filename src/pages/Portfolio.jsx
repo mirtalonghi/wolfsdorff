@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import galleries from '../data/galleries.json';
 import GalleryGrid from '../components/GalleryGrid';
@@ -19,6 +20,7 @@ const pageTransition = {
 };
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   const [selectedId, setSelectedId] = useState('todas');
   const [lightbox, setLightbox] = useState(null);
 
@@ -49,8 +51,10 @@ const Portfolio = () => {
 
       <div className="container-custom">
         <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Obras Artísticas</span>
-          <h1 className="text-4xl font-serif mb-10 text-stone-900">Colección</h1>
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">
+            {t('portfolio.subtitle')}
+          </span>
+          <h1 className="text-4xl font-serif mb-10 text-stone-900">{t('portfolio.title')}</h1>
 
           {/* Category tabs */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-6">
@@ -62,7 +66,7 @@ const Portfolio = () => {
                   : 'text-stone-400 hover:text-stone-600'
               }`}
             >
-              Todas
+              {t('portfolio.all')}
             </button>
             {galleries.map(g => (
               <button
@@ -74,7 +78,7 @@ const Portfolio = () => {
                     : 'text-stone-400 hover:text-stone-600'
                 }`}
               >
-                {g.name}
+                {t(`portfolio.categories.${g.id}`)}
               </button>
             ))}
           </div>
