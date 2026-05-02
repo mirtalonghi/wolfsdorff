@@ -95,11 +95,11 @@ const Services = () => {
     >
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8">
+          <h1 className="text-4xl md:text-5xl font-serif text-stone-900 dark:text-stone-100 mb-8">
             <span className="block mb-3">{t('services.title')}</span>
             <span className="block">{t('services.tagline')}</span>
           </h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">{t('services.intro')}</p>
+          <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">{t('services.intro')}</p>
         </div>
 
         <div className="columns-2 md:columns-3 lg:columns-4 gap-3">

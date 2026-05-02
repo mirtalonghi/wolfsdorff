@@ -186,7 +186,7 @@ const About = () => {
       {/* Music Control Button */}
       <button
         onClick={toggleMusic}
-        className="fixed bottom-6 right-6 z-50 bg-stone-900 text-white p-4 rounded-full shadow-lg hover:bg-stone-700 transition-colors"
+        className="fixed bottom-6 right-6 z-50 bg-stone-900 text-white p-4 rounded-full shadow-lg hover:bg-stone-700 transition-colors dark:bg-stone-100 dark:text-stone-950 dark:hover:bg-stone-300"
         title={isPlaying ? t('about.musicPause') : t('about.musicPlay')}
       >
         {isPlaying ? (
@@ -215,7 +215,7 @@ const About = () => {
             aria-labelledby="about-bio-heading"
           >
             <div
-              className="pointer-events-none absolute right-0 top-0 h-40 w-40 translate-x-1/4 -translate-y-1/4 rounded-full bg-stone-200/40 blur-3xl"
+              className="pointer-events-none absolute right-0 top-0 h-40 w-40 translate-x-1/4 -translate-y-1/4 rounded-full bg-stone-200/40 blur-3xl dark:bg-stone-600/20"
               aria-hidden
             />
             <div
@@ -227,7 +227,7 @@ const About = () => {
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-xs uppercase tracking-[0.35em] text-stone-500"
+                className="text-xs uppercase tracking-[0.35em] text-stone-500 dark:text-stone-400"
               >
                 {t('about.bioLabel')}
               </motion.span>
@@ -236,7 +236,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-4 font-serif text-3xl leading-tight tracking-tight text-stone-900 md:text-4xl lg:text-[2.35rem]"
+                className="mt-4 font-serif text-3xl leading-tight tracking-tight text-stone-900 dark:text-stone-100 md:text-4xl lg:text-[2.35rem]"
               >
                 {t('about.bioTitle')}
               </motion.h1>
@@ -244,7 +244,7 @@ const About = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="mx-auto mt-8 h-px w-20 origin-center bg-gradient-to-r from-transparent via-stone-800 to-transparent"
+                className="mx-auto mt-8 h-px w-20 origin-center bg-gradient-to-r from-transparent via-stone-800 to-transparent dark:via-stone-500"
               />
             </header>
 
@@ -271,7 +271,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.05 }}
-                className="space-y-6 text-lg leading-[1.75] text-stone-700"
+                className="space-y-6 text-lg leading-[1.75] text-stone-700 dark:text-stone-300"
               >
                 <p>{t('about.bioP1')}</p>
                 <p>{t('about.bioP2')}</p>
@@ -285,13 +285,13 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="clear-both mt-10 space-y-4 border-t border-stone-200/90 pt-8"
+                className="clear-both mt-10 space-y-4 border-t border-stone-200/90 dark:border-stone-700/90 pt-8"
               >
-                <h3 className="font-serif text-xl text-stone-900">{t('about.techniquesTitle')}</h3>
-                <p className="text-sm leading-relaxed text-stone-700 md:text-[0.95rem]">
+                <h3 className="font-serif text-xl text-stone-900 dark:text-stone-100">{t('about.techniquesTitle')}</h3>
+                <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300 md:text-[0.95rem]">
                   <Trans
                     i18nKey="about.techniquesBody"
-                    components={{ auto: <strong className="font-semibold text-stone-900" /> }}
+                    components={{ auto: <strong className="font-semibold text-stone-900 dark:text-stone-100" /> }}
                   />
                 </p>
               </motion.div>
@@ -300,17 +300,17 @@ const About = () => {
 
           {/* Colecciones — después de la biografía */}
           <section className="relative pb-4" aria-labelledby="about-collections-heading">
-            <div className="mb-10 flex flex-col gap-6 border-b border-stone-200 pb-10 lg:mb-12 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12">
+            <div className="mb-10 flex flex-col gap-6 border-b border-stone-200 dark:border-stone-700 pb-10 lg:mb-12 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12">
               <div className="max-w-xl">
-                <p className="text-xs uppercase tracking-[0.35em] text-stone-500">{t('about.collectionsLabel')}</p>
+                <p className="text-xs uppercase tracking-[0.35em] text-stone-500 dark:text-stone-400">{t('about.collectionsLabel')}</p>
                 <h2
                   id="about-collections-heading"
-                  className="mt-3 font-serif text-2xl tracking-tight text-stone-900 md:text-3xl"
+                  className="mt-3 font-serif text-2xl tracking-tight text-stone-900 dark:text-stone-100 md:text-3xl"
                 >
                   {t('about.collectionsTitle')}
                 </h2>
               </div>
-              <p className="max-w-md text-sm leading-relaxed text-stone-600 lg:text-right lg:text-[0.9375rem]">
+              <p className="max-w-md text-sm leading-relaxed text-stone-600 dark:text-stone-400 lg:text-right lg:text-[0.9375rem]">
                 {t('about.collectionsSubtitle')}
               </p>
             </div>

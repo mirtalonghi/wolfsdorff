@@ -20,6 +20,10 @@
     "en": "EN",
     "pt": "PT"
   },
+  "theme": {
+    "useLight": "Activar tema claro",
+    "useDark": "Activar tema oscuro"
+  },
   "home": {
     "heroAlt": "Fondo abstracto surrealista",
     "label": "Artista Surrealista",
@@ -77,6 +81,25 @@
     "subtitle": "Exposiciones",
     "title": "Galería",
     "intro": "Un recorrido fotográfico por las exposiciones de Faiwel Wolfsdorf a lo largo de su trayectoria artística.",
+    "exhibitionsHeading": "Catálogos y muestras",
+    "exhibitionsRange": "1967–2003",
+    "photosHeading": "Fotos en exposiciones",
+    "exhibitions": [
+      "1967 – Galería Mimo Arte",
+      "1968 – Galería Witcomb",
+      "1971 – AMIA Asociación Mutual Israelita Argentina",
+      "1979 – Galería En Flores » De las moradas, sus habitantes y algunas otras cosas »",
+      "1981 – Galería Ivonne Briceño",
+      "1982 – Galería La Araña «Casualismo?»",
+      "1984 – Galería Praxis",
+      "1988 – Galería Praxis",
+      "1994 – Galería Vargas «Rostros»",
+      "1998 – Cultural Británico «Frutos del Sueño»",
+      "2000 – Galería John Harriman «Instantes de WOLFSDORF»",
+      "2001 – Galería 2599 «Retrospectiva 1976-2001»",
+      "2002 – Cultural Británico",
+      "2003 – Galería PetroPerú «Percepciones»"
+    ],
     "imageAlt": "Exposición {{n}}"
   },
   "criticasPage": {
