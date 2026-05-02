@@ -88,7 +88,7 @@ const Home = () => {
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg md:text-xl text-stone-600 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-stone-600 md:text-xl md:mb-11"
           >
             {t('home.intro')}
           </motion.p>
@@ -102,37 +102,47 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* Featured Work Preview - Asymmetrical Layout */}
-      <section className="py-28 bg-white">
+      {/* Featured Work — densidad editorial: más lienzo, texto en columna fija */}
+      <section className="bg-white py-14 md:py-16 lg:py-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-7 order-2 md:order-1">
+          <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-12">
+            <div className="order-2 md:order-1 md:col-span-7 lg:col-span-8">
               <motion.div
-                initial={{ opacity: 0, x: -40 }}
+                initial={{ opacity: 0, x: -36 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                className="relative"
               >
+                <div className="pointer-events-none absolute -inset-3 -z-10 bg-gradient-to-br from-stone-200/40 via-transparent to-stone-300/20 blur-2xl md:-inset-4" />
                 <img
                   src={featuredWork}
                   alt={t('home.featuredAlt')}
-                  className="w-full h-auto shadow-2xl rounded-lg"
+                  className="h-auto w-full rounded-md shadow-[0_24px_60px_-20px_rgba(28,25,23,0.35)] ring-1 ring-stone-900/5"
                 />
               </motion.div>
             </div>
-            <div className="md:col-span-5 order-1 md:order-2 md:pl-8">
+            <div className="order-1 flex md:order-2 md:col-span-5 md:max-lg:pl-2 lg:col-span-4 lg:min-h-0 lg:justify-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.75, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="flex w-full max-w-md flex-col md:mx-0 md:max-w-none lg:sticky lg:top-28 lg:max-w-[22rem] xl:max-w-[24rem]"
               >
-                <span className="text-xs uppercase tracking-[0.2em] text-stone-500 block mb-4">
+                <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.28em] text-stone-500">
                   {t('home.featuredLabel')}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6 text-stone-900">{t('home.featuredTitle')}</h2>
-                <p className="text-stone-600 mb-8 leading-relaxed">{t('home.featuredBody')}</p>
-                <Link to="/about" className="link-animated text-stone-900 uppercase tracking-widest text-sm font-medium">
+                <h2 className="mb-4 font-serif text-3xl leading-tight text-stone-900 md:text-[2.1rem] lg:text-4xl">
+                  {t('home.featuredTitle')}
+                </h2>
+                <p className="mb-6 text-[0.98rem] leading-[1.7] text-stone-600 md:text-base">
+                  {t('home.featuredBody')}
+                </p>
+                <Link
+                  to="/about"
+                  className="link-animated mt-auto inline-flex w-fit text-sm font-medium uppercase tracking-[0.2em] text-stone-900"
+                >
                   {t('home.featuredLink')}
                 </Link>
               </motion.div>
@@ -142,7 +152,7 @@ const Home = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="pt-28 pb-20 bg-stone-900 text-white">
+      <section className="bg-stone-900 pb-16 pt-20 text-white md:pb-20 md:pt-24">
         <div className="container-custom text-center max-w-3xl mx-auto">
           <motion.blockquote
             initial={{ opacity: 0, y: 30 }}
