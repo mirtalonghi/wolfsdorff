@@ -118,7 +118,7 @@ const Home = () => {
                 <img
                   src={featuredWork}
                   alt={t('home.featuredAlt')}
-                  className="h-auto w-full rounded-md shadow-[0_24px_60px_-20px_rgba(28,25,23,0.35)] ring-1 ring-stone-900/5"
+                  className="h-auto w-full rounded-[1.375rem] shadow-[0_24px_60px_-20px_rgba(28,25,23,0.35)] ring-1 ring-stone-900/5"
                 />
               </motion.div>
             </div>
