@@ -300,7 +300,7 @@ const About = () => {
 
           {/* Colecciones — después de la biografía */}
           <section className="relative pb-4" aria-labelledby="about-collections-heading">
-            <div className="mb-10 flex flex-col gap-6 border-b border-stone-200 dark:border-stone-700 pb-10 lg:mb-12 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12">
+            <div className="mb-10 border-b border-stone-200 dark:border-stone-700 pb-10 lg:mb-12 lg:pb-12">
               <div className="max-w-xl">
                 <p className="text-xs uppercase tracking-[0.35em] text-stone-500 dark:text-stone-400">{t('about.collectionsLabel')}</p>
                 <h2
@@ -310,9 +310,6 @@ const About = () => {
                   {t('about.collectionsTitle')}
                 </h2>
               </div>
-              <p className="max-w-md text-sm leading-relaxed text-stone-600 dark:text-stone-400 lg:text-right lg:text-[0.9375rem]">
-                {t('about.collectionsSubtitle')}
-              </p>
             </div>
 
             <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 md:gap-10 lg:gap-12">

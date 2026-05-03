@@ -62,8 +62,7 @@
     "cardArconTitle": "Arcón de los Recuerdos",
     "cardArconDesc": "Cápsula del tiempo",
     "collectionsLabel": "Archivo visual",
-    "collectionsTitle": "Memoria en imágenes",
-    "collectionsSubtitle": "Del taller cotidiano al arcón del tiempo — dos colecciones del legado."
+    "collectionsTitle": "Memoria en imágenes"
   },
   "portfolio": {
     "subtitle": "Obras Artísticas",
@@ -148,7 +147,10 @@
     "subjectOtro": "Otro",
     "messageLabel": "Mensaje",
     "messagePlaceholder": "Escriba su mensaje aquí...",
-    "submit": "Enviar Mensaje"
+    "submit": "Enviar Mensaje",
+    "formSending": "Enviando…",
+    "formSuccess": "Gracias. Su mensaje fue enviado correctamente.",
+    "formError": "No se pudo enviar el mensaje. Intente de nuevo más tarde."
   },
   "lightbox": {
     "close": "Cerrar",

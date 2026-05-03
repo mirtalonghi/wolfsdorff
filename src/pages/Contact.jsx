@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
+
+const WEB3FORMS_ACTION = 'https://api.web3forms.com/submit';
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ?? '850c7d13-546d-460f-bdf8-4817abad70e9';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
@@ -19,6 +23,50 @@ const pageTransition = {
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [formStatus, setFormStatus] = useState('idle');
+
+  const subjectText = (value) => {
+    const keys = {
+      adquisicion: 'contact.subjectAdquisicion',
+      prensa: 'contact.subjectPrensa',
+      archivo: 'contact.subjectArchivo',
+      otro: 'contact.subjectOtro',
+    };
+    return value && keys[value] ? t(keys[value]) : '';
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const subjectValue = data.get('subject');
+    const subjectLine = subjectText(subjectValue) || t('contact.formTitle');
+
+    setFormStatus('loading');
+    try {
+      const res = await fetch(WEB3FORMS_ACTION, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: data.get('name'),
+          email: data.get('email'),
+          subject: subjectLine,
+          message: data.get('message'),
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) {
+        setFormStatus('success');
+        form.reset();
+      } else {
+        setFormStatus('error');
+      }
+    } catch {
+      setFormStatus('error');
+    }
+  };
+
   return (
     <motion.div
       className="pt-12 pb-24"
@@ -81,27 +129,39 @@ const Contact = () => {
           {/* Form */}
           <div className="bg-white dark:bg-stone-900 p-8 md:p-10 shadow-xl border-t-4 border-stone-900 dark:border-stone-100">
             <h3 className="text-2xl font-serif mb-6 text-stone-900 dark:text-stone-100">{t('contact.formTitle')}</h3>
-            <form className="space-y-6">
+            <form
+              action={WEB3FORMS_ACTION}
+              method="POST"
+              className="space-y-6"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">
                   {t('contact.nameLabel')}
                 </label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors"
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors disabled:opacity-60"
                   placeholder={t('contact.namePlaceholder')}
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">
                   {t('contact.emailFieldLabel')}
                 </label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors"
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors disabled:opacity-60"
                   placeholder={t('contact.emailPlaceholder')}
                 />
               </div>
@@ -110,9 +170,12 @@ const Contact = () => {
                 <label htmlFor="subject" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">
                   {t('contact.subjectLabel')}
                 </label>
-                <select 
-                  id="subject" 
-                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors"
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors disabled:opacity-60"
                 >
                   <option value="">{t('contact.subjectPlaceholder')}</option>
                   <option value="adquisicion">{t('contact.subjectAdquisicion')}</option>
@@ -126,16 +189,34 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">
                   {t('contact.messageLabel')}
                 </label>
-                <textarea 
-                  id="message" 
+                <textarea
+                  name="message"
+                  id="message"
                   rows={5}
-                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors resize-none"
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:border-stone-900 dark:focus:border-stone-300 focus:ring-0 outline-none transition-colors resize-none disabled:opacity-60"
                   placeholder={t('contact.messagePlaceholder')}
-                ></textarea>
+                />
               </div>
 
-              <button type="submit" className="btn-primary w-full">
-                {t('contact.submit')}
+              {formStatus === 'success' && (
+                <p className="text-sm text-green-800 dark:text-green-300" role="status">
+                  {t('contact.formSuccess')}
+                </p>
+              )}
+              {formStatus === 'error' && (
+                <p className="text-sm text-red-800 dark:text-red-300" role="alert">
+                  {t('contact.formError')}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={formStatus === 'loading'}
+                className="btn-primary w-full disabled:opacity-60 disabled:pointer-events-none"
+              >
+                {formStatus === 'loading' ? t('contact.formSending') : t('contact.submit')}
               </button>
             </form>
           </div>

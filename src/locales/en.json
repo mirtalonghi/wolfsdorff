@@ -62,8 +62,7 @@
     "cardArconTitle": "Chest of Memories",
     "cardArconDesc": "Time capsule",
     "collectionsLabel": "Visual archive",
-    "collectionsTitle": "Memory in images",
-    "collectionsSubtitle": "From the everyday studio to the chest of memories — two collections from the legacy."
+    "collectionsTitle": "Memory in images"
   },
   "portfolio": {
     "subtitle": "Artistic Works",
@@ -148,7 +147,10 @@
     "subjectOtro": "Other",
     "messageLabel": "Message",
     "messagePlaceholder": "Write your message here...",
-    "submit": "Send Message"
+    "submit": "Send Message",
+    "formSending": "Sending…",
+    "formSuccess": "Thank you. Your message was sent successfully.",
+    "formError": "Could not send the message. Please try again later."
   },
   "lightbox": {
     "close": "Close",

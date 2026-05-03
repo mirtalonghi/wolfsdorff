@@ -62,8 +62,7 @@
     "cardArconTitle": "Baú das Memórias",
     "cardArconDesc": "Cápsula do tempo",
     "collectionsLabel": "Arquivo visual",
-    "collectionsTitle": "Memória em imagens",
-    "collectionsSubtitle": "Do ateliê cotidiano ao baú do tempo — duas coleções do legado."
+    "collectionsTitle": "Memória em imagens"
   },
   "portfolio": {
     "subtitle": "Obras Artísticas",
@@ -148,7 +147,10 @@
     "subjectOtro": "Outro",
     "messageLabel": "Mensagem",
     "messagePlaceholder": "Escreva sua mensagem aqui...",
-    "submit": "Enviar Mensagem"
+    "submit": "Enviar Mensagem",
+    "formSending": "Enviando…",
+    "formSuccess": "Obrigado. Sua mensagem foi enviada com sucesso.",
+    "formError": "Não foi possível enviar a mensagem. Tente novamente mais tarde."
   },
   "lightbox": {
     "close": "Fechar",
