@@ -103,28 +103,32 @@ const Services = () => {
           </h1>
           <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">{t('services.intro')}</p>
 
-          <div className="mt-12 mx-auto max-w-md border-t border-stone-200 pt-10 dark:border-stone-800">
+          <div className="mt-12 mx-auto w-full max-w-[280px] border-t border-stone-200 pt-10 dark:border-stone-800">
             <p className="text-xs uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400 mb-6 text-center">
               {t('services.alumniHeading')}
             </p>
-            <ul className="flex flex-col items-stretch gap-3 sm:items-center">
+            <ul className="mx-auto flex w-full max-w-[280px] flex-col gap-3">
               {legacyAlumni.map((alumno) => (
                 <li
                   key={alumno.id}
-                  className="flex items-center justify-center gap-4 border border-stone-200/80 bg-stone-100/40 px-5 py-3 dark:border-stone-700 dark:bg-stone-900/40 sm:min-w-[280px]"
+                  className="flex w-full items-center gap-3 border border-stone-200/80 bg-stone-100/40 px-4 py-3 dark:border-stone-700 dark:bg-stone-900/40"
                 >
-                  <span className="font-serif text-base text-stone-900 dark:text-stone-100">{alumno.name}</span>
-                  {alumno.instagramUrl ? (
-                    <a
-                      href={alumno.instagramUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex shrink-0 rounded-md p-2 text-stone-600 transition-colors hover:bg-stone-200/80 hover:text-stone-900 dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
-                      aria-label={t('services.instagramProfileAria', { name: alumno.name })}
-                    >
-                      <InstagramIcon size={22} />
-                    </a>
-                  ) : null}
+                  <span className="min-w-0 flex-1 text-left font-serif text-base text-stone-900 dark:text-stone-100">
+                    {alumno.name}
+                  </span>
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center">
+                    {alumno.instagramUrl ? (
+                      <a
+                        href={alumno.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-md p-2 text-stone-600 transition-colors hover:bg-stone-200/80 hover:text-stone-900 dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+                        aria-label={t('services.instagramProfileAria', { name: alumno.name })}
+                      >
+                        <InstagramIcon size={22} />
+                      </a>
+                    ) : null}
+                  </div>
                 </li>
               ))}
             </ul>
