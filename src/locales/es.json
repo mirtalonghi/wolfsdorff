@@ -24,7 +24,8 @@
     "label": "Idioma",
     "es": "ES",
     "en": "EN",
-    "pt": "PT"
+    "pt": "PT",
+    "it": "IT"
   },
   "theme": {
     "useLight": "Activar tema claro",
@@ -51,7 +52,7 @@
     "bioTitle": "El Arquitecto de los Sueños",
     "portraitAlt": "Faiwel Wolfsdorf",
     "bioP1": "WOLFSDORF SCORNIC, Faiwel. Pintor nacido en Varsovia, Polonia, el 23 de julio de 1921, crece en el seno de una familia judía. En 1927 viajó con sus padres a Buenos Aires, donde se radicó hasta 1975, en que se traslada al Perú. Es hijo de Zelic Wolfsdorf y Sura Leja Scornic. A los 13 años Faiwel (Felipe) empieza a trabajar como aprendiz de tipógrafo en Buenos Aires, hasta llegar a ser jefe de composición en los diarios «Di Presse» y «La Nación». En el Perú realiza documentales de arte, siendo director artístico de la empresa cinematográfica Chavín. En Buenos Aires incursionó en la pintura con el maestro Gaspar Besares Soraire, pero es con el maestro Juan Batlle Planas con quien tiene mayor identificación y con quien incursionó en la metodología del automatismo inconsciente y el análisis de la psicología de la forma para expresarse en forma surrealista.",
-    "bioP2": "Felipe ha realizado más de 30 exposiciones de su obra entre el Perú y Argentina, obteniendo una amplia crítica favorable. Sus obras se encuentran en colecciones privadas de Argentina, Brasil, Venezuela, Estados Unidos, Italia, Holanda, Israel y el Perú.",
+    "bioP2": "Felipe ha realizado más de 30 exposiciones de su obra entre el Perú y Argentina, obteniendo una amplia crítica favorable. Sus obras se encuentran en colecciones privadas de Argentina, Brasil, Chile, Venezuela, Estados Unidos, Italia, Holanda, Israel y el Perú.",
     "bioP3": "Ha consagrado gran parte de su tiempo a labores humanísticas como la docencia de arte pictórico con niños pobres de la calle, agrupándolos en la Casa de los Delfines en Miraflores, donde logra realizar una vasta exposición de 300 cuadros, titulada «De pirañas a delfines»; otro tanto hizo con la Casa de los Petisos de Lima, con los jóvenes de Cedro, y también con personas jubiladas de la tercera edad, llegando a ser director del patronato cultural del Instituto Peruano de Seguridad Social.",
     "bioP4": "Dedicó los últimos 30 años de su vida a la enseñanza de pintura y escultura en su taller, punto de reunión y encuentro de alumnos que con el han crecido artísticamente desarrollando su propio estilo.",
     "bioP5": "Fallece el 3 de mayo de 2011 en Lima, Perú. Sus restos descansan en el cementerio judío del Callao.",
@@ -124,7 +125,9 @@
     "title": "Taller de Felipe",
     "tagline": "La continuidad en sus alumnos",
     "intro": "Fue más que un maestro. No enseñaba técnicas como recetas cerradas, sino como puertas abiertas. Decía que la pintura no se aprende, se descubre, y que cada trazo es una forma de decir «aquí estoy» frente al mundo. Sus alumnos —hoy artistas— no heredaron un estilo, sino algo más difícil de transmitir: una forma de mirar, una sensibilidad alerta.",
-    "imageAlt": "Legado {{n}}"
+    "imageAlt": "Legado {{n}}",
+    "alumniHeading": "Alumnos del taller",
+    "instagramProfileAria": "Perfil de Instagram de {{name}}"
   },
   "contact": {
     "subtitle": "Contacto",

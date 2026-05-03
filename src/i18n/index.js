@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import es from '../locales/es.json';
 import en from '../locales/en.json';
 import pt from '../locales/pt.json';
+import it from '../locales/it.json';
 
 const STORAGE_KEY = 'wolfsdorff-lang';
 
@@ -14,6 +15,7 @@ i18n.use(initReactI18next).init({
     es: { translation: es },
     en: { translation: en },
     pt: { translation: pt },
+    it: { translation: it },
   },
   lng: saved || 'es',
   fallbackLng: 'es',

@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Sull’artista",
+    "portfolio": "Opere",
+    "gallery": "Mostre",
+    "criticas": "Rassegna stampa",
+    "legacy": "Eredità",
+    "contact": "Contatti"
+  },
+  "footer": {
+    "tagline": "L’inconscio traccia mappe che la ragione non conosce. Un’eredità di surrealismo, colore e umanità.",
+    "links": "Collegamenti",
+    "contact": "Contatti",
+    "rights": "© {{year}} Eredità Faiwel Wolfsdorf. Tutti i diritti riservati."
+  },
+  "layout": {
+    "menuDialog": "Menu del sito",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "mainNavAria": "Navigazione principale"
+  },
+  "lang": {
+    "label": "Lingua",
+    "es": "ES",
+    "en": "EN",
+    "pt": "PT",
+    "it": "IT"
+  },
+  "theme": {
+    "useLight": "Attiva tema chiaro",
+    "useDark": "Attiva tema scuro"
+  },
+  "home": {
+    "heroAlt": "Sfondo astratto surrealista",
+    "label": "Artista surrealista",
+    "quote": "\"L’inconscio traccia mappe che la ragione non conosce.\"",
+    "intro": "Un viaggio cromatico dalle radici di Varsavia alla luce del Sudamerica. Scoprite l’universo surrealista di Faiwel Wolfsdorf, dove l’onirico prende vita.",
+    "cta": "Esplora la collezione",
+    "featuredAlt": "Opera in evidenza",
+    "featuredLabel": "Opera in evidenza",
+    "featuredTitle": "Automatismo e forma",
+    "featuredBody": "Discepolo dell’automatismo inconscio e della psicologia della forma, Wolfsdorf non dipingeva ciò che vedeva, ma ciò che sentiva pulsare sotto la superficie della realtà. La sua opera è un dialogo eterno tra colore e psiche.",
+    "featuredLink": "Leggi la biografia completa",
+    "quoteBlock": "\"Creare è liberare. La mia opera cerca di cogliere quell’istante preciso in cui il pensiero logico cede il passo all’intuizione pura.\"",
+    "quoteAuthor": "— Faiwel Wolfsdorf"
+  },
+  "about": {
+    "musicPause": "Metti in pausa la musica",
+    "musicPlay": "Riproduci musica",
+    "bioLabel": "Biografia",
+    "bioTitle": "L’architetto dei sogni",
+    "portraitAlt": "Faiwel Wolfsdorf",
+    "bioP1": "WOLFSDORF SCORNIC, Faiwel. Pittore nato a Varsavia, Polonia, il 23 luglio 1921, cresce in una famiglia ebraica. Nel 1927 viaggiò con i genitori a Buenos Aires, dove visse fino al 1975, quando si trasferì in Perù. Figlio di Zelic Wolfsdorf e Sura Leja Scornic. A 13 anni Faiwel (Felipe) iniziò a lavorare come apprendista tipografo a Buenos Aires, fino a diventare capo composizione presso i giornali «Di Presse» e «La Nación». In Perù realizzò documentari d’arte come direttore artistico della casa cinematografica Chavín. A Buenos Aires si avvicinò alla pittura con il maestro Gaspar Besares Soraire, ma fu con il maestro Juan Batlle Planas che trovò la maggiore affinità, esplorando la metodologia dell’automatismo inconscio e l’analisi della psicologia della forma per esprimersi in chiave surrealista.",
+    "bioP2": "Felipe ha tenuto più di 30 mostre della sua opera in Perù e in Argentina, riscuotendo un’ampia critica favorevole. Le sue opere si trovano in collezioni private in Argentina, Brasile, Cile, Venezuela, Stati Uniti, Italia, Paesi Bassi, Israele e Perù.",
+    "bioP3": "Ha dedicato gran parte del tempo a lavori umanitari come l’insegnamento dell’arte pittorica a bambini poveri di strada, riunendoli alla Casa de los Delfines a Miraflores, dove organizzò una vasta mostra di 300 dipinti intitolata «De pirañas a delfines»; fece altrettanto con la Casa de los Petisos a Lima, con i giovani di Cedro e anche con persone anziane in pensione, fino a diventare direttore del patronato culturale dell’Istituto peruviano di sicurezza sociale.",
+    "bioP4": "Ha dedicato gli ultimi 30 anni di vita all’insegnamento di pittura e scultura nel suo atelier, luogo d’incontro di allievi che con lui sono cresciuti artisticamente sviluppando uno stile proprio.",
+    "bioP5": "È scomparso il 3 maggio 2011 a Lima, Perù. Le sue spoglie riposano nel cimitero ebraico del Callao.",
+    "techniquesTitle": "Tecniche e materiali",
+    "techniquesBody": "Maestro dell’olio e della tecnica mista, il suo lavoro si caratterizza per l’uso dell’<auto>automatismo</auto>, lasciando fluire la mano liberamente prima che la mente imponga struttura. Le sue texture sono ricche e organiche, costruite strato su strato per rivelare la storia nascosta in ogni tela.",
+    "cardVidaTallerTitle": "La sua vita, il suo atelier, i suoi allievi",
+    "cardVidaTallerDesc": "Lo spazio della creazione",
+    "cardArconTitle": "Arca dei ricordi",
+    "cardArconDesc": "Capsula del tempo",
+    "collectionsLabel": "Archivio visivo",
+    "collectionsTitle": "Memoria in immagini"
+  },
+  "portfolio": {
+    "subtitle": "Opere artistiche",
+    "title": "Collezione",
+    "all": "Tutte",
+    "categories": {
+      "clasicos": "Alcuni classici",
+      "nordex": "Cartoncino su Nordex",
+      "cartulina-grande": "Cartoncino – grande formato",
+      "rochards": "Rochards",
+      "bastidor": "Su telaio e incorniciate",
+      "restaurar": "Da restaurare",
+      "tinta": "Inchiostro (caffè, colore, pennarello)",
+      "otros": "Altri formati",
+      "privadas": "Collezioni private",
+      "tela-1975": "Tela su telaio – anteriori al 1975",
+      "italia": "Altri formati (in Italia)"
+    }
+  },
+  "galleryPage": {
+    "subtitle": "Mostre",
+    "title": "Galleria",
+    "intro": "Un percorso fotografico attraverso le mostre di Faiwel Wolfsdorf nel corso della sua carriera artistica.",
+    "exhibitionsHeading": "Cataloghi e rassegne",
+    "exhibitionsRange": "1967–2003",
+    "photosHeading": "Foto in mostra",
+    "exhibitions": [
+      "1967 – Galleria Mimo Arte",
+      "1968 – Galleria Witcomb",
+      "1971 – AMIA Associazione mutualistica israelitica argentina",
+      "1979 – Galería En Flores » De las moradas, sus habitantes y algunas otras cosas »",
+      "1981 – Galleria Ivonne Briceño",
+      "1982 – Galleria La Araña «Casualismo?»",
+      "1984 – Galleria Praxis",
+      "1988 – Galleria Praxis",
+      "1994 – Galleria Vargas «Rostros»",
+      "1998 – British Council «Frutos del Sueño»",
+      "2000 – Galleria John Harriman «Instantes de WOLFSDORF»",
+      "2001 – Galleria 2599 «Retrospectiva 1976-2001»",
+      "2002 – British Council",
+      "2003 – Galería PetroPerú «Percepciones»"
+    ],
+    "imageAlt": "Mostra {{n}}"
+  },
+  "criticasPage": {
+    "subtitle": "Stampa e critica",
+    "title": "Rassegna stampa",
+    "intro": "Voci della stampa internazionale che hanno documentato il percorso di Faiwel Wolfsdorf nel corso dei decenni.",
+    "publicaciones": "Pubblicazioni",
+    "archivoTitle": "Archivio stampa",
+    "archivoIntro": "Ritagli e materiali che testimoniano la presenza di Wolfsdorf nella stampa della sua epoca."
+  },
+  "criticaCard": {
+    "pages_one": "{{count}} pagina",
+    "pages_other": "{{count}} pagine"
+  },
+  "services": {
+    "subtitle": "Eredità",
+    "title": "L’atelier di Felipe",
+    "tagline": "La continuità nei suoi allievi",
+    "intro": "Era più di un maestro. Non insegnava la tecnica come ricette chiuse, ma come porte aperte. Diceva che la pittura non si impara, si scopre, e che ogni tratto è un modo per dire «eccomi» al mondo. I suoi allievi —oggi artisti— non hanno ereditato uno stile, ma qualcosa di più difficile da trasmettere: un modo di guardare, una sensibilità vigile.",
+    "imageAlt": "Eredità {{n}}",
+    "alumniHeading": "Allievi dell’atelier",
+    "instagramProfileAria": "Profilo Instagram di {{name}}"
+  },
+  "contact": {
+    "subtitle": "Contatti",
+    "title": "Parliamone",
+    "intro": "Siamo a disposizione di galleristi, curatori, collezionisti e amanti dell’arte che desiderano saperne di più sulla vita e sull’opera di Faiwel Wolfsdorf.",
+    "emailLabel": "Email",
+    "locationLabel": "Sede",
+    "location": "CABA, Buenos Aires, Argentina",
+    "phoneLabel": "Telefono",
+    "formTitle": "Modulo di contatto",
+    "nameLabel": "Nome e cognome",
+    "namePlaceholder": "Il tuo nome",
+    "emailFieldLabel": "Email",
+    "emailPlaceholder": "nome@esempio.com",
+    "subjectLabel": "Oggetto",
+    "subjectPlaceholder": "Seleziona un motivo",
+    "subjectAdquisicion": "Acquisto di un’opera",
+    "subjectPrensa": "Stampa / Mostre",
+    "subjectArchivo": "Richiesta archivio",
+    "subjectOtro": "Altro",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Scrivi qui il tuo messaggio...",
+    "submit": "Invia messaggio",
+    "formSending": "Invio in corso…",
+    "formSuccess": "Grazie. Il messaggio è stato inviato correttamente.",
+    "formError": "Impossibile inviare il messaggio. Riprova più tardi."
+  },
+  "lightbox": {
+    "close": "Chiudi",
+    "zoomIn": "Ingrandisci",
+    "zoomOut": "Riduci",
+    "prev": "Precedente",
+    "next": "Successivo"
+  }
+}
