@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import ImageLightbox from '../components/ImageLightbox';
+import InstagramIcon from '../components/icons/InstagramIcon';
+import { legacyAlumni } from '../data/legacyAlumni';
 
 import legado01 from '../assets/images/legado/WhatsApp Image 2026-05-02 at 19.52.54.jpeg';
 import legado02 from '../assets/images/legado/WhatsApp Image 2026-05-02 at 19.52.55.jpeg';
@@ -100,6 +102,33 @@ const Services = () => {
             <span className="block">{t('services.tagline')}</span>
           </h1>
           <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">{t('services.intro')}</p>
+
+          <div className="mt-12 mx-auto max-w-md border-t border-stone-200 pt-10 dark:border-stone-800">
+            <p className="text-xs uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400 mb-6 text-center">
+              {t('services.alumniHeading')}
+            </p>
+            <ul className="flex flex-col items-stretch gap-3 sm:items-center">
+              {legacyAlumni.map((alumno) => (
+                <li
+                  key={alumno.id}
+                  className="flex items-center justify-center gap-4 border border-stone-200/80 bg-stone-100/40 px-5 py-3 dark:border-stone-700 dark:bg-stone-900/40 sm:min-w-[280px]"
+                >
+                  <span className="font-serif text-base text-stone-900 dark:text-stone-100">{alumno.name}</span>
+                  {alumno.instagramUrl ? (
+                    <a
+                      href={alumno.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex shrink-0 rounded-md p-2 text-stone-600 transition-colors hover:bg-stone-200/80 hover:text-stone-900 dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+                      aria-label={t('services.instagramProfileAria', { name: alumno.name })}
+                    >
+                      <InstagramIcon size={22} />
+                    </a>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="columns-2 md:columns-3 lg:columns-4 gap-3">

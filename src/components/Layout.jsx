@@ -41,6 +41,7 @@ const Layout = ({ children }) => {
     { code: 'es', label: t('lang.es') },
     { code: 'en', label: t('lang.en') },
     { code: 'pt', label: t('lang.pt') },
+    { code: 'it', label: t('lang.it') },
   ];
 
   return (

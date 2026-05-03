@@ -24,7 +24,8 @@
     "label": "Idioma",
     "es": "ES",
     "en": "EN",
-    "pt": "PT"
+    "pt": "PT",
+    "it": "IT"
   },
   "theme": {
     "useLight": "Usar tema claro",
@@ -51,7 +52,7 @@
     "bioTitle": "O Arquiteto dos Sonhos",
     "portraitAlt": "Faiwel Wolfsdorf",
     "bioP1": "WOLFSDORF SCORNIC, Faiwel. Pintor nascido em Varsóvia, Polônia, em 23 de julho de 1921, cresceu em uma família judia. Em 1927 viajou com os pais para Buenos Aires, onde viveu até 1975, quando se mudou para o Peru. Filho de Zelic Wolfsdorf e Sura Leja Scornic. Aos 13 anos, Faiwel (Felipe) começou a trabalhar como aprendiz de tipógrafo em Buenos Aires, até chefiar a composição nos jornais Di Presse e La Nación. No Peru realizou documentários de arte como diretor artístico da produtora cinematográfica Chavín. Em Buenos Aires iniciou-se na pintura com o mestre Gaspar Besares Soraire, mas foi com Juan Batlle Planas que encontrou maior identificação, explorando o automatismo inconsciente e a análise da psicologia da forma para expressar-se de modo surrealista.",
-    "bioP2": "Felipe realizou mais de 30 exposições de sua obra entre Peru e Argentina, com ampla crítica favorável. Suas obras integram coleções privadas na Argentina, Brasil, Venezuela, Estados Unidos, Itália, Holanda, Israel e Peru.",
+    "bioP2": "Felipe realizou mais de 30 exposições de sua obra entre Peru e Argentina, com ampla crítica favorável. Suas obras integram coleções privadas na Argentina, Brasil, Chile, Venezuela, Estados Unidos, Itália, Holanda, Israel e Peru.",
     "bioP3": "Dedicou grande parte do tempo a trabalhos humanitários como o ensino de arte pictórica a crianças pobres de rua, reunindo-as na Casa de los Delfines em Miraflores, onde organizou uma vasta exposição de 300 quadros intitulada «De pirañas a delfines»; fez o mesmo com a Casa de los Petisos em Lima, com jovens de Cedro e também com idosos aposentados, chegando a dirigir o patronato cultural do Instituto Peruano de Seguridad Social.",
     "bioP4": "Dedicou os últimos 30 anos de vida ao ensino de pintura e escultura em seu ateliê, ponto de encontro de alunos que cresceram artisticamente ao seu lado desenvolvendo estilo próprio.",
     "bioP5": "Faleceu em 3 de maio de 2011 em Lima, Peru. Seus restos repousam no cemitério judeu do Callao.",
@@ -124,7 +125,9 @@
     "title": "Oficina do Felipe",
     "tagline": "A continuidade nos seus alunos",
     "intro": "Foi mais que um mestre. Não ensinava técnicas como receitas fechadas, mas como portas abertas. Dizia que a pintura não se aprende, se descobre, e que cada traço é uma forma de dizer «aqui estou» ao mundo. Seus alunos —hoje artistas— não herdaram um estilo, e sim algo mais difícil de transmitir: uma forma de olhar, uma sensibilidade alerta.",
-    "imageAlt": "Legado {{n}}"
+    "imageAlt": "Legado {{n}}",
+    "alumniHeading": "Alunos do ateliê",
+    "instagramProfileAria": "Perfil do Instagram de {{name}}"
   },
   "contact": {
     "subtitle": "Contato",
