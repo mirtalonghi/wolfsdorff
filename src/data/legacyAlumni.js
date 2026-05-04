@@ -18,4 +18,9 @@ export const legacyAlumni = [
     id: 'bert-engelhard',
     name: 'Bert Engelhard',
   },
+  {
+    id: 'liza-holzapfel',
+    name: 'Liza Holzapfel',
+    instagramUrl: 'https://www.instagram.com/manzan_de_mandera/',
+  },
 ];
