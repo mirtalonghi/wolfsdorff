@@ -3,446 +3,2041 @@
     "id": "clasicos",
     "name": "Algunos Clásicos",
     "images": [
-      "/galleries/clasicos/P115017769.jpg",
-      "/galleries/clasicos/P115017610.jpg",
-      "/galleries/clasicos/P115017355.jpg",
-      "/galleries/clasicos/P115017818.jpg",
-      "/galleries/clasicos/P115017976.jpg",
-      "/galleries/clasicos/P115018019.jpg",
-      "/galleries/clasicos/P115018280.jpg",
-      "/galleries/clasicos/P115018317.jpg",
-      "/galleries/clasicos/P115018435.jpg",
-      "/galleries/clasicos/P115018555.jpg",
-      "/galleries/clasicos/P115018669.jpg",
-      "/galleries/clasicos/P115018756.jpg",
-      "/galleries/clasicos/P115018850.jpg",
-      "/galleries/clasicos/P115018984.jpg",
-      "/galleries/clasicos/P115019010.jpg",
-      "/galleries/clasicos/P115019222.jpg",
-      "/galleries/clasicos/P11501937166.jpg",
-      "/galleries/clasicos/P115019497.jpg",
-      "/galleries/clasicos/P115019581.jpg",
-      "/galleries/clasicos/P115019769.jpg",
-      "/galleries/clasicos/P115019620.jpg",
-      "/galleries/clasicos/P115019812.jpg",
-      "/galleries/clasicos/P115019995.jpg",
-      "/galleries/clasicos/P115020071.jpg",
-      "/galleries/clasicos/P115020149.jpg",
-      "/galleries/clasicos/P115020247.jpg",
-      "/galleries/clasicos/P115020473.jpg",
-      "/galleries/clasicos/P115020619.jpg",
-      "/galleries/clasicos/P115020731.jpg",
-      "/galleries/clasicos/P115020869.jpg",
-      "/galleries/clasicos/P115020958.jpg",
-      "/galleries/clasicos/P115021079.jpg",
-      "/galleries/clasicos/P115021145.jpg",
-      "/galleries/clasicos/P115021265.jpg",
-      "/galleries/clasicos/P115021310.jpg",
-      "/galleries/clasicos/P115021580.jpg",
-      "/galleries/clasicos/P115021431.jpg",
-      "/galleries/clasicos/P115021669.jpg",
-      "/galleries/clasicos/P115021758.jpg"
+      {
+        "src": "/galleries/clasicos/P115017769.jpg",
+        "title": "Máscara con corona dorada",
+        "description": "Rostro femenino emergente de un fondo terracota, enmarcado por elementos florales y dorados que forman una corona. La expresión velada y la paleta cálida definen el carácter onírico de la composición.",
+        "size": "319 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115017610.jpg",
+        "title": "Casas nocturnas bajo la luna",
+        "description": "Dos edificios de tejados anaranjados se alzan bajo un cielo gris nocturno iluminado por la luna llena. La escena oscila entre lo cotidiano y lo fantástico.",
+        "size": "339 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115017355.jpg",
+        "title": "Barco y arquitectura suspendida",
+        "description": "Una embarcación roja navega bajo una gran estructura metálica que flota sin apoyo. La tensión entre lo industrial y lo poético define esta obra de singular inventiva espacial.",
+        "size": "295 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115017818.jpg",
+        "title": "Desnudo con cabellera azul",
+        "description": "Figura femenina de pie sobre fondo azul oscuro. El cabello azul intenso contrasta con el cuerpo dorado, tratado con línea sintética y economía de medios.",
+        "size": "307 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115017976.jpg",
+        "title": "Rostro en malvas",
+        "description": "Planos superpuestos de malva, rosa y lila configuran un rostro femenino de mirada introspectiva. La paleta fría acentúa el carácter reflexivo y misterioso de la imagen.",
+        "size": "336 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018019.jpg",
+        "title": "El payaso rojo",
+        "description": "Figura de payaso cubierta de rojo intenso, con cuello blanco que enmarca un rostro partido en dos mitades. La dualidad entre la comedia y la tragedia es el eje emocional de la obra.",
+        "size": "341 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018280.jpg",
+        "title": "Ciudad en el umbral",
+        "description": "Arquitectura urbana encerrada en un óvalo luminoso sobre fondo oscuro. Una ciudad suspendida fuera del tiempo, entre la realidad y el sueño.",
+        "size": "329 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018317.jpg",
+        "title": "Tres figuras bajo el árbol dorado",
+        "description": "Tres figuras femeninas entrelazadas bajo un árbol de follaje dorado, sobre un fragmento de tierra flotante en el azul. Alegría, comunidad y naturaleza onírica en una sola imagen.",
+        "size": "322 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018435.jpg",
+        "title": "Rostro escultórico",
+        "description": "Retrato de rasgos angulares y textura matérica que evoca la solidez de la escultura. La paleta de tierras y grises subraya el peso y la permanencia de la forma.",
+        "size": "332 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018555.jpg",
+        "title": "Corona de oro",
+        "description": "Retrato con el rostro partido en luz y sombra, coronado por una melena dorada. La mirada de ojos azules sobre la paleta de rosas y malvas confiere una presencia intensa y solemne.",
+        "size": "337 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018669.jpg",
+        "title": "Figura con velo y cuello rojo",
+        "description": "Retrato delicado de figura con tocado blanco vaporoso y cuello rojo ondulado. El fondo tierra y la expresión melancólica crean una atmósfera de quietud y misterio íntimo.",
+        "size": "329 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018756.jpg",
+        "title": "Aparición sobre carmín",
+        "description": "Rostro pálido que emerge de un fondo carmín intenso, rodeado de planos azules y dorados. El contraste cromático genera una presencia casi visionaria, entre lo sagrado y lo onírico.",
+        "size": "321 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018850.jpg",
+        "title": "Tres figuras en la isla",
+        "description": "Tres figuras etéreas, apenas esbozadas, sobre un fragmento de tierra suspendido bajo un cielo azul uniforme. La obra sugiere un momento de tránsito entre mundos.",
+        "size": "335 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115018984.jpg",
+        "title": "La gran ave y el rostro rosa",
+        "description": "Una figura blanca de gran envergadura —evocadora de un ave— coexiste con un pequeño rostro femenino de cabello dorado sobre fondo azul. La escala y el contraste articulan una dualidad poderosa.",
+        "size": "326 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019010.jpg",
+        "title": "Rostro en rosa",
+        "description": "Óvalo facial rosado sobre fondo crema, de una simpleza casi meditativa. La mirada directa y la economía de medios concentran toda la carga expresiva en el rostro.",
+        "size": "333 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019222.jpg",
+        "title": "Torres bajo cielo encendido",
+        "description": "Dos edificios de aspecto europeo persisten bajo un cielo en tonos malva y rojo encendido. La arquitectura como testigo mudo del tiempo y las tempestades.",
+        "size": "327 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P11501937166.jpg",
+        "title": "Dama de verde",
+        "description": "Figura femenina con vestido verde y cabellera rojo-anaranjada sobre fondo violeta. La obra combina el clasicismo del retrato con la libertad formal del surrealismo.",
+        "size": "297 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019497.jpg",
+        "title": "Perfil en magenta",
+        "description": "Perfil femenino de cabellera magenta sobre fondo azul acero. La simplificación del rostro en planos de color crea una imagen de síntesis formal y gran fuerza visual.",
+        "size": "349 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019581.jpg",
+        "title": "El florero surrealista",
+        "description": "Florero blanco de formas orgánicas sostiene flores de colores vivos sobre fondo oscuro. La naturaleza muerta atravesada por la lógica onírica del surrealismo.",
+        "size": "330 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019769.jpg",
+        "title": "Figura con corona de espinas",
+        "description": "Figura coronada con ramas espinosas blancas y cuerpo abstracto con espiral rojo. La mirada directa y la tensión simbólica imponen una presencia perturbadora.",
+        "size": "332 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019620.jpg",
+        "title": "Rostro bipartito",
+        "description": "La mitad roja y la mitad blanca de un rostro conviven sin fusionarse sobre fondo azul con detalles amarillos. La dualidad de la identidad expresada a través del color.",
+        "size": "332 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019812.jpg",
+        "title": "Retrato con cabellera roja",
+        "description": "Rostro fragmentado en planos de luz y sombra, enmarcado por una cabellera rojo-ocre. El fondo gris azulado refuerza la tensión entre los distintos planos del retrato.",
+        "size": "311 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115019995.jpg",
+        "title": "Fachada nocturna",
+        "description": "Edificio de fachada rosada con tejado rojo sobre fondo oscuro y tormentoso. La arquitectura doméstica como refugio frágil ante la amenaza de la noche.",
+        "size": "319 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020071.jpg",
+        "title": "Rostro bajo capucha rosa",
+        "description": "El rostro aparece bajo un gran sombrero o capucha rosada que ocupa la mayor parte del lienzo. La intimidad y el misterio conviven en un retrato de tonos muy suaves.",
+        "size": "321 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020149.jpg",
+        "title": "Figura con tocado",
+        "description": "Figura de tonalidades rosadas y ámbar con un tocado que encuadra el rostro. La gestualidad de la pincelada dota la imagen de calidez y un movimiento contenido.",
+        "size": "358 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020247.jpg",
+        "title": "El torero y el toro",
+        "description": "Matador enfrentado al toro en un paisaje árido y ocre bajo un cielo crepuscular. La escena, tratada con libertad expresiva, eleva la corrida a dimensión mítica.",
+        "size": "304 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020473.jpg",
+        "title": "El flautista",
+        "description": "Figura en rojo que toca una flauta bajo un cielo azul con detalles dorados. La música como acto ritual y la figura como hechicero de un mundo imaginario.",
+        "size": "321 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020619.jpg",
+        "title": "Corona de flores",
+        "description": "Rostro femenino sereno con una corona de flores amarillas y rosas sobre fondo malva. La delicadeza floral contrasta con la solidez tranquila del rostro.",
+        "size": "329 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020731.jpg",
+        "title": "Dos torres al atardecer",
+        "description": "Dos torres fantásticas con tejados anaranjados y ventanas iluminadas sobre fondo azul celeste. La arquitectura onírica de Wolfsdorf en su versión más luminosa y festiva.",
+        "size": "324 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020869.jpg",
+        "title": "Ciudad bajo la luna llena",
+        "description": "Dos edificios de tejados rojos bajo la luna llena en un cielo nocturno carmín. Arquitectura y luz lunar como polos de una escena de quietud perturbadora.",
+        "size": "312 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115020958.jpg",
+        "title": "Las tres gracias",
+        "description": "Tres figuras femeninas con tocados blancos emergen de una nube de pinceladas sobre fondo lavanda. La alusión a las Tres Gracias clásicas reinterpretada desde el surrealismo.",
+        "size": "346 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021079.jpg",
+        "title": "Doble rostro en azul",
+        "description": "Dos rostros superpuestos de cabellera azul sobre fondo violáceo. La dualidad y la superposición de identidades como exploración pictórica de la psique.",
+        "size": "348 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021145.jpg",
+        "title": "Constelación de rostros",
+        "description": "Múltiples rostros femeninos en tonos rojos y rosas se agrupan en un espacio en agitación. La energía colectiva desborda los límites individuales de cada figura.",
+        "size": "335 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021265.jpg",
+        "title": "Perfil con flor en la oscuridad",
+        "description": "Rostro en perfil sobre fondo oscuro, flanqueado por una forma floral rosada. La soledad y la naturaleza como compañía en la noche.",
+        "size": "287 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021310.jpg",
+        "title": "Cabellera al viento",
+        "description": "Retrato de figura con cabellera ámbar en movimiento y ojos azules intensos. Las formas geométricas del vestido contrastan con la fluidez orgánica del cabello.",
+        "size": "311 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021580.jpg",
+        "title": "Doble presencia",
+        "description": "Primer plano de un rostro en salmón y coral del que emerge, tangencialmente, un segundo perfil. La coexistencia de dos identidades en un solo espacio pictórico.",
+        "size": "320 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021431.jpg",
+        "title": "La corrida",
+        "description": "Vista aérea de la plaza de toros con matador y toro en el ruedo, bajo un cielo en rojos y azules intensos. La lidia elevada a escena de ritual y drama universal.",
+        "size": "315 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021669.jpg",
+        "title": "Cabeza de caballo",
+        "description": "Cabeza de caballo en tonos dorados y ocres sobre fondo azul oscuro. El animal tratado con síntesis expresiva, símbolo de fuerza, libertad y energía primordial.",
+        "size": "431 × 465"
+      },
+      {
+        "src": "/galleries/clasicos/P115021758.jpg",
+        "title": "Figura azul en la oscuridad",
+        "description": "Figura de cuerpo voluminoso en azul intenso, con incrustaciones de color sobre fondo púrpura. Una presencia enigmática que desafía la anatomía y habita un espacio propio.",
+        "size": "295 × 465"
+      }
     ]
   },
   {
     "id": "nordex",
     "name": "Cartulina sobre Nordex",
     "images": [
-      "/galleries/nordex/P1150148.jpg",
-      "/galleries/nordex/P1150170.jpg",
-      "/galleries/nordex/P1150149.jpg",
-      "/galleries/nordex/P1150150.jpg",
-      "/galleries/nordex/P1150153.jpg",
-      "/galleries/nordex/P1150154.jpg",
-      "/galleries/nordex/P1150155.jpg",
-      "/galleries/nordex/P1150156.jpg",
-      "/galleries/nordex/P1150157.jpg",
-      "/galleries/nordex/P1150159.jpg",
-      "/galleries/nordex/P1150160.jpg",
-      "/galleries/nordex/P1150161.jpg",
-      "/galleries/nordex/P1150163.jpg",
-      "/galleries/nordex/P1150165.jpg",
-      "/galleries/nordex/P1150164.jpg",
-      "/galleries/nordex/P1150166.jpg",
-      "/galleries/nordex/P1150167.jpg"
+      {
+        "src": "/galleries/nordex/P1150148.jpg",
+        "title": "Rostro en rosa y violeta",
+        "description": "Retrato de gran formato cromático trabajado sobre Nordex. La textura estriada del material se integra con la pintura, generando un efecto de relieve que amplifica la intensidad expresiva del rostro.",
+        "size": "313 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150170.jpg",
+        "title": "La multitud de rostros",
+        "description": "Múltiples rostros superpuestos emergen de una superficie de rojos y azules. La acumulación de presencias sobre el Nordex evoca una memoria colectiva o un sueño habitado por muchas voces.",
+        "size": "348 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150149.jpg",
+        "title": "Cabellera en llamas",
+        "description": "Rostro de piel violeta coronado por una cabellera de amarillo y naranja ardiente. La textura del Nordex acentúa la vibración cromática, convirtiendo el cabello en un fuego silencioso.",
+        "size": "315 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150150.jpg",
+        "title": "Espejo de rostros",
+        "description": "Múltiples ojos y rasgos faciales se superponen en azules, malvas y crema. El Nordex actúa como un espejo roto que refleja fragmentos de identidad desde distintos ángulos.",
+        "size": "319 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150153.jpg",
+        "title": "Rostro bajo la lluvia",
+        "description": "El rostro aparece atravesado por trazos verticales que evocan lluvia o cuerdas tensadas. La textura del Nordex refuerza la sensación de que la figura emerge desde el interior del material.",
+        "size": "312 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150154.jpg",
+        "title": "Aparición en azul",
+        "description": "Rostro que emerge difusamente de una superficie en azules, violetas y rojos estriados. La figura parece disolverse y recomponerse en el tejido visual del Nordex.",
+        "size": "322 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150155.jpg",
+        "title": "Rostro sobre fondo oscuro",
+        "description": "La cara emerge de un entorno de azules, verdes y amarillos sobre fondo negro. La paleta viva contrasta con la profundidad del campo oscuro, creando una tensión luminosa particular al Nordex.",
+        "size": "361 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150156.jpg",
+        "title": "Figura con animal en sombra",
+        "description": "Retrato de figura sobre fondo multicolor en tonos rosados, con la silueta de un animal en la zona inferior. La coexistencia humano-animal es característica del universo simbólico de Wolfsdorf.",
+        "size": "374 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150157.jpg",
+        "title": "Rostro en el cosmos",
+        "description": "Cara rodeada de formas abstractas en azul, amarillo y verde que evocan constelaciones o células. El Nordex da a la superficie una calidad casi mineral, como si el rostro fuera una formación geológica.",
+        "size": "347 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150159.jpg",
+        "title": "Máscara con aureola",
+        "description": "Rostro frontal coronado por grandes formas ovales vacías que flotan sobre el mauve del fondo. El Nordex texturizado hace que la figura parezca crecer desde la superficie misma del soporte.",
+        "size": "324 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150160.jpg",
+        "title": "Figura con corona azul",
+        "description": "Figura de rostro rosado con una exuberante corona de formas azules sobre fondo rojo intenso. La materia del Nordex colabora en la vibración del contraste cromático.",
+        "size": "318 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150161.jpg",
+        "title": "Mirada azul sobre rojo",
+        "description": "Rostro de tez azulada con cabellera rojo-borgoña y ojos de mirada directa e intensa. El Nordex integra el pigmento en su trama, dando al color una profundidad táctil.",
+        "size": "315 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150163.jpg",
+        "title": "Perfil azul velado",
+        "description": "Rostro en perfil en tonos azul celeste y malva, tratado con extrema delicadeza sobre el Nordex. La figura parece contemplar algo invisible, en actitud de serena meditación.",
+        "size": "313 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150165.jpg",
+        "title": "Inmersión en carmín",
+        "description": "Rostro sumergido en un campo profundo de carmines y malvas con texturas verticales del Nordex. La figura apenas se diferencia del fondo, sugiriendo una fusión entre el ser y su entorno.",
+        "size": "330 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150164.jpg",
+        "title": "Rostro en la tormenta de color",
+        "description": "Cara que emerge de un torbellino de rojos, verdes, purpuras y ocres. El Nordex amplifica la textura dramática, convirtiendo el soporte en una superficie casi volcánica.",
+        "size": "325 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150166.jpg",
+        "title": "El rostro y sus fantasmas",
+        "description": "Figura principal en primer plano acompañada de rostros más pequeños y ligeros que flotan sobre ella. El campo dorado y carmín del Nordex los unifica en una sola visión.",
+        "size": "325 × 465"
+      },
+      {
+        "src": "/galleries/nordex/P1150167.jpg",
+        "title": "La luna entre dos sombras",
+        "description": "Figura central luminosa flanqueada por dos presencias oscuras que la contemplan. El azul profundo del Nordex convierte la escena en un ritual nocturno de gran intensidad poética.",
+        "size": "332 × 465"
+      }
     ]
   },
   {
     "id": "cartulina-grande",
     "name": "Cartulina – formato grande",
     "images": [
-      "/galleries/cartulina-grande/P1150220.jpg",
-      "/galleries/cartulina-grande/P1150222.jpg",
-      "/galleries/cartulina-grande/P1150221.jpg",
-      "/galleries/cartulina-grande/P1150223.jpg",
-      "/galleries/cartulina-grande/P1150224.jpg",
-      "/galleries/cartulina-grande/P1150225.jpg",
-      "/galleries/cartulina-grande/P1150226.jpg",
-      "/galleries/cartulina-grande/P1150227.jpg",
-      "/galleries/cartulina-grande/P1150228.jpg",
-      "/galleries/cartulina-grande/P1150238.jpg",
-      "/galleries/cartulina-grande/P1150237.jpg",
-      "/galleries/cartulina-grande/P115056831.jpg",
-      "/galleries/cartulina-grande/P115056960.jpg",
-      "/galleries/cartulina-grande/P115056643.jpg",
-      "/galleries/cartulina-grande/P115057687.jpg"
+      {
+        "src": "/galleries/cartulina-grande/P1150220.jpg",
+        "title": "El fumador",
+        "description": "Retrato expresionista de figura masculina con pipa, cabellera naranja encendida y mirada penetrante sobre fondo oscuro. La gestualidad de la pincelada comunica fuerza e ironía en partes iguales.",
+        "size": "348 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150222.jpg",
+        "title": "Perfil con velo de encaje",
+        "description": "Perfil femenino de expresión serena envuelto en un velo de encaje blanco sobre fondo azul nocturno. La calidad del encaje, trabajada con gran delicadeza, contrasta con la oscuridad que rodea la figura.",
+        "size": "344 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150221.jpg",
+        "title": "La mandolina y la figura",
+        "description": "Figura de cabellera dorada y rizada junto a una mandolina de gran tamaño sobre un fondo de colores vivos. La música y la figura se entrelazan en una composición de exuberancia cromática.",
+        "size": "357 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150223.jpg",
+        "title": "Naturaleza muerta con copa",
+        "description": "Bandeja con un pan o trozo de comida y una copa oscura bajo una forma floral amarilla suspendida en el negro. Una naturaleza muerta atravesada por una lógica onírica que defamiliariza los objetos cotidianos.",
+        "size": "352 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150224.jpg",
+        "title": "Rostro cubista en malva",
+        "description": "Rostro fragmentado en planos geométricos de malva, borgoña, rosa y amarillo sobre fondo gris-azulado. La descomposición cubista del retrato como exploración de las múltiples caras de la identidad.",
+        "size": "364 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150225.jpg",
+        "title": "Arabescos rojos",
+        "description": "Rostro femenino rodeado por una trama de arabescos rojos y dorados sobre fondo azul. El ornamento de inspiración Art Nouveau dialoga con el surrealismo propio del artista.",
+        "size": "356 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150226.jpg",
+        "title": "La pareja en el paisaje",
+        "description": "Dos figuras desnudas se toman de las manos en un paisaje de rojo intenso, agua y vegetación surrealista. Un momento de encuentro entre dos seres que flotan en un mundo propio.",
+        "size": "370 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150227.jpg",
+        "title": "Forma orgánica (apaisado)",
+        "description": "Composición horizontal de gran mancha orgánica en rosa, cobre y rojo sobre fondo azul. La forma evoca un organismo vivo, una célula o un paisaje geológico visto desde el aire.",
+        "size": "465 × 356"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150228.jpg",
+        "title": "Explosión interior",
+        "description": "Forma de luz blanca y azul que surge con violencia de un fondo vino oscuro, dejando rastros dorados a su paso. La obra sugiere una energía interna que busca liberarse del soporte.",
+        "size": "347 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150238.jpg",
+        "title": "El sol espiral",
+        "description": "Gran espiral de luz naranja y amarillo que gira sobre un horizonte terroso. Una meditación sobre el origen, el ciclo cósmico y la energía primordial del astro.",
+        "size": "385 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P1150237.jpg",
+        "title": "Perfil con ornamentos rojos",
+        "description": "Perfil masculino de rasgos clásicos con cabello y barba en rojo rizados sobre fondo gris-azul y naranja. La figura combina solidez escultórica con la vitalidad del trazo expresivo.",
+        "size": "356 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P115056831.jpg",
+        "title": "Dos rostros en el arco azul",
+        "description": "Dos rostros superpuestos emergen bajo un arco sobre fondo azul profundo. La doble presencia dentro del arco sugiere una dualidad arquetípica: el yo y su sombra.",
+        "size": "361 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P115056960.jpg",
+        "title": "Rostro azul en llamas",
+        "description": "Rostro de piel azul con cabellera roja encendida sobre fondo carmín y violeta. La tensión entre el frío del azul facial y el calor de la cabellera crea una imagen de intensidad volcánica.",
+        "size": "353 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P115056643.jpg",
+        "title": "Cabellera que sangra",
+        "description": "Rostro de piel azul sobre el que caen venas o hilos rojos desde una cabellera anaranjada. Una imagen perturbadora que une belleza y vulnerabilidad en una sola figura.",
+        "size": "357 × 465"
+      },
+      {
+        "src": "/galleries/cartulina-grande/P115057687.jpg",
+        "title": "El encuentro de los seres",
+        "description": "Dos figuras fantásticas de cuerpos fragmentados se miran ante una mesita suspendida bajo un cielo nocturno con discos dorados flotantes. Una escena de ritual o negociación en un mundo otro.",
+        "size": "393 × 465"
+      }
     ]
   },
   {
     "id": "rochards",
     "name": "Rochards",
     "images": [
-      "/galleries/rochards/P1150232.jpg",
-      "/galleries/rochards/P1150230.jpg",
-      "/galleries/rochards/P1150235.jpg",
-      "/galleries/rochards/P1150236.jpg"
+      {
+        "src": "/galleries/rochards/P1150232.jpg",
+        "title": "Díptico azul y rojo I",
+        "description": "Díptico abstracto sobre Rochards: dos paneles con formas orgánicas rojas sobre campo azul profundo. La simetría imperfecta entre los paneles sugiere variación y repetición, como los latidos de un organismo vivo.",
+        "size": "465 × 200"
+      },
+      {
+        "src": "/galleries/rochards/P1150230.jpg",
+        "title": "Díptico rojo y dorado",
+        "description": "Dos paneles con formas de materia dorada y roja sobre azul. La textura del Rochards imprime huellas orgánicas que hacen de cada panel una huella única, complementaria de la otra.",
+        "size": "465 × 303"
+      },
+      {
+        "src": "/galleries/rochards/P1150235.jpg",
+        "title": "Díptico multicolor",
+        "description": "Díptico de gran riqueza cromática: turquesa, amarillo, rosa y rojo conviven en dos paneles de composición análoga. La paleta viva y la textura matérica son el lenguaje central de la serie Rochards.",
+        "size": "465 × 213"
+      },
+      {
+        "src": "/galleries/rochards/P1150236.jpg",
+        "title": "Díptico naranja y azul",
+        "description": "Dos paneles con formas volcánicas en naranja, rojo y azul. El panel derecho, más oscuro, actúa como eco o sombra del izquierdo, creando un diálogo entre luz y profundidad.",
+        "size": "465 × 224"
+      }
     ]
   },
   {
     "id": "bastidor",
     "name": "En bastidor y enmarcadas",
     "images": [
-      "/galleries/bastidor/Foto1EB.jpg",
-      "/galleries/bastidor/P1150265.jpg",
-      "/galleries/bastidor/P1150264.jpg",
-      "/galleries/bastidor/P1150271.jpg",
-      "/galleries/bastidor/P1150276.jpg",
-      "/galleries/bastidor/P1150277.jpg",
-      "/galleries/bastidor/P1150279.jpg",
-      "/galleries/bastidor/P1150280.jpg",
-      "/galleries/bastidor/P1150282.jpg",
-      "/galleries/bastidor/P1150284.jpg",
-      "/galleries/bastidor/P1150289.jpg",
-      "/galleries/bastidor/P1150286.jpg",
-      "/galleries/bastidor/P1150283.jpg",
-      "/galleries/bastidor/P1150290.jpg",
-      "/galleries/bastidor/P1150293.jpg",
-      "/galleries/bastidor/P1150294.jpg",
-      "/galleries/bastidor/P1150300.jpg",
-      "/galleries/bastidor/P1150301.jpg",
-      "/galleries/bastidor/P1150304.jpg",
-      "/galleries/bastidor/P115030399.jpg",
-      "/galleries/bastidor/P1150306.jpg",
-      "/galleries/bastidor/P1150307.jpg",
-      "/galleries/bastidor/P1150311.jpg",
-      "/galleries/bastidor/P1150313.jpg",
-      "/galleries/bastidor/P1150316.jpg",
-      "/galleries/bastidor/P1150315.jpg",
-      "/galleries/bastidor/P1150317.jpg",
-      "/galleries/bastidor/P1150319.jpg",
-      "/galleries/bastidor/P1150318.jpg",
-      "/galleries/bastidor/P1150321.jpg",
-      "/galleries/bastidor/P1150323.jpg",
-      "/galleries/bastidor/P1150324.jpg",
-      "/galleries/bastidor/P1150326.jpg",
-      "/galleries/bastidor/P1150328.jpg",
-      "/galleries/bastidor/P1150327.jpg",
-      "/galleries/bastidor/P1150329.jpg",
-      "/galleries/bastidor/P1150330.jpg",
-      "/galleries/bastidor/P1150332.jpg",
-      "/galleries/bastidor/P1150334.jpg",
-      "/galleries/bastidor/P1150253.jpg",
-      "/galleries/bastidor/P1150255.jpg",
-      "/galleries/bastidor/P1150256.jpg",
-      "/galleries/bastidor/P1150258.jpg",
-      "/galleries/bastidor/P1150259.jpg",
-      "/galleries/bastidor/P1150263.jpg",
-      "/galleries/bastidor/P1150260.jpg",
-      "/galleries/bastidor/P1150339.jpg",
-      "/galleries/bastidor/P1150347.jpg",
-      "/galleries/bastidor/P1150343.jpg",
-      "/galleries/bastidor/P1150344.jpg"
+      {
+        "src": "/galleries/bastidor/Foto1EB.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150265.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150264.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150271.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150276.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150277.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150279.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150280.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150282.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150284.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150289.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150286.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150283.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150290.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150293.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150294.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150300.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150301.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150304.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P115030399.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150306.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150307.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150311.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150313.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150316.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150315.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150317.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150319.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150318.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150321.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150323.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150324.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150326.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150328.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150327.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150329.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150330.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150332.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150334.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150253.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150255.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150256.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150258.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150259.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150263.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150260.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150339.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150347.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150343.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/bastidor/P1150344.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   },
   {
     "id": "restaurar",
     "name": "A restaurar",
     "images": [
-      "/galleries/restaurar/P114096378.jpg",
-      "/galleries/restaurar/P1140959.jpg",
-      "/galleries/restaurar/P1140964.jpg",
-      "/galleries/restaurar/P1140965.jpg",
-      "/galleries/restaurar/P1140966.jpg",
-      "/galleries/restaurar/P1140967.jpg",
-      "/galleries/restaurar/P1140969.jpg",
-      "/galleries/restaurar/P1140972.jpg",
-      "/galleries/restaurar/P1140973.jpg",
-      "/galleries/restaurar/P1140974.jpg",
-      "/galleries/restaurar/P1140975.jpg",
-      "/galleries/restaurar/P1140979.jpg",
-      "/galleries/restaurar/P1140983.jpg",
-      "/galleries/restaurar/P1140985.jpg",
-      "/galleries/restaurar/P1140984.jpg",
-      "/galleries/restaurar/P1140990.jpg",
-      "/galleries/restaurar/P1150242.jpg",
-      "/galleries/restaurar/P1150240.jpg",
-      "/galleries/restaurar/P1150243.jpg",
-      "/galleries/restaurar/P1150245.jpg",
-      "/galleries/restaurar/P1150246.jpg",
-      "/galleries/restaurar/P1150247.jpg",
-      "/galleries/restaurar/P1150248.jpg",
-      "/galleries/restaurar/P1150250.jpg",
-      "/galleries/restaurar/P1150249.jpg",
-      "/galleries/restaurar/P1150251.jpg",
-      "/galleries/restaurar/P1150252.jpg"
+      {
+        "src": "/galleries/restaurar/P114096378.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140959.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140964.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140965.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140966.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140967.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140969.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140972.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140973.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140974.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140975.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140979.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140983.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140985.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140984.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1140990.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150242.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150240.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150243.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150245.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150246.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150247.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150248.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150250.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150249.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150251.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/restaurar/P1150252.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   },
   {
     "id": "tinta",
     "name": "Tinta (Café, color, plumón)",
     "images": [
-      "/galleries/tinta/P1150394.jpg",
-      "/galleries/tinta/P1150395.jpg",
-      "/galleries/tinta/P1150393.jpg",
-      "/galleries/tinta/P1150396.jpg",
-      "/galleries/tinta/P1150397.jpg",
-      "/galleries/tinta/P1150398.jpg",
-      "/galleries/tinta/P1150399.jpg",
-      "/galleries/tinta/P1150400.jpg",
-      "/galleries/tinta/P1150375.jpg",
-      "/galleries/tinta/P1150374.jpg",
-      "/galleries/tinta/P1150376.jpg",
-      "/galleries/tinta/P1150377.jpg",
-      "/galleries/tinta/P1150380.jpg",
-      "/galleries/tinta/P1150379.jpg",
-      "/galleries/tinta/P1150381.jpg",
-      "/galleries/tinta/P1150382.jpg",
-      "/galleries/tinta/P1150383.jpg",
-      "/galleries/tinta/P1150384.jpg",
-      "/galleries/tinta/P1150385.jpg",
-      "/galleries/tinta/P1150387.jpg",
-      "/galleries/tinta/P1150388.jpg",
-      "/galleries/tinta/P1150386.jpg",
-      "/galleries/tinta/P1150389.jpg",
-      "/galleries/tinta/P1150390.jpg",
-      "/galleries/tinta/P1150392.jpg",
-      "/galleries/tinta/P1150391.jpg"
+      {
+        "src": "/galleries/tinta/P1150394.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150395.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150393.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150396.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150397.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150398.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150399.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150400.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150375.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150374.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150376.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150377.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150380.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150379.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150381.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150382.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150383.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150384.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150385.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150387.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150388.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150386.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150389.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150390.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150392.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tinta/P1150391.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   },
   {
     "id": "otros",
     "name": "Otros formatos",
     "images": [
-      "/galleries/otros/P1150403.jpg",
-      "/galleries/otros/P1150402.jpg",
-      "/galleries/otros/P1150404.jpg",
-      "/galleries/otros/P1150406.jpg",
-      "/galleries/otros/P1150408.jpg",
-      "/galleries/otros/P1150407.jpg",
-      "/galleries/otros/P1150411.jpg",
-      "/galleries/otros/P1150409.jpg",
-      "/galleries/otros/P1150412.jpg",
-      "/galleries/otros/P1150413.jpg",
-      "/galleries/otros/P1150415.jpg",
-      "/galleries/otros/P1150414.jpg",
-      "/galleries/otros/P1150417.jpg",
-      "/galleries/otros/P1150416.jpg",
-      "/galleries/otros/P1150419.jpg",
-      "/galleries/otros/P1150420.jpg",
-      "/galleries/otros/P1150421.jpg",
-      "/galleries/otros/P1150422.jpg",
-      "/galleries/otros/P1150423.jpg",
-      "/galleries/otros/P1150424.jpg",
-      "/galleries/otros/P1150426.jpg",
-      "/galleries/otros/P1150425.jpg",
-      "/galleries/otros/P1150427.jpg",
-      "/galleries/otros/P1150428.jpg",
-      "/galleries/otros/P1150430.jpg",
-      "/galleries/otros/P1150429.jpg",
-      "/galleries/otros/P1150431.jpg",
-      "/galleries/otros/P1150432.jpg",
-      "/galleries/otros/P1150433.jpg",
-      "/galleries/otros/P1150434.jpg",
-      "/galleries/otros/P1150435.jpg",
-      "/galleries/otros/P1150436.jpg",
-      "/galleries/otros/P1150440.jpg",
-      "/galleries/otros/P1150441.jpg",
-      "/galleries/otros/P1150439.jpg",
-      "/galleries/otros/P1150442.jpg",
-      "/galleries/otros/P1150443.jpg",
-      "/galleries/otros/P1150444.jpg",
-      "/galleries/otros/P1150446.jpg",
-      "/galleries/otros/P1150447.jpg",
-      "/galleries/otros/P1150445.jpg",
-      "/galleries/otros/P1150448.jpg",
-      "/galleries/otros/P1150451.jpg",
-      "/galleries/otros/P1150450.jpg",
-      "/galleries/otros/P1150449.jpg",
-      "/galleries/otros/P1150452.jpg",
-      "/galleries/otros/P1150453.jpg",
-      "/galleries/otros/P1150455.jpg",
-      "/galleries/otros/P1150459.jpg",
-      "/galleries/otros/P1150457.jpg",
-      "/galleries/otros/P1150454.jpg",
-      "/galleries/otros/P1150461.jpg",
-      "/galleries/otros/P1150467.jpg",
-      "/galleries/otros/P1150468.jpg",
-      "/galleries/otros/P1150469.jpg",
-      "/galleries/otros/P1150470.jpg",
-      "/galleries/otros/P1150471.jpg",
-      "/galleries/otros/P1150472.jpg",
-      "/galleries/otros/P1150473.jpg",
-      "/galleries/otros/P1150475.jpg",
-      "/galleries/otros/P1150476.jpg",
-      "/galleries/otros/P1150474.jpg",
-      "/galleries/otros/P1150477.jpg",
-      "/galleries/otros/escanear0154.jpg",
-      "/galleries/otros/escanear0156.jpg",
-      "/galleries/otros/escanear0155.jpg",
-      "/galleries/otros/escanear0157.jpg",
-      "/galleries/otros/escanear0158.jpg",
-      "/galleries/otros/escanear015993.jpg",
-      "/galleries/otros/escanear016063.jpg",
-      "/galleries/otros/escanear016151.jpg",
-      "/galleries/otros/escanear012237.jpg",
-      "/galleries/otros/escanear012392.jpg",
-      "/galleries/otros/escanear012493.jpg",
-      "/galleries/otros/escanear012515.jpg",
-      "/galleries/otros/escanear012680.jpg",
-      "/galleries/otros/escanear012742.jpg",
-      "/galleries/otros/escanear012871.jpg",
-      "/galleries/otros/escanear012977.jpg",
-      "/galleries/otros/escanear013059.jpg",
-      "/galleries/otros/escanear013188.jpg",
-      "/galleries/otros/escanear013226.jpg",
-      "/galleries/otros/escanear013599.jpg",
-      "/galleries/otros/escanear013452.jpg",
-      "/galleries/otros/escanear013626.jpg",
-      "/galleries/otros/escanear013739.jpg",
-      "/galleries/otros/escanear013874.jpg",
-      "/galleries/otros/escanear013952.jpg",
-      "/galleries/otros/escanear014083.jpg",
-      "/galleries/otros/escanear014121.jpg",
-      "/galleries/otros/escanear014241.jpg",
-      "/galleries/otros/escanear014397.jpg",
-      "/galleries/otros/escanear014493.jpg",
-      "/galleries/otros/escanear014551.jpg",
-      "/galleries/otros/escanear014654.jpg",
-      "/galleries/otros/escanear014719.jpg",
-      "/galleries/otros/escanear0148.jpg",
-      "/galleries/otros/escanear0149.jpg",
-      "/galleries/otros/escanear0150.jpg",
-      "/galleries/otros/escanear0151.jpg",
-      "/galleries/otros/escanear0153.jpg",
-      "/galleries/otros/escanear0152.jpg",
-      "/galleries/otros/P115057216.jpg",
-      "/galleries/otros/P11505742121.jpg",
-      "/galleries/otros/P115057593.jpg"
+      {
+        "src": "/galleries/otros/P1150403.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150402.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150404.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150406.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150408.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150407.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150411.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150409.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150412.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150413.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150415.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150414.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150417.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150416.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150419.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150420.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150421.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150422.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150423.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150424.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150426.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150425.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150427.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150428.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150430.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150429.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150431.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150432.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150433.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150434.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150435.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150436.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150440.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150441.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150439.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150442.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150443.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150444.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150446.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150447.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150445.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150448.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150451.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150450.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150449.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150452.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150453.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150455.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150459.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150457.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150454.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150461.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150467.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150468.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150469.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150470.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150471.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150472.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150473.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150475.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150476.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150474.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P1150477.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0154.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0156.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0155.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0157.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0158.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear015993.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear016063.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear016151.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012237.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012392.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012493.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012515.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012680.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012742.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012871.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear012977.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013059.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013188.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013226.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013599.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013452.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013626.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013739.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013874.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear013952.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014083.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014121.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014241.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014397.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014493.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014551.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014654.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear014719.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0148.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0149.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0150.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0151.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0153.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/escanear0152.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P115057216.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P11505742121.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/otros/P115057593.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   },
   {
     "id": "privadas",
     "name": "Colecciones Privadas",
     "images": [
-      "/galleries/privadas/P115057374.jpg",
-      "/galleries/privadas/P115057173.jpg",
-      "/galleries/privadas/P115059849.jpg",
-      "/galleries/privadas/P115059920.jpg",
-      "/galleries/privadas/P115060286.jpg",
-      "/galleries/privadas/P115060595.jpg",
-      "/galleries/privadas/P115060498.jpg",
-      "/galleries/privadas/P115056514.jpg",
-      "/galleries/privadas/P115060852.jpg",
-      "/galleries/privadas/P115056741.jpg",
-      "/galleries/privadas/P1150309.jpg",
-      "/galleries/privadas/colecciones-privadas27.jpg",
-      "/galleries/privadas/colecciones-privadas28.jpg",
-      "/galleries/privadas/IMG_2691.JPG",
-      "/galleries/privadas/IMG_2679.JPG",
-      "/galleries/privadas/P103051218.jpg",
-      "/galleries/privadas/P115078810.jpg",
-      "/galleries/privadas/P115079342.jpg",
-      "/galleries/privadas/P115079528.jpg",
-      "/galleries/privadas/P115079998.jpg",
-      "/galleries/privadas/P115080052.jpg",
-      "/galleries/privadas/P115080160.jpg",
-      "/galleries/privadas/P115080329.jpg",
-      "/galleries/privadas/P115080417.jpg",
-      "/galleries/privadas/P114097094.jpg",
-      "/galleries/privadas/escanear0104.jpg",
-      "/galleries/privadas/escanear0105.jpg",
-      "/galleries/privadas/Dc84.jpg",
-      "/galleries/privadas/P115031424.jpg",
-      "/galleries/privadas/P115019165.jpg",
-      "/galleries/privadas/P115020558.jpg",
-      "/galleries/privadas/P1140980.jpg",
-      "/galleries/privadas/P1150438.jpg",
-      "/galleries/privadas/P1150418.jpg",
-      "/galleries/privadas/P1150298.jpg",
-      "/galleries/privadas/P1150308.jpg",
-      "/galleries/privadas/P1150312.jpg",
-      "/galleries/privadas/P1150338.jpg",
-      "/galleries/privadas/P1150331.jpg",
-      "/galleries/privadas/P1150241.jpg",
-      "/galleries/privadas/P114097179.jpg",
-      "/galleries/privadas/P1150151.jpg",
-      "/galleries/privadas/P1150158.jpg",
-      "/galleries/privadas/P1150162.jpg",
-      "/galleries/privadas/P115018165.jpg",
-      "/galleries/privadas/P1150254.jpg",
-      "/galleries/privadas/P1150333.jpg",
-      "/galleries/privadas/P1150272.jpg",
-      "/galleries/privadas/P1150154.jpg"
+      {
+        "src": "/galleries/privadas/P115057374.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115057173.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115059849.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115059920.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115060286.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115060595.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115060498.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115056514.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115060852.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115056741.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150309.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/colecciones-privadas27.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/colecciones-privadas28.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/IMG_2691.JPG",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/IMG_2679.JPG",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P103051218.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115078810.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115079342.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115079528.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115079998.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115080052.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115080160.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115080329.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115080417.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P114097094.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/escanear0104.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/escanear0105.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/Dc84.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115031424.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115019165.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115020558.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1140980.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150438.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150418.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150298.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150308.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150312.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150338.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150331.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150241.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P114097179.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150151.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150158.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150162.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P115018165.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150254.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150333.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150272.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/privadas/P1150154.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   },
   {
     "id": "tela-1975",
     "name": "Tela sobre bastidor – anteriores a 1975",
     "images": [
-      "/galleries/tela-1975/01-Cuadros_Felipe_y_San_Vicente_047.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_008.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_007.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_016.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_017.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_014.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_015.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_019.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_024.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_021.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_025.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_026.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_027.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_030.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_034.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_052.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_039.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_043.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_053.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_055.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_054.jpg",
-      "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_056.jpg",
-      "/galleries/tela-1975/Felipe_y_San_Vicente_012.jpg"
+      {
+        "src": "/galleries/tela-1975/01-Cuadros_Felipe_y_San_Vicente_047.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_008.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_007.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_016.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_017.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_014.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_015.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_019.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_024.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_021.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_025.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_026.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_027.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_030.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_034.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_052.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_039.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_043.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_053.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_055.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_054.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Cuadros_Felipe_y_San_Vicente_056.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/tela-1975/Felipe_y_San_Vicente_012.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   },
   {
     "id": "italia",
     "name": "Otros formatos (en Italia)",
     "images": [
-      "/galleries/italia/cuadros-papa-en-Italia-00247.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-00170.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-003.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-00481.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-005.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-00654.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-007.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-008.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-00920.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-010.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01191.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01255.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01327.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01444.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01510.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01690.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01760.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01851.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-01982.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-02082.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-02173.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-02258.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-02374.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-02499.jpg",
-      "/galleries/italia/cuadros-papa-en-Italia-02530.jpg"
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-00247.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-00170.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-003.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-00481.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-005.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-00654.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-007.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-008.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-00920.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-010.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01191.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01255.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01327.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01444.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01510.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01690.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01760.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01851.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-01982.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-02082.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-02173.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-02258.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-02374.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-02499.jpg",
+        "title": "",
+        "description": ""
+      },
+      {
+        "src": "/galleries/italia/cuadros-papa-en-Italia-02530.jpg",
+        "title": "",
+        "description": ""
+      }
     ]
   }
 ]

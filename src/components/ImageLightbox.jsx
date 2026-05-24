@@ -16,17 +16,6 @@ const ZoomOutIcon = () => (
   </svg>
 );
 
-/**
- * ImageLightbox — visor unificado con zoom, arrastrar, navegación y teclado.
- *
- * Props:
- *   images        string[]   array de src
- *   initialIndex  number     índice inicial (default 0)
- *   onClose       () => void
- *   dots          boolean    mostrar indicadores en vez de "x / total" (default false)
- *
- * El padre debe envolver la renderización condicional en <AnimatePresence>.
- */
 const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
   const [index, setIndex] = useState(initialIndex);
   const [zoom, setZoom] = useState(false);
@@ -80,6 +69,12 @@ const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
 
   const multiple = images.length > 1;
 
+  const current = images[index];
+  const src = typeof current === 'string' ? current : current.src;
+  const title = typeof current === 'object' ? current.title : '';
+  const description = typeof current === 'object' ? current.description : '';
+  const hasCaption = title || description;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -107,12 +102,12 @@ const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <motion.img
-            src={images[index]}
-            alt=""
+            src={src}
+            alt={title || ''}
             draggable={false}
-            className={`max-h-[88vh] max-w-[88vw] object-contain select-none ${
+            className={`object-contain select-none ${
               zoom ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'
-            }`}
+            } ${hasCaption ? 'max-h-[78vh] max-w-[88vw]' : 'max-h-[88vh] max-w-[88vw]'}`}
             style={{ x, y }}
             animate={{ scale: zoom ? 3 : 1 }}
             transition={{ duration: 0.35 }}
@@ -150,25 +145,37 @@ const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
         </>
       )}
 
-      {multiple && (
-        dots ? (
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-            {images.map((_, i) => (
-              <button
-                key={i}
-                onClick={(e) => { e.stopPropagation(); navigate(() => setIndex(i)); }}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                  i === index ? 'bg-white' : 'bg-white/40'
-                }`}
-              />
-            ))}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 text-center max-w-xl px-6 w-full">
+        {hasCaption && (
+          <div className="mb-2">
+            {title && (
+              <p className="text-white text-sm font-serif mb-1">{title}</p>
+            )}
+            {description && (
+              <p className="text-white/60 text-xs leading-relaxed">{description}</p>
+            )}
           </div>
-        ) : (
-          <p className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/40 text-xs uppercase tracking-[0.2em] z-10">
-            {index + 1} / {images.length}
-          </p>
-        )
-      )}
+        )}
+        {multiple && (
+          dots ? (
+            <div className="flex justify-center gap-3">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); navigate(() => setIndex(i)); }}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    i === index ? 'bg-white' : 'bg-white/40'
+                  }`}
+                />
+              ))}
+            </div>
+          ) : (
+            <p className="text-white/40 text-xs uppercase tracking-[0.2em]">
+              {index + 1} / {images.length}
+            </p>
+          )
+        )}
+      </div>
     </motion.div>
   );
 };

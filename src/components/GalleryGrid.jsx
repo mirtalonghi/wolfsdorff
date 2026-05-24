@@ -42,8 +42,8 @@ const GalleryGrid = ({ images, galleryKey, onImageClick }) => {
           transition={{ duration: 0.35 }}
           className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3"
         >
-          {visibleImages.map((src, i) => (
-            <ImageItem key={src} src={src} onClick={() => onImageClick(images, i)} />
+          {visibleImages.map((image, i) => (
+            <ImageItem key={image.src} image={image} onClick={() => onImageClick(images, i)} />
           ))}
         </motion.div>
       </AnimatePresence>
