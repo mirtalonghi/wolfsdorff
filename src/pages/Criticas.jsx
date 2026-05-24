@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import CriticaCard from '../components/CriticaCard';
 import ImageLightbox from '../components/ImageLightbox';
@@ -11,6 +12,7 @@ const pageTransition = {
 };
 
 const Criticas = () => {
+  const { t } = useTranslation();
   const [lightbox, setLightbox] = useState(null);
 
   const openPublication = (pub) => setLightbox({ images: pub.imagenes, index: 0 });
@@ -29,19 +31,17 @@ const Criticas = () => {
 
         {/* Encabezado */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">
-            Prensa & Crítica
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 dark:text-stone-400 block mb-6">
+            {t('criticasPage.subtitle')}
           </span>
-          <h1 className="text-4xl font-serif mb-8 text-stone-900">Críticas</h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            Voces de la prensa internacional que documentaron la trayectoria de Faiwel Wolfsdorf a lo largo de las décadas.
-          </p>
+          <h1 className="text-4xl font-serif mb-8 text-stone-900 dark:text-stone-100">{t('criticasPage.title')}</h1>
+          <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">{t('criticasPage.intro')}</p>
         </div>
 
         {/* Publicaciones nombradas */}
         <section className="mb-20">
-          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 text-center mb-10">
-            Publicaciones
+          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 dark:text-stone-500 text-center mb-10">
+            {t('criticasPage.publicaciones')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {publicaciones.map((pub) => (
@@ -54,15 +54,15 @@ const Criticas = () => {
           </div>
         </section>
 
-        <div className="border-t border-stone-200 my-4" />
+        <div className="border-t border-stone-200 dark:border-stone-700 my-4" />
 
         {/* Archivo de prensa */}
         <section className="mt-16">
-          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 text-center mb-3">
-            Archivo de Prensa
+          <h2 className="text-xs uppercase tracking-[0.25em] text-stone-400 dark:text-stone-500 text-center mb-3">
+            {t('criticasPage.archivoTitle')}
           </h2>
-          <p className="text-sm text-stone-500 text-center mb-10 max-w-lg mx-auto">
-            Recortes y materiales que dan testimonio de la presencia de Wolfsdorf en la prensa de su época.
+          <p className="text-sm text-stone-500 dark:text-stone-400 text-center mb-10 max-w-lg mx-auto">
+            {t('criticasPage.archivoIntro')}
           </p>
           <div className="columns-2 md:columns-3 lg:columns-4 gap-3">
             {archivoPrensa.map((img, i) => (

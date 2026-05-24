@@ -1,167 +1,227 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../hooks/useTheme';
 
 const Layout = ({ children }) => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return undefined;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isMenuOpen]);
+
   const navLinks = [
-    { name: 'Inicio', path: '/' },
-    { name: 'Sobre el Artista', path: '/about' },
-    { name: 'Obras', path: '/portfolio' },
-    { name: 'Exposiciones', path: '/gallery' },
-    { name: 'Críticas', path: '/criticas' },
-    { name: 'Legado', path: '/legacy' },
-    { name: 'Contacto', path: '/contact' },
+    { nameKey: 'nav.home', path: '/' },
+    { nameKey: 'nav.about', path: '/about' },
+    { nameKey: 'nav.portfolio', path: '/portfolio' },
+    { nameKey: 'nav.gallery', path: '/gallery' },
+    { nameKey: 'nav.criticas', path: '/criticas' },
+    { nameKey: 'nav.legacy', path: '/legacy' },
+    { nameKey: 'nav.contact', path: '/contact' },
+  ];
+
+  const langs = [
+    { code: 'es', label: t('lang.es') },
+    { code: 'en', label: t('lang.en') },
+    { code: 'pt', label: t('lang.pt') },
+    { code: 'it', label: t('lang.it') },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50">
-      {/* Texture overlay */}
+    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-stone-950">
       <div className="texture-overlay" />
 
-      {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500">
-        <div className="container-custom py-5 flex justify-between items-center">
-          <Link to="/" className="text-xl font-serif tracking-[0.2em] z-50 relative group">
-            <span className="text-stone-900">FAIWEL</span>
-            <span className="text-stone-500 ml-2 group-hover:text-stone-900 transition-colors">WOLFSDORF</span>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-500 dark:bg-stone-950/95 dark:border-stone-800/60">
+        <div className="container-custom py-5 flex min-w-0 justify-between items-center gap-3">
+          <Link
+            to="/"
+            className="group relative z-50 min-w-0 flex-1 pr-2 font-serif text-lg tracking-[0.15em] sm:text-xl sm:tracking-[0.2em] lg:flex-none lg:shrink-0 lg:pr-0"
+          >
+            <span className="block min-w-0 truncate">
+              <span className="text-stone-900 dark:text-stone-100">FAIWEL</span>
+              <span className="ml-1.5 text-stone-500 transition-colors group-hover:text-stone-900 sm:ml-2 dark:text-stone-400 dark:group-hover:text-stone-100">
+                WOLFSDORF
+              </span>
+            </span>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-10 items-center">
-            {navLinks.map((link) => (
-              link.hasSubmenu ? (
-                <div key={link.name} className="relative group">
-                  <button
-                    className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated flex items-center gap-1 ${location.pathname === '/gallery' || location.pathname === '/portfolio' ? 'text-stone-900 font-medium' : 'text-stone-500'
-                      }`}
-                    onClick={() => setIsGalleryOpen(!isGalleryOpen)}
-                  >
-                    {link.name}
-                    <ChevronDown size={12} className={`transition-transform ${isGalleryOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  {/* Dropdown Submenu */}
-                  <div className={`absolute top-full left-0 mt-2 bg-white border border-stone-200 shadow-lg py-2 min-w-[160px] transition-all duration-300 ${isGalleryOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                    {link.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.path}
-                        to={subItem.path}
-                        className={`block px-4 py-2 text-xs uppercase tracking-widest hover:text-stone-900 hover:bg-stone-50 transition-all ${location.pathname === subItem.path ? 'text-stone-900 font-medium' : 'text-stone-500'
-                          }`}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated ${location.pathname === link.path ? 'text-stone-900 font-medium' : 'text-stone-500'
-                    }`}
-                >
-                  {link.name}
-                </Link>
-              )
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden z-50 relative p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          <nav
+            className="hidden lg:flex flex-wrap justify-end items-center gap-x-6 gap-y-2"
+            aria-label={t('layout.mainNavAria')}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-xs uppercase tracking-widest hover:text-stone-900 transition-all duration-300 link-animated dark:hover:text-stone-100 ${
+                  location.pathname === link.path
+                    ? 'text-stone-900 font-medium dark:text-stone-100'
+                    : 'text-stone-500 dark:text-stone-400'
+                }`}
+              >
+                {t(link.nameKey)}
+              </Link>
+            ))}
+            <div className="flex items-center gap-3 border-l border-stone-200 pl-6 ml-2 dark:border-stone-700">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="p-2 rounded-md text-stone-600 hover:bg-stone-200/80 hover:text-stone-900 transition-colors dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+                aria-label={theme === 'dark' ? t('theme.useLight') : t('theme.useDark')}
+                aria-pressed={theme === 'dark'}
+              >
+                {theme === 'dark' ? <Sun size={20} strokeWidth={1.75} /> : <Moon size={20} strokeWidth={1.75} />}
+              </button>
+              <div className="flex items-center gap-1" role="group" aria-label={t('lang.label')}>
+                {langs.map(({ code, label }) => (
+                  <button
+                    key={code}
+                    type="button"
+                    onClick={() => i18n.changeLanguage(code)}
+                    className={`text-xs uppercase tracking-widest px-2 py-1 rounded transition-colors ${
+                      i18n.language === code
+                        ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-950'
+                        : 'text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </nav>
 
-          {/* Mobile Menu Overlay */}
-          {isMenuOpen && (
-            <div className="fixed top-[68px] left-0 w-full h-[calc(100vh-68px)] bg-stone-50 z-40 flex flex-col justify-start items-center space-y-6 md:hidden pt-8 border-t border-stone-200">
-              {navLinks.map((link) => (
-                link.hasSubmenu ? (
-                  <div key={link.name} className="text-center">
-                    <button
-                      onClick={() => setIsGalleryOpen(!isGalleryOpen)}
-                      className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors flex items-center gap-2"
-                    >
-                      {link.name}
-                      <ChevronDown size={16} className={`transition-transform ${isGalleryOpen ? 'rotate-180' : ''}`} />
-                    </button>
-                    {/* Mobile Submenu */}
-                    <div className={`mt-4 space-y-3 overflow-hidden transition-all duration-300 ${isGalleryOpen ? 'max-h-40' : 'max-h-0'}`}>
-                      {link.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.path}
-                          to={subItem.path}
-                          onClick={() => setIsMenuOpen(false)}
-                          className="block text-lg font-serif text-stone-600 hover:text-stone-900 transition-colors"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
+          <div className="flex shrink-0 items-center gap-1 lg:hidden">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-2 rounded-md text-stone-600 hover:bg-stone-200/80 dark:text-stone-400 dark:hover:bg-stone-800"
+              aria-label={theme === 'dark' ? t('theme.useLight') : t('theme.useDark')}
+              aria-pressed={theme === 'dark'}
+            >
+              {theme === 'dark' ? <Sun size={22} strokeWidth={1.75} /> : <Moon size={22} strokeWidth={1.75} />}
+            </button>
+            <button
+              className="relative z-50 -mr-1 p-2 text-stone-800 dark:text-stone-200"
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-nav-panel"
+              aria-label={isMenuOpen ? t('layout.closeMenu') : t('layout.openMenu')}
+            >
+              {isMenuOpen ? <X size={24} strokeWidth={1.75} /> : <Menu size={24} strokeWidth={1.75} />}
+            </button>
+          </div>
+        </div>
+
+        {isMenuOpen && (
+          <div
+            id="mobile-nav-panel"
+            className="fixed inset-x-0 top-0 z-40 flex max-h-[100dvh] flex-col bg-stone-50 pb-[max(2.5rem,env(safe-area-inset-bottom,0px))] pt-[5.25rem] lg:hidden dark:bg-stone-950"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('layout.menuDialog')}
+          >
+            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain border-t border-stone-200 px-6 pb-10 pt-8 dark:border-stone-800">
+              <nav className="flex flex-col items-center space-y-6" aria-label={t('layout.mainNavAria')}>
+                {navLinks.map((link) => (
                   <div key={link.path}>
                     <Link
                       to={link.path}
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-2xl font-serif text-stone-800 hover:text-stone-900 transition-colors"
+                      className="text-2xl font-serif text-stone-800 transition-colors hover:text-stone-900 dark:text-stone-200 dark:hover:text-white"
                     >
-                      {link.name}
+                      {t(link.nameKey)}
                     </Link>
                   </div>
-                )
-              ))}
+                ))}
+              </nav>
+              <div
+                className="mx-auto mt-12 w-full max-w-xs border-t border-stone-200 pt-10 dark:border-stone-800"
+                role="group"
+                aria-label={t('lang.label')}
+              >
+                <p className="mb-4 text-center text-xs uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400">
+                  {t('lang.label')}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  {langs.map(({ code, label }) => (
+                    <button
+                      key={code}
+                      type="button"
+                      onClick={() => i18n.changeLanguage(code)}
+                      className={`min-h-[44px] min-w-[44px] rounded-md px-4 text-xs uppercase tracking-widest transition-colors ${
+                        i18n.language === code
+                          ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-950'
+                          : 'text-stone-600 ring-1 ring-stone-300 hover:bg-stone-100 dark:text-stone-400 dark:ring-stone-600 dark:hover:bg-stone-900'
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
-          )}
-        </div>
-      </nav>
+          </div>
+        )}
+      </header>
 
-      {/* Main Content */}
       <main className="flex-grow pt-20">
-        <div key={location.pathname}>
-          {children}
-        </div>
+        <div key={location.pathname}>{children}</div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-stone-900 text-stone-400 py-16 mt-20">
+      <footer className="bg-stone-900 text-stone-400 py-16 dark:bg-black dark:border-t dark:border-stone-800">
         <div className="container-custom grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-white font-serif text-xl mb-6">Faiwel Wolfsdorf</h3>
-            <p className="text-sm leading-relaxed max-w-xs">
-              El inconsciente traza mapas que la razón desconoce. Un legado de surrealismo, color y humanidad.
-            </p>
+            <p className="text-sm leading-relaxed max-w-xs">{t('footer.tagline')}</p>
           </div>
 
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Enlaces</h4>
+            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">{t('footer.links')}</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/portfolio" className="hover:text-white transition-colors">Colección</Link></li>
-              <li><Link to="/legacy" className="hover:text-white transition-colors">Adquisición</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">Biografía</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contacto</Link></li>
+              {navLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`hover:text-white transition-colors ${
+                      location.pathname === link.path ? 'text-white' : ''
+                    }`}
+                  >
+                    {t(link.nameKey)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">Contacto</h4>
+            <h4 className="text-white text-xs uppercase tracking-[0.15em] mb-6">{t('footer.contact')}</h4>
             <a
-              href="mailto:Faiwelwolfsdorf@gmail.com"
+              href="mailto:faiwelwolfsdorf@gmail.com"
               className="text-sm hover:text-white transition-colors"
             >
-              Faiwelwolfsdorf@gmail.com
+              faiwelwolfsdorf@gmail.com
             </a>
-            <p className="mt-6 text-xs text-stone-600">
-              © {new Date().getFullYear()} Legado Faiwel Wolfsdorf. Todos los derechos reservados.
+            <p className="mt-6 text-xs text-stone-600 dark:text-stone-500">
+              {t('footer.rights', { year: new Date().getFullYear() })}
             </p>
           </div>
         </div>
@@ -171,8 +231,3 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
-
-
-
-
-

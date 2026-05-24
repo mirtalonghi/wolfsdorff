@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 
-const CriticaCard = ({ publicacion, onClick }) => (
+const CriticaCard = ({ publicacion, onClick }) => {
+  const { t } = useTranslation();
+  const n = publicacion.imagenes.length;
+  return (
   <motion.div
     initial={{ opacity: 0, y: 24 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -11,7 +15,7 @@ const CriticaCard = ({ publicacion, onClick }) => (
     className="group cursor-pointer"
     onClick={onClick}
   >
-    <div className="relative overflow-hidden bg-stone-100 aspect-[3/4] mb-4 flex items-center justify-center">
+    <div className="relative overflow-hidden bg-stone-100 dark:bg-stone-800 aspect-[3/4] mb-4 flex items-center justify-center">
       <img
         src={publicacion.imagenes[0]}
         alt={publicacion.publicacion}
@@ -19,16 +23,16 @@ const CriticaCard = ({ publicacion, onClick }) => (
         loading="lazy"
       />
       <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors duration-300" />
-      {publicacion.imagenes.length > 1 && (
+      {n > 1 && (
         <span className="absolute bottom-2 right-2 bg-stone-900/70 text-white text-[10px] px-2 py-0.5 uppercase tracking-widest">
-          {publicacion.imagenes.length} páginas
+          {t('criticaCard.pages', { count: n })}
         </span>
       )}
     </div>
-    <p className="font-serif text-lg text-stone-900 group-hover:text-stone-600 transition-colors leading-snug">
+    <p className="font-serif text-lg text-stone-900 dark:text-stone-100 group-hover:text-stone-600 dark:group-hover:text-stone-300 transition-colors leading-snug">
       {publicacion.publicacion}
     </p>
-    <div className="flex items-center gap-1 text-xs text-stone-500 mt-1">
+    <div className="flex items-center gap-1 text-xs text-stone-500 dark:text-stone-400 mt-1">
       <MapPin size={10} />
       <span>{publicacion.pais}</span>
       <span className="mx-1">·</span>
@@ -36,5 +40,6 @@ const CriticaCard = ({ publicacion, onClick }) => (
     </div>
   </motion.div>
 );
+};
 
 export default CriticaCard;

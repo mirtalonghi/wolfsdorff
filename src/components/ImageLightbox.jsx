@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence, useMotionValue, animate } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -17,6 +18,7 @@ const ZoomOutIcon = () => (
 );
 
 const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(initialIndex);
   const [zoom, setZoom] = useState(false);
   const x = useMotionValue(0);
@@ -86,7 +88,7 @@ const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
       <button
         onClick={(e) => { e.stopPropagation(); onClose(); }}
         className="absolute top-5 right-5 text-white/60 hover:text-white transition-colors z-10"
-        aria-label="Cerrar"
+        aria-label={t('lightbox.close')}
       >
         <X size={22} />
       </button>
@@ -119,7 +121,7 @@ const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
           <button
             className="absolute bottom-3 right-3 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors z-10"
             onClick={(e) => { e.stopPropagation(); toggleZoom(); }}
-            title={zoom ? 'Alejar' : 'Acercar'}
+            title={zoom ? t('lightbox.zoomOut') : t('lightbox.zoomIn')}
           >
             {zoom ? <ZoomOutIcon /> : <ZoomInIcon />}
           </button>
@@ -131,14 +133,14 @@ const ImageLightbox = ({ images, initialIndex = 0, onClose, dots = false }) => {
           <button
             onClick={(e) => { e.stopPropagation(); navigate(goPrev); }}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white transition-colors z-10"
-            aria-label="Anterior"
+            aria-label={t('lightbox.prev')}
           >
             <ChevronLeft size={28} />
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); navigate(goNext); }}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full text-white transition-colors z-10"
-            aria-label="Siguiente"
+            aria-label={t('lightbox.next')}
           >
             <ChevronRight size={28} />
           </button>

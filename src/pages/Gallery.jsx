@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import ImageLightbox from '../components/ImageLightbox';
 
 import img100 from '../assets/images/Exposiciones/100.jpg';
-import img102 from '../assets/images/Exposiciones/102.jpg';
-import img103 from '../assets/images/Exposiciones/103.jpg';
-import img107 from '../assets/images/Exposiciones/107.jpg';
 import img200 from '../assets/images/Exposiciones/200.jpg';
 import img201 from '../assets/images/Exposiciones/201.jpg';
 import img202 from '../assets/images/Exposiciones/202.jpg';
@@ -32,6 +30,7 @@ import imgFaiwelFrutos from '../assets/images/Exposiciones/Faiwel-con-los-artist
 import imgFaiwelPatricia from '../assets/images/Exposiciones/Faiwel-con-Patricia-Rodriguez-Mejia.JPG';
 import imgFaiwelPatriciaEscultura from '../assets/images/Exposiciones/Faiwel-y-Patricia-Rodriguez-Mejia-con-una-de-sus-esculturas.jpg';
 import imgFelipe from '../assets/images/Exposiciones/Felipe-album-13.jpg';
+import imgInstantesWolfsdorf from '../assets/images/Exposiciones/Instantes de wolfsdorf.jpg';
 import imgFoto004 from '../assets/images/Exposiciones/foto004.jpg';
 import imgScan3 from '../assets/images/Exposiciones/SCAN_3.jpg';
 import imgScan4 from '../assets/images/Exposiciones/SCAN_4.jpg';
@@ -131,24 +130,14 @@ const images = [
     description: "Fotografía grupal durante la exposición colectiva 'Frutos del Sueño'. Wolfsdorf fue uno de los organizadores de esta muestra que reunió a más de doce artistas.",
   },
   {
+    src: imgInstantesWolfsdorf,
+    title: 'Instantes de Wolfsdorf',
+    description: '',
+  },
+  {
     src: img100,
     title: 'Obra sin título — ca. 1960',
     description: 'Pieza de la etapa inicial de Wolfsdorf, caracterizada por el uso de simbolismo onírico y paletas terrosas. Técnica mixta sobre cartón.',
-  },
-  {
-    src: img102,
-    title: 'Composición surrealista — ca. 1962',
-    description: 'Una de las primeras obras en las que Wolfsdorf incorpora figuras flotantes y distorsión perspéctica, recursos que definirían su lenguaje visual.',
-  },
-  {
-    src: img103,
-    title: 'Figura en el umbral — ca. 1963',
-    description: 'La figura humana en el umbral entre dos mundos es un motivo recurrente en esta etapa. La obra transmite la tensión entre lo real y lo imaginado.',
-  },
-  {
-    src: img107,
-    title: 'El jardín interior — 1965',
-    description: 'Óleo sobre tela. Wolfsdorf representa un espacio vegetal imposible donde conviven elementos del mundo natural y figuras arquetípicas.',
   },
   {
     src: img200,
@@ -245,8 +234,10 @@ const videos = [
 ];
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const exhibitions = t('galleryPage.exhibitions', { returnObjects: true });
 
   return (
     <motion.div
@@ -258,11 +249,44 @@ const Gallery = () => {
     >
       <div className="container-custom">
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Exposiciones</span>
-          <h1 className="text-4xl font-serif mb-8 text-stone-900">Galería</h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            Un recorrido fotográfico por las exposiciones de Faiwel Wolfsdorf a lo largo de su trayectoria artística.
-          </p>
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 dark:text-stone-400 block mb-6">
+            {t('galleryPage.subtitle')}
+          </span>
+          <h1 className="text-4xl font-serif mb-8 text-stone-900 dark:text-stone-100">{t('galleryPage.title')}</h1>
+          <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">{t('galleryPage.intro')}</p>
+        </div>
+
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="max-w-3xl mx-auto mb-20"
+        >
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-serif text-stone-900 dark:text-stone-100 mb-2">
+              {t('galleryPage.exhibitionsHeading')}
+            </h2>
+            <span className="text-xs uppercase tracking-[0.25em] text-stone-500 dark:text-stone-400">
+              {t('galleryPage.exhibitionsRange')}
+            </span>
+          </div>
+          <ul className="space-y-3 text-left border-l-2 border-stone-300 dark:border-stone-600 pl-6 md:pl-8">
+            {Array.isArray(exhibitions) &&
+              exhibitions.map((line, i) => (
+                <li
+                  key={i}
+                  className="text-stone-700 dark:text-stone-300 text-sm md:text-base leading-relaxed"
+                >
+                  {line}
+                </li>
+              ))}
+          </ul>
+        </motion.section>
+
+        <div className="text-center mb-10">
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 dark:text-stone-400">
+            {t('galleryPage.photosHeading')}
+          </span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -275,20 +299,19 @@ const Gallery = () => {
               className="cursor-pointer group border border-stone-200 rounded overflow-hidden bg-white hover:border-stone-400 transition-colors duration-300"
               onClick={() => setSelectedIndex(index)}
             >
-              <div className="overflow-hidden aspect-[4/3]">
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+              <img
+                src={item.src}
+                alt={t('galleryPage.imageAlt', { n: index + 1 })}
+                className="w-full block transition-transform duration-500 group-hover:scale-105"
+              />
               <div className="px-3 py-2.5">
                 <p className="text-xs font-serif text-stone-700 leading-snug line-clamp-2">{item.title}</p>
               </div>
-            </motion.div>
+              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/20 transition-colors duration-300" />
+            </motion.div >
           ))}
-        </div>
-      </div>
+        </div >
+      </div >
 
       <AnimatePresence>
         {selectedIndex !== null && (
@@ -380,7 +403,7 @@ const Gallery = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.div >
   );
 };
 

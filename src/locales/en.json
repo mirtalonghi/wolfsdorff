@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About the Artist",
+    "portfolio": "Works",
+    "gallery": "Exhibitions",
+    "criticas": "Press & Reviews",
+    "legacy": "Legacy",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "The unconscious draws maps that reason does not know. A legacy of surrealism, color, and humanity.",
+    "links": "Links",
+    "contact": "Contact",
+    "rights": "© {{year}} Faiwel Wolfsdorf Legacy. All rights reserved."
+  },
+  "layout": {
+    "menuDialog": "Site menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavAria": "Main navigation"
+  },
+  "lang": {
+    "label": "Language",
+    "es": "ES",
+    "en": "EN",
+    "pt": "PT",
+    "it": "IT"
+  },
+  "theme": {
+    "useLight": "Switch to light mode",
+    "useDark": "Switch to dark mode"
+  },
+  "home": {
+    "heroAlt": "Surrealist abstract background",
+    "label": "Surrealist Artist",
+    "quote": "\"The unconscious draws maps that reason does not know.\"",
+    "intro": "A chromatic journey from the roots of Warsaw to the light of South America. Discover the surreal universe of Faiwel Wolfsdorf, where the oneiric comes to life.",
+    "cta": "Explore the Collection",
+    "featuredAlt": "Featured work",
+    "featuredLabel": "Featured Work",
+    "featuredTitle": "Automatism and Form",
+    "featuredBody": "A disciple of unconscious automatism and the psychology of form, Wolfsdorf did not paint what he saw, but what he felt pulsing beneath the surface of reality. His work is an eternal dialogue between color and psyche.",
+    "featuredLink": "Read Full Biography",
+    "quoteBlock": "\"To create is to set free. My work seeks to capture that precise instant where logical thought yields to pure intuition.\"",
+    "quoteAuthor": "— Faiwel Wolfsdorf"
+  },
+  "about": {
+    "musicPause": "Pause music",
+    "musicPlay": "Play music",
+    "bioLabel": "Biography",
+    "bioTitle": "The Architect of Dreams",
+    "portraitAlt": "Faiwel Wolfsdorf",
+    "bioP1": "WOLFSDORF SCORNIC, Faiwel. Painter born in Warsaw, Poland, on July 23, 1921, he grew up in a Jewish family. In 1927 he traveled with his parents to Buenos Aires, where he lived until 1975, when he moved to Peru. He was the son of Zelic Wolfsdorf and Sura Leja Scornic. At age 13, Faiwel (Felipe) began working as a typesetter’s apprentice in Buenos Aires, eventually becoming head of composition at the newspapers Di Presse and La Nación. In Peru he made art documentaries, serving as artistic director of the film company Chavín. In Buenos Aires he began painting with master Gaspar Besares Soraire, but it was with master Juan Batlle Planas that he found the deepest affinity, exploring the methodology of unconscious automatism and the analysis of the psychology of form to express himself in a surrealist vein.",
+    "bioP2": "Felipe held more than 30 exhibitions of his work in Peru and Argentina, earning widespread favorable critical reception. His works are held in private collections in Argentina, Brazil, Chile, Venezuela, the United States, Italy, the Netherlands, Israel, and Peru.",
+    "bioP3": "He devoted much of his time to humanistic work such as teaching pictorial art to poor street children, bringing them together at the Casa de los Delfines in Miraflores, where he organized a large exhibition of 300 paintings titled “From Piranhas to Dolphins”; he did similar work with the Casa de los Petisos in Lima, with young people from Cedro, and with senior citizens, eventually becoming director of the cultural board of the Peruvian Social Security Institute.",
+    "bioP4": "He devoted the last 30 years of his life to teaching painting and sculpture in his studio, a meeting place for students who grew artistically with him and developed their own style.",
+    "bioP5": "He died on May 3, 2011, in Lima, Peru. His remains rest in the Jewish cemetery in Callao.",
+    "techniquesTitle": "Techniques and Materials",
+    "techniquesBody": "A master of oil and mixed media, his work is characterized by the use of <auto>automatism</auto>, allowing the hand to flow freely before the mind imposes structure. His textures are rich and organic, built layer upon layer to reveal the hidden story in each canvas.",
+    "cardVidaTallerTitle": "His life, his studio, his students",
+    "cardVidaTallerDesc": "The creative space",
+    "cardArconTitle": "Chest of Memories",
+    "cardArconDesc": "Time capsule",
+    "collectionsLabel": "Visual archive",
+    "collectionsTitle": "Memory in images"
+  },
+  "portfolio": {
+    "subtitle": "Artistic Works",
+    "title": "Collection",
+    "all": "All",
+    "categories": {
+      "clasicos": "Some Classics",
+      "nordex": "Cardboard on Nordex",
+      "cartulina-grande": "Cardboard – large format",
+      "rochards": "Rochards",
+      "bastidor": "On stretcher and framed",
+      "restaurar": "To be restored",
+      "tinta": "Ink (coffee, color, marker)",
+      "otros": "Other formats",
+      "privadas": "Private Collections",
+      "tela-1975": "Canvas on stretcher – before 1975",
+      "italia": "Other formats (in Italy)"
+    }
+  },
+  "galleryPage": {
+    "subtitle": "Exhibitions",
+    "title": "Gallery",
+    "intro": "A photographic journey through Faiwel Wolfsdorf’s exhibitions across his artistic career.",
+    "exhibitionsHeading": "Catalogs and shows",
+    "exhibitionsRange": "1967–2003",
+    "photosHeading": "Exhibition photos",
+    "exhibitions": [
+      "1967 – Mimo Arte Gallery",
+      "1968 – Witcomb Gallery",
+      "1971 – AMIA (Argentine Jewish Mutual Aid Society)",
+      "1979 – Galería En Flores » De las moradas, sus habitantes y algunas otras cosas »",
+      "1981 – Ivonne Briceño Gallery",
+      "1982 – La Araña Gallery «Casualismo?»",
+      "1984 – Praxis Gallery",
+      "1988 – Praxis Gallery",
+      "1994 – Vargas Gallery «Rostros»",
+      "1998 – British Council «Frutos del Sueño»",
+      "2000 – John Harriman Gallery «Instantes de WOLFSDORF»",
+      "2001 – Galería 2599 «Retrospectiva 1976-2001»",
+      "2002 – British Council",
+      "2003 – Galería PetroPerú «Percepciones»"
+    ],
+    "imageAlt": "Exhibition {{n}}"
+  },
+  "criticasPage": {
+    "subtitle": "Press & Criticism",
+    "title": "Reviews",
+    "intro": "Voices from the international press that documented Faiwel Wolfsdorf’s trajectory over the decades.",
+    "publicaciones": "Publications",
+    "archivoTitle": "Press Archive",
+    "archivoIntro": "Clippings and materials that bear witness to Wolfsdorf’s presence in the press of his time."
+  },
+  "criticaCard": {
+    "pages_one": "{{count}} page",
+    "pages_other": "{{count}} pages"
+  },
+  "services": {
+    "subtitle": "Legacy",
+    "title": "Felipe’s Workshop",
+    "tagline": "Continuity in his students",
+    "intro": "He was more than a teacher. He didn’t teach technique as closed recipes, but as open doors. He said painting isn’t learned—it’s discovered—and that every brushstroke is a way of saying “here I am” to the world. His students—artists today—didn’t inherit a style, but something harder to pass on: a way of seeing, an alert sensibility.",
+    "imageAlt": "Legacy {{n}}",
+    "alumniHeading": "Students of the workshop",
+    "instagramProfileAria": "Instagram profile of {{name}}"
+  },
+  "contact": {
+    "subtitle": "Contact",
+    "title": "Let’s Talk",
+    "intro": "We welcome gallerists, curators, collectors, and art lovers who wish to learn more about the life and work of Faiwel Wolfsdorf.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "location": "CABA, Buenos Aires, Argentina",
+    "phoneLabel": "Phone",
+    "formTitle": "Contact Form",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your name",
+    "emailFieldLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Select a reason",
+    "subjectAdquisicion": "Acquiring a Work",
+    "subjectPrensa": "Press / Exhibitions",
+    "subjectArchivo": "Archive Inquiry",
+    "subjectOtro": "Other",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "submit": "Send Message",
+    "formSending": "Sending…",
+    "formSuccess": "Thank you. Your message was sent successfully.",
+    "formError": "Could not send the message. Please try again later."
+  },
+  "lightbox": {
+    "close": "Close",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "prev": "Previous",
+    "next": "Next"
+  }
+}

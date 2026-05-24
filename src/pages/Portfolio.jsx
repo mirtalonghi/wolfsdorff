@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import galleries from '../data/galleries.json';
 import GalleryGrid from '../components/GalleryGrid';
@@ -19,6 +20,7 @@ const pageTransition = {
 };
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   const [selectedId, setSelectedId] = useState('todas');
   const [lightbox, setLightbox] = useState(null);
 
@@ -49,8 +51,10 @@ const Portfolio = () => {
 
       <div className="container-custom">
         <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 block mb-6">Obras Artísticas</span>
-          <h1 className="text-4xl font-serif mb-10 text-stone-900">Colección</h1>
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 dark:text-stone-400 block mb-6">
+            {t('portfolio.subtitle')}
+          </span>
+          <h1 className="text-4xl font-serif mb-10 text-stone-900 dark:text-stone-100">{t('portfolio.title')}</h1>
 
           {/* Category tabs */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-6">
@@ -58,11 +62,11 @@ const Portfolio = () => {
               onClick={() => setSelectedId('todas')}
               className={`text-xs uppercase tracking-widest pb-1.5 transition-all whitespace-nowrap ${
                 selectedId === 'todas'
-                  ? 'text-stone-900 border-b-2 border-stone-900'
-                  : 'text-stone-400 hover:text-stone-600'
+                  ? 'text-stone-900 border-b-2 border-stone-900 dark:text-stone-100 dark:border-stone-100'
+                  : 'text-stone-400 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300'
               }`}
             >
-              Todas
+              {t('portfolio.all')}
             </button>
             {galleries.map(g => (
               <button
@@ -70,11 +74,11 @@ const Portfolio = () => {
                 onClick={() => setSelectedId(g.id)}
                 className={`text-xs uppercase tracking-widest pb-1.5 transition-all whitespace-nowrap ${
                   selectedId === g.id
-                    ? 'text-stone-900 border-b-2 border-stone-900'
-                    : 'text-stone-400 hover:text-stone-600'
+                    ? 'text-stone-900 border-b-2 border-stone-900 dark:text-stone-100 dark:border-stone-100'
+                    : 'text-stone-400 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300'
                 }`}
               >
-                {g.name}
+                {t(`portfolio.categories.${g.id}`)}
               </button>
             ))}
           </div>
