@@ -4,7 +4,7 @@ import ImageItem from './ImageItem';
 
 const BATCH = 24;
 
-const GalleryGrid = ({ images, galleryKey, onImageClick }) => {
+const GalleryGrid = ({ images, galleryKey, layout = 'masonry', onImageClick }) => {
   const [visibleCount, setVisibleCount] = useState(BATCH);
   const sentinelRef = useRef(null);
 
@@ -40,10 +40,19 @@ const GalleryGrid = ({ images, galleryKey, onImageClick }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35 }}
-          className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3"
+          className={
+            layout === 'cards'
+              ? 'grid grid-cols-2 md:grid-cols-3 gap-5'
+              : 'columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3'
+          }
         >
           {visibleImages.map((image, i) => (
-            <ImageItem key={image.src} image={image} onClick={() => onImageClick(images, i)} />
+            <ImageItem
+              key={image.src}
+              image={image}
+              cardMode={layout === 'cards'}
+              onClick={() => onImageClick(images, i)}
+            />
           ))}
         </motion.div>
       </AnimatePresence>

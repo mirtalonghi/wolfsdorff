@@ -87,6 +87,7 @@ const Portfolio = () => {
         <GalleryGrid
           images={current.images}
           galleryKey={selectedId}
+          layout={selectedId === 'ilustraciones' ? 'cards' : 'masonry'}
           onImageClick={(images, index) => setLightbox({ images, index })}
         />
       </div>
